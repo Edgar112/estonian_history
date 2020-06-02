@@ -4,13 +4,17 @@ import 'package:estonian_history/timeline_list/timeline.dart';
 import 'package:estonian_history/timeline_list/timeline_model.dart';
 import 'package:estonian_history/data.dart';
 import 'package:estonian_history/constants.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Timeline Demo',
@@ -39,24 +43,25 @@ class _TimelinePageState extends State<TimelinePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Eesti ajalugu',
-          style: TextStyle(color: kText2Color),
-        ),
-        centerTitle: true,
-        backgroundColor: kPrimaryColor,
-      ),
-      body: timelineModel(TimelinePosition.Left),
+      body: NotificationListener<ScrollNotification>(
+          onNotification: (scrollNotification) {
+            // print(scrollNotification.metrics.pixels);
+            if (scrollNotification.metrics.pixels < 402.3) {
+              SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
+            } else {
+              SystemChrome.setEnabledSystemUIOverlays([]);
+            }
+          },
+          child: timelineModelPage()),
     );
   }
 
 ////////////////////////////////////////////////////////////////////////// physics
-  timelineModel(TimelinePosition position) => Timeline.builder(
+  timelineModelPage() => Timeline.builder(
       itemBuilder: centerTimelineBuilder,
       itemCount: events.length,
       physics: BouncingScrollPhysics(),
-      position: position);
+      position: TimelinePosition.Left);
 
   TimelineModel centerTimelineBuilder(BuildContext context, int i) {
     final event = events[i];
@@ -71,7 +76,6 @@ class _TimelinePageState extends State<TimelinePage> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              Image.network(event.image),
               const SizedBox(
                 height: 8.0,
               ),

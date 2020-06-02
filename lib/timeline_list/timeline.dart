@@ -1,9 +1,11 @@
 library timeline;
 
+import 'package:estonian_history/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:estonian_history/timeline_list/src/timeline_item.dart';
 import 'package:estonian_history/timeline_list/src/timeline_painter.dart';
 import 'package:estonian_history/timeline_list/timeline_model.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 typedef IndexedTimelineModelBuilder = TimelineModel Function(
     BuildContext context, int index);
@@ -63,7 +65,7 @@ class Timeline extends StatelessWidget {
       double iconSize,
       this.position = TimelinePosition.Center,
       this.physics,
-      this.shrinkWrap = false,
+      this.shrinkWrap = true,
       this.primary = false,
       this.reverse = false})
       : properties = TimelineProperties(
@@ -71,21 +73,56 @@ class Timeline extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        physics: physics,
-        shrinkWrap: shrinkWrap,
-        itemCount: itemCount,
-        controller: controller,
-        reverse: reverse,
-        primary: primary,
-        itemBuilder: (context, i) {
-          final TimelineModel model = itemBuilder(context, i);
-          model.isFirst = reverse ? i == (itemCount - 1) : i == 0;
-          model.isLast = reverse ? i == 0 : i == (itemCount - 1);
-          switch (position) {
-            default:
-              return TimelineItemLeft(properties: properties, model: model);
-          }
-        });
+    return CustomScrollView(
+      reverse: reverse,
+      physics: physics,
+      primary: primary,
+      // shrinkWrap: shrinkWrap,
+      controller: controller,
+      slivers: <Widget>[
+        SliverAppBar(
+          brightness: Brightness.light,
+          // actions: <Widget>[
+          //   Padding(
+          //     padding: const EdgeInsets.only(right: 10),
+          //     child: IconButton(
+          //       icon: Icon(
+          //         Icons.info_outline,
+          //         color: kText1Color,
+          //       ),
+          //       tooltip: 'someIcon',
+          //       onPressed: () {},
+          //     ),
+          //   ),
+          // ],
+          backgroundColor: kPrimaryColor,
+          floating: false,
+          pinned: false,
+          expandedHeight: 400,
+          flexibleSpace: FlexibleSpaceBar(
+            title: Text('Eesti Ajalugu',
+                style: Theme.of(context).textTheme.headline5),
+            background: SvgPicture.asset(
+              'assets/illustrations/rocket_boy.svg',
+            ),
+            collapseMode: CollapseMode.pin,
+          ),
+        ),
+        SliverList(
+          delegate: SliverChildBuilderDelegate(
+            (context, i) {
+              final TimelineModel model = itemBuilder(context, i);
+              model.isFirst = reverse ? i == (itemCount - 1) : i == 0;
+              model.isLast = reverse ? i == 0 : i == (itemCount - 1);
+              switch (position) {
+                default:
+                  return TimelineItemLeft(properties: properties, model: model);
+              }
+            },
+            childCount: itemCount, //why
+          ),
+        ),
+      ],
+    );
   }
 }
