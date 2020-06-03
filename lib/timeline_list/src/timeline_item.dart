@@ -111,7 +111,7 @@ class TimelineItemLeft extends TimelineItem {
               child: Text(
                 model.year,
                 textAlign: TextAlign.center,
-                style: TextStyle(color: kSecondaryColor),
+                style: TextStyle(color: kText2Color),
               )),
           Container(
               padding:
