@@ -15,6 +15,23 @@ class _HistoryInfoState extends State<HistoryInfo> {
   Event event;
   _HistoryInfoState(this.event);
 
+  final ScrollController infoBackground1ScrollController = ScrollController();
+  final ScrollController infoBackground2ScrollController = ScrollController();
+  final ScrollController infoBackground3ScrollController = ScrollController();
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      infoBackground1ScrollController
+          .jumpTo(background1ScrollController.position.pixels);
+      infoBackground2ScrollController
+          .jumpTo(background2ScrollController.position.pixels);
+      infoBackground3ScrollController
+          .jumpTo(background3ScrollController.position.pixels);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,28 +41,45 @@ class _HistoryInfoState extends State<HistoryInfo> {
             reverse: false,
             physics: BouncingScrollPhysics(),
             primary: false,
-            controller: backgroundScrollController,
-            child: SvgPicture.asset('assets/illustrations/cosmosBG1.svg',
-                width: MediaQuery.of(context).size.width),
+            controller: infoBackground1ScrollController,
+            child: Container(
+              width: double.infinity,
+              child: SvgPicture.asset(
+                'assets/illustrations/cosmosBG1.svg',
+                fit: BoxFit.fitWidth,
+              ),
+            ),
           ),
           SingleChildScrollView(
             reverse: false,
             physics: BouncingScrollPhysics(),
             primary: false,
-            controller: background2ScrollController,
-            child: SvgPicture.asset('assets/illustrations/cosmosBG2.svg',
-                width: MediaQuery.of(context).size.width),
+            controller: infoBackground2ScrollController,
+            child: Container(
+              width: double.infinity,
+              child: SvgPicture.asset(
+                'assets/illustrations/cosmosBG2.svg',
+                fit: BoxFit.fitWidth,
+              ),
+            ),
           ),
           SingleChildScrollView(
             reverse: false,
             physics: BouncingScrollPhysics(),
             primary: false,
-            controller: background3ScrollController,
-            child: SvgPicture.asset('assets/illustrations/cosmosBG3.svg',
-                width: MediaQuery.of(context).size.width),
+            controller: infoBackground3ScrollController,
+            child: Container(
+              width: double.infinity,
+              child: SvgPicture.asset(
+                'assets/illustrations/cosmosBG3.svg',
+                fit: BoxFit.fitWidth,
+              ),
+            ),
           ),
-          Center(
-            child: Text(backgroundScrollController.position.pixels.toString()),
+          Container(
+            width: double.infinity,
+            height: double.infinity,
+            child: Text('ww'),
           )
         ],
       ),

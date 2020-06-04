@@ -28,7 +28,7 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
   @override
   void initState() {
     timelineScrollController.addListener(() {
-      backgroundScrollController
+      background1ScrollController
           .jumpTo(timelineScrollController.position.pixels * 0.9);
       background2ScrollController
           .jumpTo(timelineScrollController.position.pixels * 0.8);

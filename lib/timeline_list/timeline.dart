@@ -80,25 +80,40 @@ class Timeline extends StatelessWidget {
           reverse: reverse,
           physics: physics,
           primary: primary,
-          controller: backgroundScrollController,
-          child: SvgPicture.asset('assets/illustrations/cosmosBG1.svg',
-              width: MediaQuery.of(context).size.width),
+          controller: background1ScrollController,
+          child: Container(
+            width: double.infinity,
+            child: SvgPicture.asset(
+              'assets/illustrations/cosmosBG1.svg',
+              fit: BoxFit.fitWidth,
+            ),
+          ),
         ),
         SingleChildScrollView(
           reverse: reverse,
           physics: physics,
           primary: primary,
           controller: background2ScrollController,
-          child: SvgPicture.asset('assets/illustrations/cosmosBG2.svg',
-              width: MediaQuery.of(context).size.width),
+          child: Container(
+            width: double.infinity,
+            child: SvgPicture.asset(
+              'assets/illustrations/cosmosBG2.svg',
+              fit: BoxFit.fitWidth,
+            ),
+          ),
         ),
         SingleChildScrollView(
           reverse: reverse,
           physics: physics,
           primary: primary,
           controller: background3ScrollController,
-          child: SvgPicture.asset('assets/illustrations/cosmosBG3.svg',
-              width: MediaQuery.of(context).size.width),
+          child: Container(
+            width: double.infinity,
+            child: SvgPicture.asset(
+              'assets/illustrations/cosmosBG3.svg',
+              fit: BoxFit.fitWidth,
+            ),
+          ),
         ),
         CustomScrollView(
           reverse: reverse,
