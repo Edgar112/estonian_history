@@ -11,34 +11,15 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:estonian_history/global.dart';
 
-void main() => runApp(HistoryTimeline());
-
-class HistoryTimeline extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'empty',
-      theme: ThemeData(
-        textTheme: GoogleFonts.reemKufiTextTheme(Theme.of(context).textTheme),
-        scaffoldBackgroundColor: kPrimaryColor,
-      ),
-      home: TimelinePage(title: 'empty'),
-    );
-  }
-}
-
-class TimelinePage extends StatefulWidget {
-  TimelinePage({Key key, this.title}) : super(key: key);
+class HistoryTimeline extends StatefulWidget {
+  HistoryTimeline({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _TimelinePageState createState() => _TimelinePageState();
+  _HistoryTimelineState createState() => _HistoryTimelineState();
 }
 
-class _TimelinePageState extends State<TimelinePage> {
+class _HistoryTimelineState extends State<HistoryTimeline> {
   final PageController pageController =
       PageController(initialPage: 1, keepPage: true);
   int pageIx = 1;
@@ -48,7 +29,11 @@ class _TimelinePageState extends State<TimelinePage> {
   void initState() {
     timelineScrollController.addListener(() {
       backgroundScrollController
-          .jumpTo(timelineScrollController.position.pixels);
+          .jumpTo(timelineScrollController.position.pixels * 0.9);
+      background2ScrollController
+          .jumpTo(timelineScrollController.position.pixels * 0.8);
+      background3ScrollController
+          .jumpTo(timelineScrollController.position.pixels * 0.7);
     });
     super.initState();
   }

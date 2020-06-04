@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:estonian_history/timeline_list/src/timeline_item.dart';
 import 'package:estonian_history/timeline_list/src/timeline_painter.dart';
 import 'package:estonian_history/timeline_list/timeline_model.dart';
-import 'package:flutter_parallax/flutter_parallax.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 typedef IndexedTimelineModelBuilder = TimelineModel Function(
@@ -82,18 +81,24 @@ class Timeline extends StatelessWidget {
           physics: physics,
           primary: primary,
           controller: backgroundScrollController,
-          child: Column(
-            children: <Widget>[
-              SizedBox(height: 430),
-              Parallax.inside(
-                mainAxisExtent: 7000,
-                child: SvgPicture.asset(
-                  'assets/illustrations/cosmosBG.svg',
-                  fit: BoxFit.fill,
-                ),
-              ),
-            ],
-          ),
+          child: SvgPicture.asset('assets/illustrations/cosmosBG1.svg',
+              width: MediaQuery.of(context).size.width),
+        ),
+        SingleChildScrollView(
+          reverse: reverse,
+          physics: physics,
+          primary: primary,
+          controller: background2ScrollController,
+          child: SvgPicture.asset('assets/illustrations/cosmosBG2.svg',
+              width: MediaQuery.of(context).size.width),
+        ),
+        SingleChildScrollView(
+          reverse: reverse,
+          physics: physics,
+          primary: primary,
+          controller: background3ScrollController,
+          child: SvgPicture.asset('assets/illustrations/cosmosBG3.svg',
+              width: MediaQuery.of(context).size.width),
         ),
         CustomScrollView(
           reverse: reverse,

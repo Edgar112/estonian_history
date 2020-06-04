@@ -1,5 +1,7 @@
 import 'package:estonian_history/data.dart';
+import 'package:estonian_history/global.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HistoryInfo extends StatefulWidget {
   Event event;
@@ -16,13 +18,36 @@ class _HistoryInfoState extends State<HistoryInfo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GestureDetector(
-        child: Center(
-          child: Text(event.name),
-        ),
-        onTap: () {
-          Navigator.pop(context);
-        },
+      body: Stack(
+        children: <Widget>[
+          SingleChildScrollView(
+            reverse: false,
+            physics: BouncingScrollPhysics(),
+            primary: false,
+            controller: backgroundScrollController,
+            child: SvgPicture.asset('assets/illustrations/cosmosBG1.svg',
+                width: MediaQuery.of(context).size.width),
+          ),
+          SingleChildScrollView(
+            reverse: false,
+            physics: BouncingScrollPhysics(),
+            primary: false,
+            controller: background2ScrollController,
+            child: SvgPicture.asset('assets/illustrations/cosmosBG2.svg',
+                width: MediaQuery.of(context).size.width),
+          ),
+          SingleChildScrollView(
+            reverse: false,
+            physics: BouncingScrollPhysics(),
+            primary: false,
+            controller: background3ScrollController,
+            child: SvgPicture.asset('assets/illustrations/cosmosBG3.svg',
+                width: MediaQuery.of(context).size.width),
+          ),
+          Center(
+            child: Text(backgroundScrollController.position.pixels.toString()),
+          )
+        ],
       ),
     );
   }
