@@ -108,10 +108,19 @@ class TimelineItemLeft extends TimelineItem {
                   timelinePosition: TimelinePosition.Left),
               width: properties.iconSize * 4.5,
               alignment: Alignment.center,
-              child: Text(
-                model.year,
-                textAlign: TextAlign.center,
-                style: TextStyle(color: kText2Color),
+              child: Column(
+                children: <Widget>[
+                  Text(
+                    model.date,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: kText2Color),
+                  ),
+                  Text(
+                    model.subDate,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: kText2Color),
+                  ),
+                ],
               )),
           Container(
               padding:

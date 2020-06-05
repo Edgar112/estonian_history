@@ -41,7 +41,7 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: NotificationListener<ScrollNotification>(
+        body: NotificationListener<ScrollNotification>(
           onNotification: (scrollNotification) {
             if (scrollNotification.metrics.pixels < 402.3) {
               SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
@@ -49,8 +49,9 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
               SystemChrome.setEnabledSystemUIOverlays([]);
             }
           },
-          child: timelineModelPage()),
-    );
+          child: timelineModelPage(),
+        ),
+        drawer: Drawer(elevation: 10,));
   }
 
   timelineModelPage() => Timeline.builder(
@@ -64,53 +65,54 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
     final event = events[i];
     final textTheme = Theme.of(context).textTheme;
     return TimelineModel(
-      GestureDetector(
-        onTap: () {
-          Navigator.push(context, FadeRoute(page: HistoryInfo(event)));
-        },
-        child: Opacity(
-          opacity: 0.6,
-          child: Card(
-            margin: EdgeInsets.symmetric(vertical: 16.0),
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8.0)),
-            clipBehavior: Clip.antiAlias,
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  const SizedBox(
-                    height: 8.0,
-                  ),
-                  Text(
-                    event.name,
-                    style: textTheme.headline6,
-                    textAlign: TextAlign.left,
-                  ),
-                  const SizedBox(
-                    height: 8.0,
-                  ),
-                  Text(
-                    event.content,
-                    style: textTheme.subtitle2,
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(
-                    height: 8.0,
-                  ),
-                ],
+        GestureDetector(
+          onTap: () {
+            SystemChrome.setEnabledSystemUIOverlays([]);
+            Navigator.push(context, FadeRoute(page: HistoryInfo(event)));
+          },
+          child: Opacity(
+            opacity: 0.6,
+            child: Card(
+              margin: EdgeInsets.symmetric(vertical: 16.0),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0)),
+              clipBehavior: Clip.antiAlias,
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    const SizedBox(
+                      height: 8.0,
+                    ),
+                    Text(
+                      event.name,
+                      style: textTheme.headline6,
+                      textAlign: TextAlign.left,
+                    ),
+                    const SizedBox(
+                      height: 8.0,
+                    ),
+                    Text(
+                      event.cover,
+                      style: textTheme.subtitle2,
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(
+                      height: 8.0,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
         ),
-      ),
-      position:
-          i % 2 == 0 ? TimelineItemPosition.right : TimelineItemPosition.left,
-      isFirst: i == 0,
-      isLast: i == events.length,
-      iconBackground: event.iconBackground,
-      year: event.year,
-    );
+        position:
+            i % 2 == 0 ? TimelineItemPosition.right : TimelineItemPosition.left,
+        isFirst: i == 0,
+        isLast: i == events.length,
+        iconBackground: event.iconBackground,
+        date: event.date,
+        subDate: event.subDate);
   }
 }
