@@ -27,6 +27,7 @@ dependencies:
   timeline_list: ^0.0.3
   google_fonts: ^1.1.0
   flutter_svg: any
+  google_maps_flutter: ^0.5.28+1
 
 dev_dependencies:
   flutter_test:

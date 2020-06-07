@@ -4,7 +4,7 @@ import 'package:estonian_history/transitions/fade_route.dart';
 import 'package:flutter/material.dart';
 import 'package:estonian_history/timeline_list/timeline.dart';
 import 'package:estonian_history/timeline_list/timeline_model.dart';
-import 'package:estonian_history/data.dart';
+import 'package:estonian_history/event/event.dart';
 import 'package:estonian_history/constants.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -41,17 +41,17 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: NotificationListener<ScrollNotification>(
-          onNotification: (scrollNotification) {
-            if (scrollNotification.metrics.pixels < 402.3) {
-              SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
-            } else {
-              SystemChrome.setEnabledSystemUIOverlays([]);
-            }
-          },
-          child: timelineModelPage(),
-        ),
-        drawer: Drawer(elevation: 10,));
+      body: NotificationListener<ScrollNotification>(
+        onNotification: (scrollNotification) {
+          if (scrollNotification.metrics.pixels < 402.3) {
+            SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
+          } else {
+            SystemChrome.setEnabledSystemUIOverlays([]);
+          }
+        },
+        child: timelineModelPage(),
+      ),
+    );
   }
 
   timelineModelPage() => Timeline.builder(
@@ -78,29 +78,37 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
                   borderRadius: BorderRadius.circular(8.0)),
               clipBehavior: Clip.antiAlias,
               child: Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: EdgeInsets.all(16.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    const SizedBox(
+                    SizedBox(
                       height: 8.0,
                     ),
-                    Text(
-                      event.name,
-                      style: textTheme.headline6,
-                      textAlign: TextAlign.left,
-                    ),
-                    const SizedBox(
-                      height: 8.0,
-                    ),
-                    Text(
-                      event.cover,
-                      style: textTheme.subtitle2,
-                      textAlign: TextAlign.center,
-                    ),
-                    const SizedBox(
-                      height: 8.0,
-                    ),
+                    event.name != ''
+                        ? Text(
+                            event.name,
+                            style: Theme.of(context).textTheme.headline6,
+                            textAlign: TextAlign.left,
+                          )
+                        : Container(),
+                    event.name != ''
+                        ? SizedBox(
+                            height: 8.0,
+                          )
+                        : Container(),
+                    event.cover != ''
+                        ? Text(
+                            event.cover,
+                            style: Theme.of(context).textTheme.subtitle2,
+                            textAlign: TextAlign.center,
+                          )
+                        : Container(),
+                    event.cover != ''
+                        ? SizedBox(
+                            height: 8.0,
+                          )
+                        : Container(),
                   ],
                 ),
               ),

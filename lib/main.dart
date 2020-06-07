@@ -20,12 +20,20 @@ class EstonianHistory extends StatelessWidget {
         );
       },
       debugShowCheckedModeBanner: false,
-      title: 'empty',
+      title: 'Eesti Ajalugu',
       theme: ThemeData(
-        textTheme: GoogleFonts.reemKufiTextTheme(Theme.of(context).textTheme),
+        textTheme: TextTheme(
+          caption: GoogleFonts.gabriela(fontSize: 30, color: kText2Color),
+          headline5: GoogleFonts.gabriela(fontSize: 25, color: kText2Color),
+          headline6: GoogleFonts.gabriela(fontSize: 20, color: kText2Color),
+          subtitle1: GoogleFonts.gabriela(fontSize: 17, color: kText2Color),
+          subtitle2: GoogleFonts.gabriela(fontSize: 15, color: kText2Color),
+          bodyText1: GoogleFonts.gabriela(fontSize: 14, color: kText2Color),
+          bodyText2: GoogleFonts.gabriela(fontSize: 10, color: kText2Color),
+        ),
         scaffoldBackgroundColor: kPrimaryColor,
       ),
-      home: HistoryTimeline(title: 'empty'),
+      home: HistoryTimeline(title: 'Eesti Ajalugu'),
     );
   }
 }

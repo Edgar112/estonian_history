@@ -1,10 +1,16 @@
 import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/data.dart';
+import 'package:estonian_history/event/event.dart';
 import 'package:estonian_history/global.dart';
+import 'package:estonian_history/myMap.dart';
+import 'package:estonian_history/transitions/fade_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'dart:ui';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'dart:async';
+
+import 'package:google_fonts/google_fonts.dart';
 
 class HistoryInfo extends StatefulWidget {
   Event event;
@@ -38,6 +44,7 @@ class _HistoryInfoState extends State<HistoryInfo> {
 
   @override
   Widget build(BuildContext context) {
+    contextHistoryInfo = context;
     // RenderParagraph renderParagraph = RenderParagraph(
     //   TextSpan(
     //     text: event.cover,
@@ -121,7 +128,7 @@ class _HistoryInfoState extends State<HistoryInfo> {
                 snap: true,
                 forceElevated: true,
                 title: Text(event.subDate + " " + event.date,
-                    style: Theme.of(context).textTheme.headline4),
+                    style: Theme.of(context).textTheme.headline5),
                 backgroundColor: kPrimaryColor.withOpacity(0.0),
                 flexibleSpace: Padding(
                   padding: const EdgeInsets.only(top: 80),
@@ -148,12 +155,8 @@ class _HistoryInfoState extends State<HistoryInfo> {
                               elevation: 0,
                               color: Colors.white,
                               child: Container(
-                                padding: EdgeInsets.all(20),
-                                child: Text(
-                                  event.text,
-                                  style: Theme.of(context).textTheme.headline6,
-                                ),
-                              ),
+                                  padding: EdgeInsets.all(20),
+                                  child: event.text),
                             ),
                           ),
                         ),
@@ -167,6 +170,30 @@ class _HistoryInfoState extends State<HistoryInfo> {
           ),
         ],
       ),
+    );
+  }
+
+  final Completer<GoogleMapController> _mapController = Completer();
+  Future _mapFuture = Future.delayed(Duration(milliseconds: 250), () => true);
+
+  Widget _buildMap() {
+    return FutureBuilder(
+      future: _mapFuture,
+      builder: (context, snapshot) {
+        if (!snapshot.hasData) {
+          print("empty");
+        }
+
+        return GoogleMap(
+          initialCameraPosition: CameraPosition(
+            target: LatLng(37.77483, -122.41942),
+            zoom: 12,
+          ),
+          onMapCreated: (GoogleMapController controller) {
+            _mapController.complete(controller);
+          },
+        );
+      },
     );
   }
 }

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:estonian_history/timeline_list/src/timeline_painter.dart';
 import 'package:estonian_history/timeline_list/timeline.dart';
 import 'package:estonian_history/timeline_list/timeline_model.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 abstract class TimelineItem extends StatelessWidget {
   final TimelineModel model;
@@ -110,16 +111,20 @@ class TimelineItemLeft extends TimelineItem {
               alignment: Alignment.center,
               child: Column(
                 children: <Widget>[
-                  Text(
-                    model.date,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: kText2Color),
-                  ),
-                  Text(
-                    model.subDate,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: kText2Color),
-                  ),
+                  model.date != ''
+                      ? Text(
+                          model.date,
+                          textAlign: TextAlign.center,
+                          style: Theme.of(context).textTheme.bodyText1,
+                        )
+                      : Container(),
+                  model.subDate != ''
+                      ? Text(
+                          model.subDate,
+                          textAlign: TextAlign.center,
+                          style: Theme.of(context).textTheme.bodyText1,
+                        )
+                      : Container(),
                 ],
               )),
           Container(
