@@ -50,9 +50,9 @@ class _MyMapState extends State<MyMap> {
             },
             circles: _circles,
           ),
-          Positioned(
-            top: 20,
-            left: 20,
+          Container(
+            padding: EdgeInsets.all(4),
+            margin: EdgeInsets.only(top: 35),
             child: IconButton(
               icon: Icon(Icons.arrow_back),
               color: kText2Color,

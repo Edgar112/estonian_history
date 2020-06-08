@@ -1,6 +1,8 @@
+import 'package:estonian_history/myMap.dart';
 import 'package:estonian_history/screens/history_timeline/history_info.dart';
 import 'package:estonian_history/timeline_list/src/timeline_item.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:estonian_history/timeline_list/timeline.dart';
 import 'package:estonian_history/timeline_list/timeline_model.dart';
@@ -25,6 +27,7 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
   int pageIx = 1;
 
   final ScrollController timelineScrollController = ScrollController();
+  List<Event> events;
   @override
   void initState() {
     timelineScrollController.addListener(() {
@@ -40,6 +43,7 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
 
   @override
   Widget build(BuildContext context) {
+    events = getEvents(); // for hot reload
     return Scaffold(
       body: NotificationListener<ScrollNotification>(
         onNotification: (scrollNotification) {
