@@ -1,19 +1,13 @@
 import 'package:estonian_history/constants.dart';
 import 'package:estonian_history/event/event.dart';
 import 'package:estonian_history/global.dart';
-import 'package:estonian_history/myMap.dart';
-import 'package:estonian_history/transitions/fade_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'dart:ui';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'dart:async';
-
-import 'package:google_fonts/google_fonts.dart';
 
 class HistoryInfo extends StatefulWidget {
-  Event event;
+  final Event event;
   HistoryInfo(this.event);
 
   @override
@@ -119,9 +113,9 @@ class _HistoryInfoState extends State<HistoryInfo> {
                     style: Theme.of(context).textTheme.headline5),
                 backgroundColor: kPrimaryColor.withOpacity(0.0),
                 flexibleSpace: Padding(
-                  padding: const EdgeInsets.only(top: 80),
+                  padding: EdgeInsets.only(top: 80),
                   child: Padding(
-                    padding: const EdgeInsets.all(14.0),
+                    padding: EdgeInsets.all(14.0),
                     child: Container(),
                   ),
                 ),

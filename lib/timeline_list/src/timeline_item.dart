@@ -1,11 +1,9 @@
 import 'dart:math';
 
-import 'package:estonian_history/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:estonian_history/timeline_list/src/timeline_painter.dart';
 import 'package:estonian_history/timeline_list/timeline.dart';
 import 'package:estonian_history/timeline_list/timeline_model.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 abstract class TimelineItem extends StatelessWidget {
   final TimelineModel model;

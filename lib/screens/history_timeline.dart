@@ -1,15 +1,10 @@
 import 'package:estonian_history/screens/history_timeline/history_info.dart';
-import 'package:estonian_history/timeline_list/src/timeline_item.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:estonian_history/timeline_list/timeline.dart';
 import 'package:estonian_history/timeline_list/timeline_model.dart';
 import 'package:estonian_history/event/event.dart';
-import 'package:estonian_history/constants.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:estonian_history/global.dart';
 
 class HistoryTimeline extends StatefulWidget {
@@ -51,6 +46,7 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
           } else {
             SystemChrome.setEnabledSystemUIOverlays([]);
           }
+          return;
         },
         child: timelineModelPage(),
       ),
@@ -91,7 +87,7 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
                   event.name != ''
                       ? Text(
                           event.name,
-                          style: Theme.of(context).textTheme.headline6,
+                          style: textTheme.headline6,
                           textAlign: TextAlign.left,
                         )
                       : Container(),
@@ -103,7 +99,7 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
                   event.cover != ''
                       ? Text(
                           event.cover,
-                          style: Theme.of(context).textTheme.subtitle2,
+                          style: textTheme.subtitle2,
                           textAlign: TextAlign.center,
                         )
                       : Container(),
