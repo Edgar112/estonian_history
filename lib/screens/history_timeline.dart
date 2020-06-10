@@ -1,4 +1,3 @@
-import 'package:estonian_history/myMap.dart';
 import 'package:estonian_history/screens/history_timeline/history_info.dart';
 import 'package:estonian_history/timeline_list/src/timeline_item.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
@@ -74,47 +73,46 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
             SystemChrome.setEnabledSystemUIOverlays([]);
             Navigator.push(context, FadeRoute(page: HistoryInfo(event)));
           },
-          child: Opacity(
-            opacity: 0.6,
-            child: Card(
-              margin: EdgeInsets.symmetric(vertical: 16.0),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8.0)),
-              clipBehavior: Clip.antiAlias,
-              child: Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    SizedBox(
-                      height: 8.0,
-                    ),
-                    event.name != ''
-                        ? Text(
-                            event.name,
-                            style: Theme.of(context).textTheme.headline6,
-                            textAlign: TextAlign.left,
-                          )
-                        : Container(),
-                    event.name != ''
-                        ? SizedBox(
-                            height: 8.0,
-                          )
-                        : Container(),
-                    event.cover != ''
-                        ? Text(
-                            event.cover,
-                            style: Theme.of(context).textTheme.subtitle2,
-                            textAlign: TextAlign.center,
-                          )
-                        : Container(),
-                    event.cover != ''
-                        ? SizedBox(
-                            height: 8.0,
-                          )
-                        : Container(),
-                  ],
-                ),
+          child: Card(
+            margin: EdgeInsets.symmetric(vertical: 16.0),
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8.0)),
+            clipBehavior: Clip.antiAlias,
+            color: Colors.white60,
+            elevation: 0,
+            child: Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  SizedBox(
+                    height: 8.0,
+                  ),
+                  event.name != ''
+                      ? Text(
+                          event.name,
+                          style: Theme.of(context).textTheme.headline6,
+                          textAlign: TextAlign.left,
+                        )
+                      : Container(),
+                  event.name != ''
+                      ? SizedBox(
+                          height: 8.0,
+                        )
+                      : Container(),
+                  event.cover != ''
+                      ? Text(
+                          event.cover,
+                          style: Theme.of(context).textTheme.subtitle2,
+                          textAlign: TextAlign.center,
+                        )
+                      : Container(),
+                  event.cover != ''
+                      ? SizedBox(
+                          height: 8.0,
+                        )
+                      : Container(),
+                ],
               ),
             ),
           ),

@@ -1,8 +1,8 @@
 import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/event/view/only_text.dart';
 import 'package:estonian_history/global.dart';
 import 'package:estonian_history/myMap.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
+import 'package:estonian_history/widgets/HeroPhotoViewWrapper.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -42,8 +42,7 @@ List<Event> getEvents() {
                 TextSpan(
                     text: 'Eesti ala vabanes jääst.\n',
                     style: TextStyle(
-                      fontSize: 26,
-                    ),
+                        fontSize: 25, color: kText2Color.withOpacity(0.6)),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
                         // open desired screen
@@ -51,7 +50,8 @@ List<Event> getEvents() {
                 TextSpan(
                     text:
                         'Jääaegsed liustikud taandusid Kagu-Eestist järk-järgult loode poole ja kujundasid maastikku.',
-                    style: TextStyle(fontSize: 20)),
+                    style: TextStyle(
+                        fontSize: 20, color: kText2Color.withOpacity(0.6))),
               ]),
         ),
         iconBackground: Colors.red),
@@ -68,13 +68,14 @@ List<Event> getEvents() {
                 TextSpan(
                   text: 'Pärnu jõe paremal kaldal ',
                   style: TextStyle(
-                    fontSize: 26,
-                  ),
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),
                 TextSpan(
                     text: 'Pullis',
                     style: TextStyle(
-                        fontSize: 26, decoration: TextDecoration.underline),
+                        fontSize: 25,
+                        color: kText2Color.withOpacity(0.6),
+                        decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
                         Navigator.push(
@@ -83,8 +84,7 @@ List<Event> getEvents() {
                 TextSpan(
                   text: ' peatus mõnda aega rühm küttijaid ja kalastajaid.',
                   style: TextStyle(
-                    fontSize: 26,
-                  ),
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),
               ]),
         ),
@@ -98,17 +98,50 @@ List<Event> getEvents() {
         text: RichText(
           text: TextSpan(
               style: GoogleFonts.gabriela(color: kText2Color),
-              children: <TextSpan>[
+              children: <InlineSpan>[
                 TextSpan(
                   text:
-                      'Mesoliitikum ehk keskmine kiviaeg. Kõik selle ajajärgu ligi sadakond asulakohta (sh Pulli) kuulusid Kunda kultuuri, mida iseloomustavad rohked luu- ja sarvriistad ning vähesed kvartsist ja tulekivist esemed.',
+                      'Mesoliitikum ehk keskmine kiviaeg. Kõik selle ajajärgu ligi sadakond asulakohta (sh Pulli) kuulusid Kunda kultuuri, mida iseloomustavad rohked luu- ja sarvriistad ning vähesed kvartsist ja tulekivist esemed.\n\n\n',
                   style: TextStyle(
-                    fontSize: 26,
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
+                ),
+                TextSpan(
+                  text: 'Hiline mesoliitikum\n\n',
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+                ),
+                TextSpan(
+                  text:
+                      "6.–5. aastatuhandel eKr muutus ilmastik niiskemaks, jäädes seejuures soojaks. Talved olid pehmed ja taimekasvuperiood pikenes. Algas taimedele väga soodne kasvuperiood. Kõikjal vähegi sobivatel aladel kasvasid lopsakad metsad. Üha enam levisid laialehelised puuliigid, eriti jalakas, pärn ja tamm. On arvatud, et lehtpuud ületasid oma hulgalt okaspuid kolmekordselt. Metsades elutses rikkalik loomastik. Samal ajal tekkis Läänemere nõos olnud veekogul jälle ühendus ookeaniga. Vesi alanes ja muutus soolasemaks. Seda Läänemere staadiumi nimetatakse Litoriinamereks.\n\n",
+                  style: TextStyle(
+                    fontSize: 20,
                   ),
                 ),
+                WidgetSpan(
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        contextHistoryInfo,
+                        MaterialPageRoute(
+                          builder: (contextHistoryInfo) => HeroPhotoViewWrapper(
+                            tagName: 'someTag',
+                            imageProvider: AssetImage(
+                                "assets/illustrations/laanemeriJarv.png"),
+                          ),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      child: Hero(
+                        tag: "someTag",
+                        child: Image.asset(
+                            "assets/illustrations/laanemeriJarv.png"),
+                      ),
+                    ),
+                  ),
+                )
               ]),
         ),
-        iconBackground: Colors.transparent),
+        iconBackground: Colors.red),
     Event(
         name: "",
         date: "U 8700 eKr",
@@ -121,10 +154,9 @@ List<Event> getEvents() {
               children: <TextSpan>[
                 TextSpan(
                   text:
-                      '	Kunda Lammasmäele, madalaveelises järves paiknevale saarekesele, rajati esimest korda hooajaline asula, mida kasutati ka edaspidi.',
+                      'Kunda Lammasmäele, madalaveelises järves paiknevale saarekesele, rajati esimest korda hooajaline asula, mida kasutati ka edaspidi.',
                   style: TextStyle(
-                    fontSize: 26,
-                  ),
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),
               ]),
         ),
@@ -143,8 +175,7 @@ List<Event> getEvents() {
                   text:
                       'Kesk-Eesti neisse piirkondadesse, kus leidus kohalikku looduslikku tulekivi, rajati mitu asulat. Omaaegsed eluasemed kerkisid Navesti jõe ääres Jäleveres ja Lepakosel, Võrtsjärve põhjaranniku voortele Siimusaares, Umbusis ja Moksis.',
                   style: TextStyle(
-                    fontSize: 26,
-                  ),
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),
               ]),
         ),
@@ -163,8 +194,7 @@ List<Event> getEvents() {
                   text:
                       'Asustus hakkas levima vahetusse rannikuvööndisse, mille asulate elanikud tegelesid ka hülgeküttimisega. U 5800 eKr jõudsid hülgekütid Saaremaale, u 5700 eKr Hiiumaale ja 5300 eKr Ruhnu saarele.',
                   style: TextStyle(
-                    fontSize: 26,
-                  ),
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),
               ]),
         ),
@@ -183,8 +213,7 @@ List<Event> getEvents() {
                   text:
                       'Keraamika kasutuselevõtmisega algas Eestis neoliitikum ehk noorem kiviaeg, mis kestis kuni u 1800 eKr. Keraamika esimese leiukoha järgi seostatakse neoliitikumi varaseimat järku Narva kultuuriga.',
                   style: TextStyle(
-                    fontSize: 26,
-                  ),
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),
               ]),
         ),
@@ -201,8 +230,7 @@ List<Event> getEvents() {
                 TextSpan(
                   text: '',
                   style: TextStyle(
-                    fontSize: 26,
-                  ),
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),
               ]),
         ),
@@ -219,8 +247,7 @@ List<Event> getEvents() {
                 TextSpan(
                   text: '',
                   style: TextStyle(
-                    fontSize: 26,
-                  ),
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),
               ]),
         ),

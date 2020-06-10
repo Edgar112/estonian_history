@@ -45,17 +45,6 @@ class _HistoryInfoState extends State<HistoryInfo> {
   @override
   Widget build(BuildContext context) {
     contextHistoryInfo = context;
-    // RenderParagraph renderParagraph = RenderParagraph(
-    //   TextSpan(
-    //     text: event.cover,
-    //     style:
-    //         TextStyle(fontSize: Theme.of(context).textTheme.headline6.fontSize),
-    //   ),
-    //   textDirection: TextDirection.ltr,
-    // );
-    // textlen = renderParagraph
-    //     .getMinIntrinsicWidth(Theme.of(context).textTheme.headline6.fontSize)
-    //     .ceilToDouble();
     return Scaffold(
       body: Stack(
         children: <Widget>[
@@ -122,7 +111,6 @@ class _HistoryInfoState extends State<HistoryInfo> {
                 iconTheme: IconThemeData(
                   color: kText2Color,
                 ),
-                // expandedHeight: 50,
                 elevation: 0,
                 floating: true,
                 snap: true,
@@ -144,16 +132,14 @@ class _HistoryInfoState extends State<HistoryInfo> {
                     return Column(
                       children: <Widget>[
                         Container(
-                          // width: double.infinity,
-                          child: Opacity(
-                            opacity: 0.5,
-                            child: Card(
-                              margin: EdgeInsets.all(15),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius:
-                                      new BorderRadius.circular(16.0)),
-                              elevation: 0,
-                              color: Colors.white,
+                          child: Card(
+                            margin: EdgeInsets.all(15),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(16.0)),
+                            elevation: 0,
+                            color: Colors.white60,
+                            child: Opacity(
+                              opacity: 1,
                               child: Container(
                                   padding: EdgeInsets.all(20),
                                   child: event.text),
@@ -170,30 +156,6 @@ class _HistoryInfoState extends State<HistoryInfo> {
           ),
         ],
       ),
-    );
-  }
-
-  final Completer<GoogleMapController> _mapController = Completer();
-  Future _mapFuture = Future.delayed(Duration(milliseconds: 250), () => true);
-
-  Widget _buildMap() {
-    return FutureBuilder(
-      future: _mapFuture,
-      builder: (context, snapshot) {
-        if (!snapshot.hasData) {
-          print("empty");
-        }
-
-        return GoogleMap(
-          initialCameraPosition: CameraPosition(
-            target: LatLng(37.77483, -122.41942),
-            zoom: 12,
-          ),
-          onMapCreated: (GoogleMapController controller) {
-            _mapController.complete(controller);
-          },
-        );
-      },
     );
   }
 }

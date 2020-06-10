@@ -1,6 +1,7 @@
 import 'dart:collection';
 
 import 'package:estonian_history/constants.dart';
+import 'package:estonian_history/widgets/backButton.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:async';
@@ -50,17 +51,7 @@ class _MyMapState extends State<MyMap> {
             },
             circles: _circles,
           ),
-          Container(
-            padding: EdgeInsets.all(4),
-            margin: EdgeInsets.only(top: 35),
-            child: IconButton(
-              icon: Icon(Icons.arrow_back),
-              color: kText2Color,
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
-          ),
+          backButton(context, kText2Color)
         ],
       ),
     );
