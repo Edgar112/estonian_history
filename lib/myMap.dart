@@ -7,15 +7,27 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:async';
 
 void main() {
-  runApp(MaterialApp(home: MyMap()));
+  runApp(MaterialApp(
+      home: MyMap(
+    coordinates: LatLng(58.419206, 24.676686),
+  )));
 }
 
 class MyMap extends StatefulWidget {
+  final LatLng coordinates;
+  final double radius;
+  final double zoom;
+  MyMap({this.coordinates, this.radius = 50, this.zoom = 18});
   @override
-  _MyMapState createState() => _MyMapState();
+  _MyMapState createState() => _MyMapState(coordinates, radius, zoom);
 }
 
 class _MyMapState extends State<MyMap> {
+  final LatLng coordinates;
+  final double radius;
+  final double zoom;
+  _MyMapState(this.coordinates, this.radius, this.zoom);
+
   final Completer<GoogleMapController> _mapController = Completer();
 
   Set<Circle> _circles = HashSet<Circle>();
@@ -23,8 +35,8 @@ class _MyMapState extends State<MyMap> {
     _circles.add(
       Circle(
           circleId: CircleId("0"),
-          center: LatLng(58.419206, 24.676686),
-          radius: 50,
+          center: coordinates,
+          radius: radius,
           strokeWidth: 2,
           fillColor: Colors.black12),
     );
@@ -43,8 +55,8 @@ class _MyMapState extends State<MyMap> {
         children: [
           GoogleMap(
             initialCameraPosition: CameraPosition(
-              target: LatLng(58.419206, 24.676686),
-              zoom: 18,
+              target: coordinates,
+              zoom: zoom,
             ),
             onMapCreated: (GoogleMapController controller) {
               _mapController.complete(controller);

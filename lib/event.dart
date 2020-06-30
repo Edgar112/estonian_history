@@ -7,6 +7,7 @@ import 'package:estonian_history/widgets/imagePopUp.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class Event {
   final String name;
@@ -82,7 +83,11 @@ List<Event> getEvents() {
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
                         Navigator.push(
-                            contextHistoryInfo, FadeRoute(page: MyMap()));
+                            contextHistoryInfo,
+                            FadeRoute(
+                                page: MyMap(
+                                    coordinates:
+                                        LatLng(58.419206, 24.676686))));
                       }),
                 TextSpan(
                   text: ' peatus mõnda aega rühm küttijaid ja kalastajaid.',
@@ -139,13 +144,31 @@ List<Event> getEvents() {
               style: GoogleFonts.gabriela(color: kText2Color),
               children: <TextSpan>[
                 TextSpan(
+                    text: 'Kunda Lammasmäele',
+                    style: TextStyle(
+                        fontSize: 25,
+                        color: kText2Color.withOpacity(0.6),
+                        decoration: TextDecoration.underline),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        Navigator.push(
+                            contextHistoryInfo,
+                            FadeRoute(
+                                page: MyMap(
+                              coordinates: LatLng(59.477513, 26.533142),
+                              radius: 3700,
+                              zoom: 12,
+                            )));
+                      }),
+                TextSpan(
                   text:
-                      'Kunda Lammasmäele, madalaveelises järves paiknevale saarekesele, rajati esimest korda hooajaline asula, mida kasutati ka edaspidi.',
+                      ', madalaveelises järves paiknevale saarekesele, rajati esimest korda hooajaline asula, mida kasutati ka edaspidi.',
                   style: TextStyle(
                       fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),
               ]),
         ),
+        more: true,
         iconBackground: Colors.transparent),
     Event(
         name: "",
