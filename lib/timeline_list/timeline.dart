@@ -132,7 +132,7 @@ class Timeline extends StatelessWidget {
                       Icons.info_outline,
                       color: kText1Color,
                     ),
-                    tooltip: 'someIcon',
+                    tooltip: 'Info',
                     onPressed: () {},
                   ),
                 ),

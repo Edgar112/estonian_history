@@ -3,6 +3,7 @@ import 'package:estonian_history/global.dart';
 import 'package:estonian_history/myMap.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
 import 'package:estonian_history/widgets/HeroPhotoViewWrapper.dart';
+import 'package:estonian_history/widgets/imagePopUp.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,6 +17,7 @@ class Event {
   final Icon icon;
   final String date;
   final String subDate;
+  final bool more;
   Event(
       {this.name,
       this.cover,
@@ -24,7 +26,8 @@ class Event {
       this.icon,
       this.iconBackground,
       this.date,
-      this.subDate});
+      this.subDate,
+      this.more = false});
 }
 
 List<Event> getEvents() {
@@ -88,6 +91,7 @@ List<Event> getEvents() {
                 ),
               ]),
         ),
+        more: true,
         iconBackground: Colors.red),
     Event(
         name: "Mesoliitikum",
@@ -117,30 +121,12 @@ List<Event> getEvents() {
                   ),
                 ),
                 WidgetSpan(
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        contextHistoryInfo,
-                        MaterialPageRoute(
-                          builder: (contextHistoryInfo) => HeroPhotoViewWrapper(
-                            tagName: 'someTag',
-                            imageProvider: AssetImage(
-                                "assets/illustrations/laanemeriJarv.png"),
-                          ),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      child: Hero(
-                        tag: "someTag",
-                        child: Image.asset(
-                            "assets/illustrations/laanemeriJarv.png"),
-                      ),
-                    ),
-                  ),
-                )
+                  child: ImagePupUp('assets/illustrations/laanemeriJarv.png',
+                      'Antsülusjärv', 'Antsülusjärv'),
+                ),
               ]),
         ),
+        more: true,
         iconBackground: Colors.red),
     Event(
         name: "",

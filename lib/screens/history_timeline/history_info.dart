@@ -1,5 +1,5 @@
 import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/event/event.dart';
+import 'package:estonian_history/event.dart';
 import 'package:estonian_history/global.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -100,20 +100,23 @@ class _HistoryInfoState extends State<HistoryInfo> {
           CustomScrollView(
             physics: BouncingScrollPhysics(),
             slivers: <Widget>[
+              SliverFixedExtentList(
+                itemExtent: 35,
+                delegate: SliverChildListDelegate([Container(color: Colors.transparent,)]),
+              ),
               SliverAppBar(
                 brightness: Brightness.light,
                 iconTheme: IconThemeData(
                   color: kText2Color,
                 ),
                 elevation: 0,
-                floating: true,
-                snap: true,
-                forceElevated: true,
-                title: Text(event.subDate + " " + event.date,
-                    style: Theme.of(context).textTheme.headline5),
+                title: Container(
+                  child: Text(event.subDate + " " + event.date,
+                      style: Theme.of(context).textTheme.headline5),
+                ),
                 backgroundColor: kPrimaryColor.withOpacity(0.0),
-                flexibleSpace: Padding(
-                  padding: EdgeInsets.only(top: 80),
+                flexibleSpace: Container(
+                  margin: EdgeInsets.only(top: 80),
                   child: Padding(
                     padding: EdgeInsets.all(14.0),
                     child: Container(),

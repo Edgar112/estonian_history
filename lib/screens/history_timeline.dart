@@ -1,9 +1,12 @@
+import 'dart:async';
+
+import 'package:estonian_history/constants.dart';
 import 'package:estonian_history/screens/history_timeline/history_info.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
 import 'package:flutter/material.dart';
 import 'package:estonian_history/timeline_list/timeline.dart';
 import 'package:estonian_history/timeline_list/timeline_model.dart';
-import 'package:estonian_history/event/event.dart';
+import 'package:estonian_history/event.dart';
 import 'package:flutter/services.dart';
 import 'package:estonian_history/global.dart';
 
@@ -22,6 +25,7 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
 
   final ScrollController timelineScrollController = ScrollController();
   List<Event> events;
+
   @override
   void initState() {
     timelineScrollController.addListener(() {
@@ -37,17 +41,19 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIOverlays([]);
+
     events = getEvents(); // for hot reload
     return Scaffold(
       body: NotificationListener<ScrollNotification>(
-        onNotification: (scrollNotification) {
-          if (scrollNotification.metrics.pixels < 402.3) {
-            SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
-          } else {
-            SystemChrome.setEnabledSystemUIOverlays([]);
-          }
-          return;
-        },
+        // onNotification: (scrollNotification) {
+        //   if (scrollNotification.metrics.pixels < 402.3) {
+        //     SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
+        //   } else {
+        //     SystemChrome.setEnabledSystemUIOverlays([]);
+        //   }
+        //   return;
+        // },
         child: timelineModelPage(),
       ),
     );
@@ -76,40 +82,58 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
             clipBehavior: Clip.antiAlias,
             color: Colors.white60,
             elevation: 0,
-            child: Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  SizedBox(
-                    height: 8.0,
+            child: Stack(
+              children: [
+                event.more
+                    ? Positioned(
+                        child: Opacity(
+                          child: Container(
+                              margin: EdgeInsets.only(left: 5, top: 5),
+                              child: Icon(
+                                Icons.add,
+                                color: kText2Color,
+                                size: 15,
+                              )),
+                          opacity: 0.2,
+                        ),
+                      )
+                    : Container(),
+                Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      SizedBox(
+                        height: 8.0,
+                      ),
+                      event.name != ''
+                          ? Text(
+                              event.name,
+                              style: textTheme.headline6,
+                              textAlign: TextAlign.left,
+                            )
+                          : Container(),
+                      event.name != ''
+                          ? SizedBox(
+                              height: 8.0,
+                            )
+                          : Container(),
+                      event.cover != ''
+                          ? Text(
+                              event.cover,
+                              style: textTheme.subtitle2,
+                              textAlign: TextAlign.center,
+                            )
+                          : Container(),
+                      event.cover != ''
+                          ? SizedBox(
+                              height: 8.0,
+                            )
+                          : Container(),
+                    ],
                   ),
-                  event.name != ''
-                      ? Text(
-                          event.name,
-                          style: textTheme.headline6,
-                          textAlign: TextAlign.left,
-                        )
-                      : Container(),
-                  event.name != ''
-                      ? SizedBox(
-                          height: 8.0,
-                        )
-                      : Container(),
-                  event.cover != ''
-                      ? Text(
-                          event.cover,
-                          style: textTheme.subtitle2,
-                          textAlign: TextAlign.center,
-                        )
-                      : Container(),
-                  event.cover != ''
-                      ? SizedBox(
-                          height: 8.0,
-                        )
-                      : Container(),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
