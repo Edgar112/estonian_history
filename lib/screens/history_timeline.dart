@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:estonian_history/constants.dart';
+import 'package:estonian_history/helper/eventsList.dart';
 import 'package:estonian_history/screens/history_timeline/history_info.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,7 @@ import 'package:estonian_history/timeline_list/timeline_model.dart';
 import 'package:estonian_history/event.dart';
 import 'package:flutter/services.dart';
 import 'package:estonian_history/global.dart';
+import 'package:flutter_svg/svg.dart';
 
 class HistoryTimeline extends StatefulWidget {
   HistoryTimeline({Key key, this.title}) : super(key: key);
@@ -24,8 +26,7 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
   int pageIx = 1;
 
   final ScrollController timelineScrollController = ScrollController();
-  List<Event> events;
-
+  List<EventsList> eventsList = List<EventsList>();
   @override
   void initState() {
     timelineScrollController.addListener(() {
@@ -43,30 +44,106 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
 
-    events = getEvents(); // for hot reload
+    eventsList.add(EventsList(
+        periodTitle: 'Esiajalugu',
+        events: getEventsEsiajalugu())); // for hot reload
+
+    BouncingScrollPhysics physics = BouncingScrollPhysics();
     return Scaffold(
       body: NotificationListener<ScrollNotification>(
-        // onNotification: (scrollNotification) {
-        //   if (scrollNotification.metrics.pixels < 402.3) {
-        //     SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
-        //   } else {
-        //     SystemChrome.setEnabledSystemUIOverlays([]);
-        //   }
-        //   return;
-        // },
-        child: timelineModelPage(),
-      ),
+          onNotification: (scrollNotification) {
+            // scrollPosition = scrollNotification.metrics.pixels;
+            // print(scrollPosition);
+            return;
+          },
+          child: Stack(
+            children: <Widget>[
+              SingleChildScrollView(
+                physics: physics,
+                controller: background1ScrollController,
+                child: Container(
+                  width: double.infinity,
+                  child: SvgPicture.asset(
+                    'assets/illustrations/cosmosBG1.svg',
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
+              ),
+              SingleChildScrollView(
+                physics: physics,
+                controller: background2ScrollController,
+                child: Container(
+                  width: double.infinity,
+                  child: SvgPicture.asset(
+                    'assets/illustrations/cosmosBG2.svg',
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
+              ),
+              SingleChildScrollView(
+                physics: physics,
+                controller: background3ScrollController,
+                child: Container(
+                  width: double.infinity,
+                  child: SvgPicture.asset(
+                    'assets/illustrations/cosmosBG3.svg',
+                    fit: BoxFit.fitWidth,
+                  ),
+                ),
+              ),
+              CustomScrollView(
+                physics: physics,
+                controller: timelineScrollController,
+                slivers: <Widget>[
+                  SliverAppBar(
+                    brightness: Brightness.light,
+                    actions: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.info_outline,
+                            color: kText1Color,
+                          ),
+                          tooltip: 'Info',
+                          onPressed: () {},
+                        ),
+                      ),
+                    ],
+                    backgroundColor: kPrimaryColor,
+                    floating: false,
+                    pinned: false,
+                    expandedHeight: 400,
+                    flexibleSpace: FlexibleSpaceBar(
+                      title: Text('Eesti Ajalugu',
+                          style: Theme.of(context).textTheme.headline5),
+                      background: SvgPicture.asset(
+                          'assets/illustrations/rocket_boy_dark.svg'),
+                      collapseMode: CollapseMode.pin,
+                    ),
+                  ),
+                  timelineModelPage(
+                      physics, eventsList[0].events, eventsList[0].periodTitle)
+                ],
+              ),
+            ],
+          )),
     );
   }
 
-  timelineModelPage() => Timeline.builder(
-      controller: timelineScrollController,
-      itemBuilder: centerTimelineBuilder,
-      itemCount: events.length,
-      physics: BouncingScrollPhysics(),
-      position: TimelinePosition.Left);
+  timelineModelPage(
+      BouncingScrollPhysics physics, List<Event> events, String periodTitle) {
+    return Timeline.builder(
+        controller: timelineScrollController,
+        itemBuilder: leftTimelineBuilder,
+        events: events,
+        itemCount: events.length,
+        physics: physics,
+        periodTitle: periodTitle);
+  }
 
-  TimelineModel centerTimelineBuilder(BuildContext context, int i) {
+  TimelineModel leftTimelineBuilder(
+      BuildContext context, int i, List<Event> events) {
     final event = events[i];
     final textTheme = Theme.of(context).textTheme;
     return TimelineModel(
@@ -137,8 +214,6 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
             ),
           ),
         ),
-        position:
-            i % 2 == 0 ? TimelineItemPosition.right : TimelineItemPosition.left,
         isFirst: i == 0,
         isLast: i == events.length,
         iconBackground: event.iconBackground,

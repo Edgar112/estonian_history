@@ -1,15 +1,16 @@
 library timeline;
 
 import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/global.dart';
+import 'package:estonian_history/event.dart';
 import 'package:flutter/material.dart';
 import 'package:estonian_history/timeline_list/src/timeline_item.dart';
 import 'package:estonian_history/timeline_list/src/timeline_painter.dart';
 import 'package:estonian_history/timeline_list/timeline_model.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_sticky_header/flutter_sticky_header.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 typedef IndexedTimelineModelBuilder = TimelineModel Function(
-    BuildContext context, int index);
+    BuildContext context, int indexm, List<Event> events);
 
 enum TimelinePosition { Left, Center, Right }
 
@@ -34,6 +35,8 @@ class Timeline extends StatelessWidget {
   final bool shrinkWrap;
   final bool primary;
   final bool reverse;
+  final String periodTitle;
+  final List<Event> events;
 
   /// Creates a scrollable timeline of widgets that are created befirehand.
   /// Note: [TimelineModel.icon]'s size is ignored when `position` is not
@@ -48,11 +51,14 @@ class Timeline extends StatelessWidget {
       this.physics,
       this.shrinkWrap = false,
       this.primary = false,
-      this.reverse = false})
+      this.reverse = false,
+      this.periodTitle,
+      this.events})
       : itemCount = children.length,
         properties = TimelineProperties(
             lineColor: lineColor, lineWidth: lineWidth, iconSize: iconSize),
-        itemBuilder = ((BuildContext context, int i) => children[i]);
+        itemBuilder =
+            ((BuildContext context, int i, List<Event> events) => children[i]);
 
   /// Creates a scrollable timeline of widgets that are created on demand.
   /// Note: `itemBuilder` position and [TimelineModel.icon]'s size is ignored
@@ -68,105 +74,36 @@ class Timeline extends StatelessWidget {
       this.physics,
       this.shrinkWrap = true,
       this.primary = false,
-      this.reverse = false})
+      this.reverse = false,
+      this.periodTitle,
+      this.events})
       : properties = TimelineProperties(
             lineColor: lineColor, lineWidth: lineWidth, iconSize: iconSize);
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        SingleChildScrollView(
-          reverse: reverse,
-          physics: physics,
-          primary: primary,
-          controller: background1ScrollController,
-          child: Container(
-            width: double.infinity,
-            child: SvgPicture.asset(
-              'assets/illustrations/cosmosBG1.svg',
-              fit: BoxFit.fitWidth,
-            ),
-          ),
+    return SliverStickyHeaderBuilder(
+      builder: (context, state) => Container(
+        height: 60.0,
+        color: (state.isPinned ? kPrimaryColor : Colors.transparent),
+        padding: EdgeInsets.symmetric(horizontal: 16.0),
+        alignment: Alignment.centerLeft,
+        child: Text(
+          periodTitle,
+          style: GoogleFonts.gabriela(fontSize: 15, color: kText2Color),
         ),
-        SingleChildScrollView(
-          reverse: reverse,
-          physics: physics,
-          primary: primary,
-          controller: background2ScrollController,
-          child: Container(
-            width: double.infinity,
-            child: SvgPicture.asset(
-              'assets/illustrations/cosmosBG2.svg',
-              fit: BoxFit.fitWidth,
-            ),
-          ),
+      ),
+      sliver: SliverList(
+        delegate: SliverChildBuilderDelegate(
+          (context, i) {
+            final TimelineModel model = itemBuilder(context, i, events);
+            model.isFirst = reverse ? i == (itemCount - 1) : i == 0;
+            model.isLast = reverse ? i == 0 : i == (itemCount - 1);
+            return TimelineItemLeft(properties: properties, model: model);
+          },
+          childCount: itemCount,
         ),
-        SingleChildScrollView(
-          reverse: reverse,
-          physics: physics,
-          primary: primary,
-          controller: background3ScrollController,
-          child: Container(
-            width: double.infinity,
-            child: SvgPicture.asset(
-              'assets/illustrations/cosmosBG3.svg',
-              fit: BoxFit.fitWidth,
-            ),
-          ),
-        ),
-        CustomScrollView(
-          reverse: reverse,
-          physics: physics,
-          primary: primary,
-          // shrinkWrap: shrinkWrap,
-          controller: controller,
-          slivers: <Widget>[
-            SliverAppBar(
-              brightness: Brightness.light,
-              actions: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(right: 10),
-                  child: IconButton(
-                    icon: Icon(
-                      Icons.info_outline,
-                      color: kText1Color,
-                    ),
-                    tooltip: 'Info',
-                    onPressed: () {},
-                  ),
-                ),
-              ],
-              backgroundColor: kPrimaryColor,
-              floating: false,
-              pinned: false,
-              expandedHeight: 400,
-              flexibleSpace: FlexibleSpaceBar(
-                title: Text('Eesti Ajalugu',
-                    style: Theme.of(context).textTheme.headline5),
-                background: SvgPicture.asset(
-                    'assets/illustrations/rocket_boy_dark.svg'),
-                collapseMode: CollapseMode.pin,
-              ),
-            ),
-            SliverList(
-              delegate: SliverChildBuilderDelegate(
-                (context, i) {
-                  final TimelineModel model = itemBuilder(context, i);
-                  model.isFirst = reverse ? i == (itemCount - 1) : i == 0;
-                  model.isLast = reverse ? i == 0 : i == (itemCount - 1);
-                  switch (position) {
-                    default:
-                      return TimelineItemLeft(
-                          properties: properties, model: model);
-                  }
-                },
-                childCount: itemCount, //why
-              ),
-            ),
-          ],
-        ),
-      ],
+      ),
     );
   }
 }

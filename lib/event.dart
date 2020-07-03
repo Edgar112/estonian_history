@@ -32,7 +32,7 @@ class Event {
       this.more = false});
 }
 
-List<Event> getEvents() {
+List<Event> getEventsEsiajalugu() {
   return [
     Event(
         name: "Eesti ala vabanes jääst",
@@ -45,18 +45,10 @@ List<Event> getEvents() {
               style: GoogleFonts.gabriela(color: kText2Color),
               children: <TextSpan>[
                 TextSpan(
-                    text: 'Eesti ala vabanes jääst.\n',
-                    style: TextStyle(
-                        fontSize: 25, color: kText2Color.withOpacity(0.6)),
-                    recognizer: TapGestureRecognizer()
-                      ..onTap = () {
-                        // open desired screen
-                      }),
-                TextSpan(
                     text:
-                        'Jääaegsed liustikud taandusid Kagu-Eestist järk-järgult loode poole ja kujundasid maastikku.',
+                        'Eesti ala vabanes jääst. Jääaegsed liustikud taandusid Kagu-Eestist järk-järgult loode poole ja kujundasid maastikku.',
                     style: TextStyle(
-                        fontSize: 20, color: kText2Color.withOpacity(0.6))),
+                        fontSize: 25, color: kText2Color.withOpacity(0.6))),
               ]),
         ),
         iconBackground: Colors.transparent),
@@ -791,6 +783,182 @@ List<Event> getEvents() {
               ]),
         ),
         more: true,
+        iconBackground: Colors.transparent),
+    Event(
+        name: "",
+        date: "U 500 eKr",
+        subDate: "",
+        cover:
+            "Algas vanem rauaaeg, mille varasemat järku nimetatakse eelrooma rauaajaks (kuni u 50 pKr).",
+        text: RichText(
+          text: TextSpan(
+              style: GoogleFonts.gabriela(color: kText2Color),
+              children: <TextSpan>[
+                TextSpan(
+                  text:
+                      'Algas vanem rauaaeg, mille varasemat järku nimetatakse eelrooma rauaajaks (kuni u 50 pKr).',
+                  style: TextStyle(
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
+                ),
+              ]),
+        ),
+        iconBackground: Colors.transparent),
+    Event(
+        name: "",
+        date: "500–250 eKr",
+        subDate: "",
+        cover:
+            "Kivikirstkalmete kõrval hakati ehitama uut tüüpi kivikalmeid - nn varaseid tarandkalmeid. Hakati rajama nn kelti põlde, mis võrreldes varasemate põldudega olid korrapärased.",
+        text: RichText(
+          text: TextSpan(
+              style: GoogleFonts.gabriela(color: kText2Color),
+              children: <TextSpan>[
+                TextSpan(
+                  text:
+                      'Kivikirstkalmete kõrval hakati ehitama uut tüüpi kivikalmeid - nn varaseid tarandkalmeid. Hakati rajama nn kelti põlde, mis võrreldes varasemate põldudega olid korrapärased.',
+                  style: TextStyle(
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
+                ),
+              ]),
+        ),
+        iconBackground: Colors.transparent),
+    Event(
+        name: "",
+        date: "250 eKr – 50 pKr",
+        subDate: "",
+        cover:
+            "Ajutiselt kasutati mõnda linnust. Õpiti ise kohalikust soomaagist rauda sulatama.",
+        text: RichText(
+          text: TextSpan(
+              style: GoogleFonts.gabriela(color: kText2Color),
+              children: <TextSpan>[
+                TextSpan(
+                  text:
+                      'Ajutiselt kasutati mõnda linnust. Õpiti ise kohalikust soomaagist rauda sulatama.',
+                  style: TextStyle(
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
+                ),
+              ]),
+        ),
+        iconBackground: Colors.transparent),
+    Event(
+        name: "",
+        date: "",
+        subDate: "",
+        cover: "",
+        text: RichText(
+          text: TextSpan(
+              style: GoogleFonts.gabriela(color: kText2Color),
+              children: <TextSpan>[
+                TextSpan(
+                  text: '',
+                  style: TextStyle(
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
+                ),
+              ]),
+        ),
+        iconBackground: Colors.transparent),
+    Event(
+        name: "",
+        date: "",
+        subDate: "",
+        cover: "",
+        text: RichText(
+          text: TextSpan(
+              style: GoogleFonts.gabriela(color: kText2Color),
+              children: <TextSpan>[
+                TextSpan(
+                  text: '',
+                  style: TextStyle(
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
+                ),
+              ]),
+        ),
+        iconBackground: Colors.transparent),
+    Event(
+        name: "",
+        date: "",
+        subDate: "",
+        cover: "",
+        text: RichText(
+          text: TextSpan(
+              style: GoogleFonts.gabriela(color: kText2Color),
+              children: <TextSpan>[
+                TextSpan(
+                  text: '',
+                  style: TextStyle(
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
+                ),
+              ]),
+        ),
+        iconBackground: Colors.transparent),
+    Event(
+        name: "",
+        date: "",
+        subDate: "",
+        cover: "",
+        text: RichText(
+          text: TextSpan(
+              style: GoogleFonts.gabriela(color: kText2Color),
+              children: <TextSpan>[
+                TextSpan(
+                  text: '',
+                  style: TextStyle(
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
+                ),
+              ]),
+        ),
+        iconBackground: Colors.transparent),
+    Event(
+        name: "",
+        date: "",
+        subDate: "",
+        cover: "",
+        text: RichText(
+          text: TextSpan(
+              style: GoogleFonts.gabriela(color: kText2Color),
+              children: <TextSpan>[
+                TextSpan(
+                  text: '',
+                  style: TextStyle(
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
+                ),
+              ]),
+        ),
+        iconBackground: Colors.transparent),
+    Event(
+        name: "",
+        date: "",
+        subDate: "",
+        cover: "",
+        text: RichText(
+          text: TextSpan(
+              style: GoogleFonts.gabriela(color: kText2Color),
+              children: <TextSpan>[
+                TextSpan(
+                  text: '',
+                  style: TextStyle(
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
+                ),
+              ]),
+        ),
+        iconBackground: Colors.transparent),
+    Event(
+        name: "",
+        date: "",
+        subDate: "",
+        cover: "",
+        text: RichText(
+          text: TextSpan(
+              style: GoogleFonts.gabriela(color: kText2Color),
+              children: <TextSpan>[
+                TextSpan(
+                  text: '',
+                  style: TextStyle(
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
+                ),
+              ]),
+        ),
         iconBackground: Colors.transparent),
     Event(
         name: "",
