@@ -1,5 +1,5 @@
 import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/event.dart';
+import 'package:estonian_history/helper/event.dart';
 import 'package:estonian_history/global.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';

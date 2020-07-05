@@ -1,4 +1,5 @@
 import 'package:estonian_history/constants.dart';
+import 'package:estonian_history/helper/event.dart';
 import 'package:estonian_history/global.dart';
 import 'package:estonian_history/myMap.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
@@ -10,29 +11,7 @@ import 'package:flutter_gradient_colors/flutter_gradient_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class Event {
-  final String name;
-  final String cover;
-  final Widget text;
-  final String image;
-  final Color iconBackground;
-  final Icon icon;
-  final String date;
-  final String subDate;
-  final bool more;
-  Event(
-      {this.name,
-      this.cover,
-      this.text,
-      this.image,
-      this.icon,
-      this.iconBackground,
-      this.date,
-      this.subDate,
-      this.more = false});
-}
-
-List<Event> getEventsEsiajalugu() {
+List<Event> getPeriod1() {
   return [
     Event(
         name: "Eesti ala vabanes jääst",

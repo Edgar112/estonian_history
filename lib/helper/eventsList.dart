@@ -1,4 +1,4 @@
-import 'package:estonian_history/event.dart';
+import 'package:estonian_history/helper/event.dart';
 
 class EventsList {
   String periodTitle;

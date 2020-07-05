@@ -1,7 +1,7 @@
 library timeline;
 
 import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/event.dart';
+import 'package:estonian_history/helper/event.dart';
 import 'package:flutter/material.dart';
 import 'package:estonian_history/timeline_list/src/timeline_item.dart';
 import 'package:estonian_history/timeline_list/src/timeline_painter.dart';

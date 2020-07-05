@@ -1,13 +1,14 @@
 import 'dart:async';
 
 import 'package:estonian_history/constants.dart';
+import 'package:estonian_history/fillPeriod/period1.dart';
 import 'package:estonian_history/helper/eventsList.dart';
 import 'package:estonian_history/screens/history_timeline/history_info.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
 import 'package:flutter/material.dart';
 import 'package:estonian_history/timeline_list/timeline.dart';
 import 'package:estonian_history/timeline_list/timeline_model.dart';
-import 'package:estonian_history/event.dart';
+import 'package:estonian_history/helper/event.dart';
 import 'package:flutter/services.dart';
 import 'package:estonian_history/global.dart';
 import 'package:flutter_svg/svg.dart';
@@ -26,7 +27,8 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
   int pageIx = 1;
 
   final ScrollController timelineScrollController = ScrollController();
-  List<EventsList> eventsList = List<EventsList>();
+
+  List<EventsList> periodList = List<EventsList>();
   @override
   void initState() {
     timelineScrollController.addListener(() {
@@ -44,9 +46,8 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
 
-    eventsList.add(EventsList(
-        periodTitle: 'Esiajalugu',
-        events: getEventsEsiajalugu())); // for hot reload
+    periodList.add(EventsList(
+        periodTitle: 'Esiajalugu', events: getPeriod1())); // for hot reload
 
     BouncingScrollPhysics physics = BouncingScrollPhysics();
     return Scaffold(
@@ -123,7 +124,7 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
                     ),
                   ),
                   timelineModelPage(
-                      physics, eventsList[0].events, eventsList[0].periodTitle)
+                      physics, periodList[0].events, periodList[0].periodTitle)
                 ],
               ),
             ],
