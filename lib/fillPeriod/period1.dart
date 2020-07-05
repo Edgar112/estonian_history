@@ -823,14 +823,14 @@ List<Event> getPeriod1() {
     Event(
         name: "",
         date: "",
-        subDate: "",
-        cover: "",
+        subDate: "200–450",
+        cover: "Eesti siseosa asustus tihenes järk-järgult, klassikalised tarandkalmed levisid üsna laialdaselt ka Kesk- ja Lõuna-Eesti tüsedama muldkattega aladel, mis on raskemini haritavad.",
         text: RichText(
           text: TextSpan(
               style: GoogleFonts.gabriela(color: kText2Color),
               children: <TextSpan>[
                 TextSpan(
-                  text: '',
+                  text: 'Eesti siseosa asustus tihenes järk-järgult, klassikalised tarandkalmed levisid üsna laialdaselt ka Kesk- ja Lõuna-Eesti tüsedama muldkattega aladel, mis on raskemini haritavad.',
                   style: TextStyle(
                       fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),
@@ -840,14 +840,14 @@ List<Event> getPeriod1() {
     Event(
         name: "",
         date: "",
-        subDate: "",
-        cover: "",
+        subDate: "450–600",
+        cover: "Keskmise rauaaja vanem järk ehk nn rahvaste rännuaeg oli põhjalike muutuste ajajärk.",
         text: RichText(
           text: TextSpan(
               style: GoogleFonts.gabriela(color: kText2Color),
               children: <TextSpan>[
                 TextSpan(
-                  text: '',
+                  text: 'Keskmise rauaaja vanem järk ehk nn rahvaste rännuaeg oli põhjalike muutuste ajajärk.',
                   style: TextStyle(
                       fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),

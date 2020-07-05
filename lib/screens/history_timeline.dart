@@ -28,7 +28,6 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
 
   final ScrollController timelineScrollController = ScrollController();
 
-  List<Period> periodList = List<Period>();
   @override
   void initState() {
     timelineScrollController.addListener(() {
@@ -46,6 +45,7 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
 
+    List<Period> periodList = List<Period>();
     periodList.add(Period(
         periodTitle: 'Esiajalugu', events: getPeriod1())); // for hot reload
 
