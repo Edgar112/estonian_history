@@ -1,13 +1,12 @@
 import 'package:estonian_history/constants.dart';
 import 'package:estonian_history/helper/event.dart';
 import 'package:estonian_history/global.dart';
-import 'package:estonian_history/myMap.dart';
+import 'package:estonian_history/helper/picture.dart';
+import 'package:estonian_history/widgets/imageSwiper.dart';
+import 'package:estonian_history/widgets/myMap.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
-import 'package:estonian_history/widgets/HeroPhotoViewWrapper.dart';
-import 'package:estonian_history/widgets/imagePopUp.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gradient_colors/flutter_gradient_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -99,9 +98,10 @@ List<Event> getPeriod1() {
                   ),
                 ),
                 WidgetSpan(
-                  child: ImagePupUp('assets/illustrations/laanemeriJarv.png',
-                      'Antsülusjärv', 'Antsülusjärv'),
-                ),
+                    child: ImageSwiper([
+                  Picture(
+                      'Antsülusjärv', 'assets/illustrations/laanemeriJarv.png')
+                ]))
               ]),
         ),
         more: true,
@@ -363,7 +363,7 @@ List<Event> getPeriod1() {
         more: true,
         iconBackground: Colors.transparent),
     Event(
-        name: "",
+        name: "Noorem kiviaeg",
         date: "U 5000 eKr",
         subDate: "",
         cover:
@@ -386,7 +386,7 @@ List<Event> getPeriod1() {
         date: "U 4000 eKr",
         subDate: "",
         cover:
-            "	Kasutusele võeti uus savinõude tüüp, mida nimetatakse kammijäljendeid meenutava ornamendi järgi tüüpiliseks kammkeraamikaks. Asulad, näiteks Valma, Akali, Kullamäe ja Narva, rajati endiselt veekogu lähedusse.",
+            "Kasutusele võeti uus savinõude tüüp, mida nimetatakse kammijäljendeid meenutava ornamendi järgi tüüpiliseks kammkeraamikaks. Asulad, näiteks Valma, Akali, Kullamäe ja Narva, rajati endiselt veekogu lähedusse.",
         text: RichText(
           text: TextSpan(
               style: GoogleFonts.gabriela(color: kText2Color),
@@ -549,7 +549,7 @@ List<Event> getPeriod1() {
         ),
         iconBackground: Colors.transparent),
     Event(
-        name: "",
+        name: "Pronksiaeg",
         date: "U 1800 eKr",
         subDate: "",
         cover:
@@ -754,11 +754,12 @@ List<Event> getPeriod1() {
                   style: TextStyle(fontSize: 25),
                 ),
                 WidgetSpan(
-                  child: ImagePupUp(
-                      'assets/illustrations/kivikirstkalmistu.jpg',
-                      'Kivikirstkalmistu',
-                      'Kivikirstkalmistu'),
-                ),
+                    child: ImageSwiper([
+                  Picture('Kivikirstkalmistu',
+                      'assets/illustrations/kivikirstkalmistu.jpg'),
+                  Picture('Kaali kindlustatud asula rauasulatuskoht',
+                      'assets/illustrations/Kaali_linnus.jpg')
+                ]))
               ]),
         ),
         more: true,
@@ -821,16 +822,44 @@ List<Event> getPeriod1() {
         ),
         iconBackground: Colors.transparent),
     Event(
+        name: "Rooma rauaaeg",
+        date: "50–450 pKr",
+        subDate: "",
+        cover:
+            "Vanema rauaaja noorem järk ehk nn rooma rauaaeg, mille alguseks peetakse klassikaliste tarandkalmete rajamise algust ja sõlgede ilmumist kalmetesse.",
+        text: RichText(
+          text: TextSpan(
+              style: GoogleFonts.gabriela(color: kText2Color),
+              children: <InlineSpan>[
+                TextSpan(
+                  text:
+                      'Vanema rauaaja noorem järk ehk nn rooma rauaaeg, mille alguseks peetakse klassikaliste tarandkalmete rajamise algust ja sõlgede ilmumist kalmetesse.',
+                  style: TextStyle(
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
+                ),
+                WidgetSpan(
+                    child: ImageSwiper([
+                  Picture(
+                      'Ptolemaiose (umbes 83–161) maailmakaart "Geographia" 15. sajandi käsikirjalisest eksemplarist',
+                      'assets/illustrations/PtolemyWorldMap.jpg')
+                ]))
+              ]),
+        ),
+        more: true,
+        iconBackground: Colors.transparent),
+    Event(
         name: "",
         date: "",
         subDate: "200–450",
-        cover: "Eesti siseosa asustus tihenes järk-järgult, klassikalised tarandkalmed levisid üsna laialdaselt ka Kesk- ja Lõuna-Eesti tüsedama muldkattega aladel, mis on raskemini haritavad.",
+        cover:
+            "Eesti siseosa asustus tihenes järk-järgult, klassikalised tarandkalmed levisid üsna laialdaselt ka Kesk- ja Lõuna-Eesti tüsedama muldkattega aladel, mis on raskemini haritavad.",
         text: RichText(
           text: TextSpan(
               style: GoogleFonts.gabriela(color: kText2Color),
               children: <TextSpan>[
                 TextSpan(
-                  text: 'Eesti siseosa asustus tihenes järk-järgult, klassikalised tarandkalmed levisid üsna laialdaselt ka Kesk- ja Lõuna-Eesti tüsedama muldkattega aladel, mis on raskemini haritavad.',
+                  text:
+                      'Eesti siseosa asustus tihenes järk-järgult, klassikalised tarandkalmed levisid üsna laialdaselt ka Kesk- ja Lõuna-Eesti tüsedama muldkattega aladel, mis on raskemini haritavad.',
                   style: TextStyle(
                       fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),
@@ -838,16 +867,18 @@ List<Event> getPeriod1() {
         ),
         iconBackground: Colors.transparent),
     Event(
-        name: "",
+        name: "Rahvaste rännuaeg",
         date: "",
         subDate: "450–600",
-        cover: "Keskmise rauaaja vanem järk ehk nn rahvaste rännuaeg oli põhjalike muutuste ajajärk.",
+        cover:
+            "Keskmise rauaaja vanem järk ehk nn rahvaste rännuaeg oli põhjalike muutuste ajajärk.",
         text: RichText(
           text: TextSpan(
               style: GoogleFonts.gabriela(color: kText2Color),
               children: <TextSpan>[
                 TextSpan(
-                  text: 'Keskmise rauaaja vanem järk ehk nn rahvaste rännuaeg oli põhjalike muutuste ajajärk.',
+                  text:
+                      'Keskmise rauaaja vanem järk ehk nn rahvaste rännuaeg oli põhjalike muutuste ajajärk.',
                   style: TextStyle(
                       fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),
@@ -855,16 +886,18 @@ List<Event> getPeriod1() {
         ),
         iconBackground: Colors.transparent),
     Event(
-        name: "",
+        name: "Sagenes varanduse peitmine",
         date: "",
-        subDate: "",
-        cover: "",
+        subDate: "U 500–600",
+        cover:
+            "Sagenes varanduse peitmine maasse. Hõbedast sõlgi, kaela- ja käevõrusid ning isegi üksikuid kuldesemeid tuleb enamasti välja põllumaadelt või asulakohtadest, vahel isegi kalmetest. Pronksehteid, relvi ja tööriistu ohverdati sohu või veekogudesse.",
         text: RichText(
           text: TextSpan(
               style: GoogleFonts.gabriela(color: kText2Color),
               children: <TextSpan>[
                 TextSpan(
-                  text: '',
+                  text:
+                      'Sagenes varanduse peitmine maasse. Hõbedast sõlgi, kaela- ja käevõrusid ning isegi üksikuid kuldesemeid tuleb enamasti välja põllumaadelt või asulakohtadest, vahel isegi kalmetest. Pronksehteid, relvi ja tööriistu ohverdati sohu või veekogudesse.',
                   style: TextStyle(
                       fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),
@@ -872,16 +905,18 @@ List<Event> getPeriod1() {
         ),
         iconBackground: Colors.transparent),
     Event(
-        name: "",
+        name: "Eelviikingiaeg",
         date: "",
-        subDate: "",
-        cover: "",
+        subDate: "600–800",
+        cover:
+            "Keskmise rauaaja noorem järk ehk nn eelviikingiaeg. Eriti maa ida- ja lõunaosas hakati püstitama rohkelt linnuseid. Algas Eesti traditsioonilise küla ja külaühiskonna kujunemine. Mitmedki selleaegsed külad on jäänud pidevalt asustatuks.",
         text: RichText(
           text: TextSpan(
               style: GoogleFonts.gabriela(color: kText2Color),
               children: <TextSpan>[
                 TextSpan(
-                  text: '',
+                  text:
+                      'Keskmise rauaaja noorem järk ehk nn eelviikingiaeg. Eriti maa ida- ja lõunaosas hakati püstitama rohkelt linnuseid. Algas Eesti traditsioonilise küla ja külaühiskonna kujunemine. Mitmedki selleaegsed külad on jäänud pidevalt asustatuks.',
                   style: TextStyle(
                       fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),
@@ -889,21 +924,29 @@ List<Event> getPeriod1() {
         ),
         iconBackground: Colors.transparent),
     Event(
-        name: "",
+        name: "Viikingiaeg Põhja-Euroopas",
         date: "",
-        subDate: "",
-        cover: "",
+        subDate: "800–1050",
+        cover:
+            "Eestlaste elu mõjutasid oluliselt viikingitest sõdalaste ja kaupmeeste tegevus ning Läänemerelt mööda Venemaa suuri jõgesid Bütsantsi ja Idamaadesse kulgeva veetee muutumine rahvusvaheliselt tähtsaks ühendussooneks.",
         text: RichText(
           text: TextSpan(
               style: GoogleFonts.gabriela(color: kText2Color),
-              children: <TextSpan>[
+              children: <InlineSpan>[
                 TextSpan(
-                  text: '',
+                  text:
+                      'Viikingiaeg Põhja-Euroopas. Eestlaste elu mõjutasid oluliselt viikingitest sõdalaste ja kaupmeeste tegevus ning Läänemerelt mööda Venemaa suuri jõgesid Bütsantsi ja Idamaadesse kulgeva veetee muutumine rahvusvaheliselt tähtsaks ühendussooneks.',
                   style: TextStyle(
                       fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),
+                WidgetSpan(
+                    child: ImageSwiper([
+                  Picture('Euroopa rändeteed',
+                      'assets/illustrations/Euroopa_randeteed.jpg')
+                ]))
               ]),
         ),
+        more: true,
         iconBackground: Colors.transparent),
     Event(
         name: "",

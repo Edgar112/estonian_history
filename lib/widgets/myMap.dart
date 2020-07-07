@@ -1,18 +1,9 @@
 import 'dart:collection';
 
 import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/widgets/backButton.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:async';
-
-void main() {
-  runApp(MaterialApp(
-      home: MyMap(
-    coordinates: LatLng(58.419206, 24.676686),
-  )));
-}
 
 class MyMap extends StatefulWidget {
   final LatLng coordinates;

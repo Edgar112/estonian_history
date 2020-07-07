@@ -1,3 +1,4 @@
+import 'package:estonian_history/constants.dart';
 import 'package:estonian_history/widgets/backButton.dart';
 import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
@@ -34,7 +35,7 @@ class HeroPhotoViewWrapper extends StatelessWidget {
               maxScale: PhotoViewComputedScale.covered * 2,
               heroAttributes: PhotoViewHeroAttributes(tag: tagName),
             ),
-            backButton(context, Colors.white)
+            backButton(context, kPrimaryColor, kText2Color)
           ],
         ),
       ),

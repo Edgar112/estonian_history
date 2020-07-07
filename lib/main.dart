@@ -1,5 +1,5 @@
 import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/my_behavior.dart';
+import 'package:estonian_history/widgets/my_behavior.dart';
 import 'package:estonian_history/screens/history_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
