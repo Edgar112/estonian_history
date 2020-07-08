@@ -94,7 +94,7 @@ List<Event> getPeriod1() {
                   text:
                       "6.–5. aastatuhandel eKr muutus ilmastik niiskemaks, jäädes seejuures soojaks. Talved olid pehmed ja taimekasvuperiood pikenes. Algas taimedele väga soodne kasvuperiood. Kõikjal vähegi sobivatel aladel kasvasid lopsakad metsad. Üha enam levisid laialehelised puuliigid, eriti jalakas, pärn ja tamm. On arvatud, et lehtpuud ületasid oma hulgalt okaspuid kolmekordselt. Metsades elutses rikkalik loomastik. Samal ajal tekkis Läänemere nõos olnud veekogul jälle ühendus ookeaniga. Vesi alanes ja muutus soolasemaks. Seda Läänemere staadiumi nimetatakse Litoriinamereks.\n\n",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 25,
                   ),
                 ),
                 WidgetSpan(
@@ -849,8 +849,8 @@ List<Event> getPeriod1() {
         iconBackground: Colors.transparent),
     Event(
         name: "",
-        date: "",
-        subDate: "200–450",
+        date: "200–450",
+        subDate: "",
         cover:
             "Eesti siseosa asustus tihenes järk-järgult, klassikalised tarandkalmed levisid üsna laialdaselt ka Kesk- ja Lõuna-Eesti tüsedama muldkattega aladel, mis on raskemini haritavad.",
         text: RichText(
@@ -868,8 +868,8 @@ List<Event> getPeriod1() {
         iconBackground: Colors.transparent),
     Event(
         name: "Rahvaste rännuaeg",
-        date: "",
-        subDate: "450–600",
+        date: "450–600",
+        subDate: "",
         cover:
             "Keskmise rauaaja vanem järk ehk nn rahvaste rännuaeg oli põhjalike muutuste ajajärk.",
         text: RichText(
@@ -887,8 +887,8 @@ List<Event> getPeriod1() {
         iconBackground: Colors.transparent),
     Event(
         name: "Sagenes varanduse peitmine",
-        date: "",
-        subDate: "U 500–600",
+        date: "U 500–600",
+        subDate: "",
         cover:
             "Sagenes varanduse peitmine maasse. Hõbedast sõlgi, kaela- ja käevõrusid ning isegi üksikuid kuldesemeid tuleb enamasti välja põllumaadelt või asulakohtadest, vahel isegi kalmetest. Pronksehteid, relvi ja tööriistu ohverdati sohu või veekogudesse.",
         text: RichText(
@@ -906,8 +906,8 @@ List<Event> getPeriod1() {
         iconBackground: Colors.transparent),
     Event(
         name: "Eelviikingiaeg",
-        date: "",
-        subDate: "600–800",
+        date: "600–800",
+        subDate: "",
         cover:
             "Keskmise rauaaja noorem järk ehk nn eelviikingiaeg. Eriti maa ida- ja lõunaosas hakati püstitama rohkelt linnuseid. Algas Eesti traditsioonilise küla ja külaühiskonna kujunemine. Mitmedki selleaegsed külad on jäänud pidevalt asustatuks.",
         text: RichText(
@@ -925,8 +925,8 @@ List<Event> getPeriod1() {
         iconBackground: Colors.transparent),
     Event(
         name: "Viikingiaeg Põhja-Euroopas",
-        date: "",
-        subDate: "800–1050",
+        date: "800–1050",
+        subDate: "",
         cover:
             "Eestlaste elu mõjutasid oluliselt viikingitest sõdalaste ja kaupmeeste tegevus ning Läänemerelt mööda Venemaa suuri jõgesid Bütsantsi ja Idamaadesse kulgeva veetee muutumine rahvusvaheliselt tähtsaks ühendussooneks.",
         text: RichText(
@@ -942,7 +942,62 @@ List<Event> getPeriod1() {
                 WidgetSpan(
                     child: ImageSwiper([
                   Picture('Euroopa rändeteed',
-                      'assets/illustrations/Euroopa_randeteed.jpg')
+                      'assets/illustrations/Euroopa_randeteed.jpg'),
+                  Picture('Põhja-Euroopa 814. aastal',
+                      'assets/illustrations/Northern_Europe_in_814.jpg'),
+                ]))
+              ]),
+        ),
+        more: true,
+        iconBackground: Colors.transparent),
+    Event(
+        name: "Tšuudid",
+        date: "882",
+        subDate: "",
+        cover:
+            "Rjuriku kaaslane Oleg vallutas Kiievi, millega ühendati Venemaa lõuna- ja põhjapoolsed hõimud ning loodi Vana-Vene ehk Kiievi-Vene riik. Olegi sõjaväes olid ka tšuudid, keda osa ajaloolasi peab otseselt eestlasteks, teised aga üheks omaette läänemeresoome rahvaks, kes elas sel ajal Pihkva- ja Novgorodimaal.",
+        text: RichText(
+          text: TextSpan(
+              style: GoogleFonts.gabriela(color: kText2Color),
+              children: <TextSpan>[
+                TextSpan(
+                  text:
+                      'Rjuriku kaaslane Oleg vallutas Kiievi, millega ühendati Venemaa lõuna- ja põhjapoolsed hõimud ning loodi Vana-Vene ehk Kiievi-Vene riik. Olegi sõjaväes olid ka tšuudid, keda osa ajaloolasi peab otseselt eestlasteks, teised aga üheks omaette läänemeresoome rahvaks, kes elas sel ajal Pihkva- ja Novgorodimaal.\n\n',
+                  style: TextStyle(
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
+                ),
+                TextSpan(
+                  text:
+                      'Tšuudidel oli esialgu Vana-Vene riigis küllaltki oluline osa. Nad võtsid osa 907. ja arvatavasti ka 944. aasta sõjakäikudest Bütsantsi ning 980. aasta retkest Polotski alla ja asusid silmapaistvate sõjameestena 991. aastal Vene lõunapiirile rändrahvaste vastu rajatud kindlustesse. 944 Vene-Bütsantsi vahel sõlmitud lepingutele allakirjutanute seas on samuti mitu läänemeresoomlastele iseloomulikku nime. Alates 11. sajandist nimetati Vene kroonikates tšuudideks kindlasti juba eestlasi.',
+                  style: TextStyle(
+                    fontSize: 25,
+                  ),
+                ),
+              ]),
+        ),
+        more: true,
+        iconBackground: Colors.transparent),
+    Event(
+        name: "",
+        date: "968",
+        subDate: "",
+        cover:
+            "Olav Trygvassoni saaga põhjal vangistasid eestlased merel hilisema kuulsa Norra viikingitejuhi ja kuninga, tol ajal veel 3-aastase poisikese Olav Trygvassoni ja tema ema Astridi. Kuus aastat viibis Olav Eestis kolme peremehe valduses, kes teda üksteisele müüsid. Lõpuks ostis Novgorodist siia turule tulnud Olavi lihane onu Sigurd ta vabaks. Ema Astridi ostis hiljem välja rikas norralane Loden.",
+        text: RichText(
+          text: TextSpan(
+              style: GoogleFonts.gabriela(color: kText2Color),
+              children: <InlineSpan>[
+                TextSpan(
+                  text:
+                      'Olav Trygvassoni saaga põhjal vangistasid eestlased merel hilisema kuulsa Norra viikingitejuhi ja kuninga, tol ajal veel 3-aastase poisikese Olav Trygvassoni ja tema ema Astridi. Kuus aastat viibis Olav Eestis kolme peremehe valduses, kes teda üksteisele müüsid. Lõpuks ostis Novgorodist siia turule tulnud Olavi lihane onu Sigurd ta vabaks. Ema Astridi ostis hiljem välja rikas norralane Loden.',
+                  style: TextStyle(
+                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
+                ),
+                WidgetSpan(
+                    child: ImageSwiper([
+                  Picture(
+                      'Olaf Trygvasson kuulutatakse Norra kuningaks. Autor Peter Nicolai Arbo',
+                      'assets/illustrations/olaf_tryggvasson.jpg')
                 ]))
               ]),
         ),
@@ -950,71 +1005,28 @@ List<Event> getPeriod1() {
         iconBackground: Colors.transparent),
     Event(
         name: "",
-        date: "",
+        date: "1000–1150",
         subDate: "",
-        cover: "",
+        cover:
+            "Eestlaste eduka kauplemise tulemusena jõudis siia rohkesti hõbedat, araabia hõbemünte hakkasid asendama nüüd järk-järgult mitmesugused Lääne-Euroopa mündid. Rahutute olude tõttu hoiti neid maasse peidetuna. Tänapäevaks on selle ajajärgu aaretest leitud juba üle 11 000 hõberaha.",
         text: RichText(
           text: TextSpan(
               style: GoogleFonts.gabriela(color: kText2Color),
-              children: <TextSpan>[
+              children: <InlineSpan>[
                 TextSpan(
-                  text: '',
+                  text:
+                      'Eestlaste eduka kauplemise tulemusena jõudis siia rohkesti hõbedat, araabia hõbemünte hakkasid asendama nüüd järk-järgult mitmesugused Lääne-Euroopa mündid. Rahutute olude tõttu hoiti neid maasse peidetuna. Tänapäevaks on selle ajajärgu aaretest leitud juba üle 11 000 hõberaha.',
                   style: TextStyle(
                       fontSize: 25, color: kText2Color.withOpacity(0.6)),
                 ),
+                WidgetSpan(
+                    child: ImageSwiper([
+                  Picture('Euroopa poliitiline kaart, ca 1000',
+                      'assets/illustrations/Europe_1000.jpg')
+                ]))
               ]),
         ),
-        iconBackground: Colors.transparent),
-    Event(
-        name: "",
-        date: "",
-        subDate: "",
-        cover: "",
-        text: RichText(
-          text: TextSpan(
-              style: GoogleFonts.gabriela(color: kText2Color),
-              children: <TextSpan>[
-                TextSpan(
-                  text: '',
-                  style: TextStyle(
-                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
-                ),
-              ]),
-        ),
-        iconBackground: Colors.transparent),
-    Event(
-        name: "",
-        date: "",
-        subDate: "",
-        cover: "",
-        text: RichText(
-          text: TextSpan(
-              style: GoogleFonts.gabriela(color: kText2Color),
-              children: <TextSpan>[
-                TextSpan(
-                  text: '',
-                  style: TextStyle(
-                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
-                ),
-              ]),
-        ),
-        iconBackground: Colors.transparent),
-    Event(
-        name: "",
-        date: "",
-        subDate: "",
-        cover: "",
-        text: RichText(
-          text: TextSpan(
-              style: GoogleFonts.gabriela(color: kText2Color),
-              children: <TextSpan>[
-                TextSpan(
-                  text: '',
-                  style: TextStyle(
-                      fontSize: 25, color: kText2Color.withOpacity(0.6)),
-                ),
-              ]),
-        ),
+        more: true,
         iconBackground: Colors.transparent),
   ];
 }

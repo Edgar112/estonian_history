@@ -1,7 +1,6 @@
-import 'dart:async';
-
 import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/fillPeriod/period1.dart';
+import 'package:estonian_history/periods/period1.dart';
+import 'package:estonian_history/periods/period2.dart';
 import 'package:estonian_history/helper/period.dart';
 import 'package:estonian_history/screens/history_timeline/history_info.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
@@ -45,9 +44,12 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
 
-    List<Period> periodList = List<Period>();
-    periodList.add(Period(
-        periodTitle: 'Esiajalugu', events: getPeriod1())); // for hot reload
+    List<Period> periodList = [
+      Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
+      Period(
+          periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
+          events: getPeriod2())
+    ];
 
     BouncingScrollPhysics physics = BouncingScrollPhysics();
     return Scaffold(
@@ -124,7 +126,9 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
                     ),
                   ),
                   timelineModelPage(
-                      physics, periodList[0].events, periodList[0].periodTitle)
+                      physics, periodList[0].events, periodList[0].periodTitle),
+                  timelineModelPage(
+                      physics, periodList[1].events, periodList[1].periodTitle)
                 ],
               ),
             ],

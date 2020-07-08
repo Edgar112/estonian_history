@@ -39,7 +39,7 @@ class _ImageSwiperState extends State<ImageSwiper> {
   Widget _buildItem(BuildContext context, int index) {
     return ClipRRect(
       borderRadius: BorderRadius.all(Radius.circular(_radius)),
-      child: images.length == 1
+      child: images.length == 1 
           ? Hero(
               tag: index.toString(),
               child: Image.asset(
