@@ -8,10 +8,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class ImageSwiper extends StatefulWidget {
   List<Picture> images;
-  ImageSwiper(this.images);
+  SwiperLayout layout;
+  ImageSwiper(this.images, [this.layout = SwiperLayout.TINDER]);
   @override
   State<StatefulWidget> createState() {
-    return new _ImageSwiperState(images);
+    return new _ImageSwiperState(images, this.layout);
   }
 }
 
@@ -34,14 +35,14 @@ class _ImageSwiperState extends State<ImageSwiper> {
   TextEditingController numberController = new TextEditingController();
   List<Picture> images;
 
-  _ImageSwiperState(this.images);
+  _ImageSwiperState(this.images, this._layout);
 
   Widget _buildItem(BuildContext context, int index) {
     return ClipRRect(
       borderRadius: BorderRadius.all(Radius.circular(_radius)),
-      child: images.length == 1 
+      child: images.length == 1
           ? Hero(
-              tag: index.toString(),
+              tag: images[index].imagePath + ' ' + index.toString(),
               child: Image.asset(
                 images[index].imagePath,
                 fit: BoxFit.scaleDown,
@@ -78,7 +79,6 @@ class _ImageSwiperState extends State<ImageSwiper> {
     _curve = Curves.ease;
     _scale = 0.8;
     _controller = new SwiperController();
-    _layout = SwiperLayout.TINDER;
     _radius = 0.0;
     _loop = true;
     _autoplay = true;
@@ -97,7 +97,7 @@ class _ImageSwiperState extends State<ImageSwiper> {
             context,
             MaterialPageRoute(
               builder: (context) => HeroPhotoViewWrapper(
-                tagName: index.toString(),
+                tagName: images[index].imagePath + ' ' + index.toString(),
                 imageProvider: AssetImage(images[index].imagePath),
               ),
             ),
@@ -115,7 +115,9 @@ class _ImageSwiperState extends State<ImageSwiper> {
         scale: _scale,
         itemWidth: 600.0,
         controller: _controller,
-        layout: images.length != 1 ? _layout : SwiperLayout.DEFAULT,
+        layout: images.length != 1
+            ? _layout ?? SwiperLayout.TINDER
+            : SwiperLayout.DEFAULT,
         outer: _outer,
         itemHeight: 500.0,
         viewportFraction: _viewportFraction,

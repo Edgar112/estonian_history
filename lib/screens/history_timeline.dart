@@ -2,6 +2,7 @@ import 'package:estonian_history/constants.dart';
 import 'package:estonian_history/periods/period1.dart';
 import 'package:estonian_history/periods/period2.dart';
 import 'package:estonian_history/helper/period.dart';
+import 'package:estonian_history/periods/period3.dart';
 import 'package:estonian_history/screens/history_timeline/history_info.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
 import 'package:flutter/material.dart';
@@ -48,7 +49,9 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
       Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
       Period(
           periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
-          events: getPeriod2())
+          events: getPeriod2()),
+      Period(
+          periodTitle: 'Muistne vabadusvõitlus (1208–27)', events: getPeriod3())
     ];
 
     BouncingScrollPhysics physics = BouncingScrollPhysics();
@@ -128,7 +131,9 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
                   timelineModelPage(
                       physics, periodList[0].events, periodList[0].periodTitle),
                   timelineModelPage(
-                      physics, periodList[1].events, periodList[1].periodTitle)
+                      physics, periodList[1].events, periodList[1].periodTitle),
+                  timelineModelPage(
+                      physics, periodList[2].events, periodList[2].periodTitle),
                 ],
               ),
             ],
