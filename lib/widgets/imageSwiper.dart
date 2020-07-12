@@ -99,6 +99,7 @@ class _ImageSwiperState extends State<ImageSwiper> {
               builder: (context) => HeroPhotoViewWrapper(
                 tagName: images[index].imagePath + ' ' + index.toString(),
                 imageProvider: AssetImage(images[index].imagePath),
+                name: images[index].imageName,
               ),
             ),
           );
