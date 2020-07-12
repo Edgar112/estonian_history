@@ -82,7 +82,7 @@ class _ImageSwiperState extends State<ImageSwiper> {
     _radius = 0.0;
     _loop = true;
     _autoplay = true;
-    _autoplayDely = 3000;
+    _autoplayDely = 5000;
     _viewportFraction = 0.8;
     _outer = false;
     _scrollDirection = Axis.horizontal;

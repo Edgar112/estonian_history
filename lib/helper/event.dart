@@ -10,7 +10,7 @@ class Event {
   final String date;
   final String subDate;
   final bool more;
-  Event(
+  const Event(
       {this.name,
       this.cover,
       this.text,

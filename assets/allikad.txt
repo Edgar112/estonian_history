@@ -7,6 +7,9 @@ https://register.muinas.ee/public.php?menuID=monument
 https://et.wikipedia.org/wiki/Kivikirstkalme
 https://et.wikipedia.org/wiki/Fulco
 https://et.wikipedia.org/wiki/M%C3%B5%C3%B5gavendade_ordu
+https://et.wikipedia.org/wiki/Katk
+https://et.wikipedia.org/wiki/Liivimaa_ristis%C3%B5da
+https://et.wikipedia.org/wiki/Eestlaste_muistne_vabadusv%C3%B5itlus
 
 
 
