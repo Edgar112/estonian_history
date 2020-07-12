@@ -6,5 +6,3 @@ ScrollController background2ScrollController = ScrollController();
 ScrollController background3ScrollController = ScrollController();
 
 BuildContext contextHistoryInfo;
-
-double scrollPosition = 0;

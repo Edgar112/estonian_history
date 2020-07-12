@@ -56,88 +56,82 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
 
     BouncingScrollPhysics physics = BouncingScrollPhysics();
     return Scaffold(
-      body: NotificationListener<ScrollNotification>(
-          onNotification: (scrollNotification) {
-            // scrollPosition = scrollNotification.metrics.pixels;
-            // print(scrollPosition);
-            return;
-          },
-          child: Stack(
-            children: <Widget>[
-              SingleChildScrollView(
-                physics: physics,
-                controller: background1ScrollController,
-                child: Container(
-                  width: double.infinity,
-                  child: SvgPicture.asset(
-                    'assets/illustrations/cosmosBG1.svg',
-                    fit: BoxFit.fitWidth,
-                  ),
-                ),
+      body: Stack(
+        children: <Widget>[
+          SingleChildScrollView(
+            physics: physics,
+            controller: background1ScrollController,
+            child: Container(
+              width: double.infinity,
+              child: SvgPicture.asset(
+                'assets/illustrations/cosmosBG1.svg',
+                fit: BoxFit.fitWidth,
               ),
-              SingleChildScrollView(
-                physics: physics,
-                controller: background2ScrollController,
-                child: Container(
-                  width: double.infinity,
-                  child: SvgPicture.asset(
-                    'assets/illustrations/cosmosBG2.svg',
-                    fit: BoxFit.fitWidth,
-                  ),
-                ),
+            ),
+          ),
+          SingleChildScrollView(
+            physics: physics,
+            controller: background2ScrollController,
+            child: Container(
+              width: double.infinity,
+              child: SvgPicture.asset(
+                'assets/illustrations/cosmosBG2.svg',
+                fit: BoxFit.fitWidth,
               ),
-              SingleChildScrollView(
-                physics: physics,
-                controller: background3ScrollController,
-                child: Container(
-                  width: double.infinity,
-                  child: SvgPicture.asset(
-                    'assets/illustrations/cosmosBG3.svg',
-                    fit: BoxFit.fitWidth,
-                  ),
-                ),
+            ),
+          ),
+          SingleChildScrollView(
+            physics: physics,
+            controller: background3ScrollController,
+            child: Container(
+              width: double.infinity,
+              child: SvgPicture.asset(
+                'assets/illustrations/cosmosBG3.svg',
+                fit: BoxFit.fitWidth,
               ),
-              CustomScrollView(
-                physics: physics,
-                controller: timelineScrollController,
-                slivers: <Widget>[
-                  SliverAppBar(
-                    brightness: Brightness.light,
-                    actions: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.only(right: 10),
-                        child: IconButton(
-                          icon: Icon(
-                            Icons.info_outline,
-                            color: kText1Color,
-                          ),
-                          tooltip: 'Info',
-                          onPressed: () {},
-                        ),
+            ),
+          ),
+          CustomScrollView(
+            physics: physics,
+            controller: timelineScrollController,
+            slivers: <Widget>[
+              SliverAppBar(
+                brightness: Brightness.light,
+                actions: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: IconButton(
+                      icon: Icon(
+                        Icons.info_outline,
+                        color: kText1Color,
                       ),
-                    ],
-                    backgroundColor: kPrimaryColor,
-                    floating: false,
-                    pinned: false,
-                    expandedHeight: 400,
-                    flexibleSpace: FlexibleSpaceBar(
-                      title: Text('Eesti Ajalugu',
-                          style: Theme.of(context).textTheme.headline5),
-                      background: SvgPicture.asset(
-                          'assets/illustrations/rocket_boy_dark.svg'),
-                      collapseMode: CollapseMode.pin,
+                      tooltip: 'Info',
+                      onPressed: () {},
                     ),
                   ),
-                  timelineModelPage(
-                      physics, periodList[0].events, periodList[0].periodTitle),
-                  timelineModelPage(
-                      physics, periodList[1].events, periodList[1].periodTitle),
-                  timelineModelPage(
-                      physics, periodList[2].events, periodList[2].periodTitle),
                 ],
+                backgroundColor: kPrimaryColor,
+                floating: false,
+                pinned: false,
+                expandedHeight: 400,
+                flexibleSpace: FlexibleSpaceBar(
+                  title: Text('Eesti Ajalugu',
+                      style: Theme.of(context).textTheme.headline5),
+                  background: SvgPicture.asset(
+                      'assets/illustrations/rocket_boy_dark.svg'),
+                  collapseMode: CollapseMode.pin,
+                ),
               ),
+              timelineModelPage(
+                  physics, periodList[0].events, periodList[0].periodTitle),
+              timelineModelPage(
+                  physics, periodList[1].events, periodList[1].periodTitle),
+              timelineModelPage(
+                  physics, periodList[2].events, periodList[2].periodTitle),
             ],
-          )),
+          ),
+        ],
+      ),
     );
   }
 
