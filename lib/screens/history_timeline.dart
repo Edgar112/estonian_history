@@ -5,6 +5,7 @@ import 'package:estonian_history/helper/period.dart';
 import 'package:estonian_history/periods/period3.dart';
 import 'package:estonian_history/screens/history_timeline/history_info.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
+import 'package:estonian_history/widgets/myDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:estonian_history/timeline_list/timeline.dart';
 import 'package:estonian_history/timeline_list/timeline_model.dart';
@@ -45,7 +46,9 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
 
-    List<Period> periodList = [
+    BouncingScrollPhysics physics = BouncingScrollPhysics();
+
+    List<Period> periods = [
       Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
       Period(
           periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
@@ -53,8 +56,12 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
       Period(
           periodTitle: 'Muistne vabadusvõitlus (1208–27)', events: getPeriod3())
     ];
+    List<Timeline> timelines = [];
+    periods.forEach((period) {
+      timelines.add(timelineModelPage(
+          new GlobalKey(), physics, period.events, period.periodTitle));
+    });
 
-    BouncingScrollPhysics physics = BouncingScrollPhysics();
     return Scaffold(
       body: Stack(
         children: <Widget>[
@@ -94,51 +101,52 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
           CustomScrollView(
             physics: physics,
             controller: timelineScrollController,
-            slivers: <Widget>[
-              SliverAppBar(
-                brightness: Brightness.light,
-                actions: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(right: 10),
-                    child: IconButton(
-                      icon: Icon(
-                        Icons.info_outline,
-                        color: kText1Color,
-                      ),
-                      tooltip: 'Info',
-                      onPressed: () {},
-                    ),
-                  ),
-                ],
-                backgroundColor: kPrimaryColor,
-                floating: false,
-                pinned: false,
-                expandedHeight: 400,
-                flexibleSpace: FlexibleSpaceBar(
-                  title: Text('Eesti Ajalugu',
-                      style: Theme.of(context).textTheme.headline5),
-                  background: SvgPicture.asset(
-                      'assets/illustrations/rocket_boy_dark.svg'),
-                  collapseMode: CollapseMode.pin,
-                ),
-              ),
-              timelineModelPage(
-                  physics, periodList[0].events, periodList[0].periodTitle),
-              timelineModelPage(
-                  physics, periodList[1].events, periodList[1].periodTitle),
-              timelineModelPage(
-                  physics, periodList[2].events, periodList[2].periodTitle),
-            ],
+            slivers: timelineView(timelines),
           ),
         ],
       ),
+      drawer: MyDrawer(periods, timelines),
     );
   }
 
-  timelineModelPage(
-      BouncingScrollPhysics physics, List<Event> events, String periodTitle) {
+  List<Widget> timelineView(List<Timeline> timelines) {
+    List<Widget> view = [
+      SliverAppBar(
+        brightness: Brightness.light,
+        actions: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: IconButton(
+              icon: Icon(
+                Icons.info_outline,
+                color: kText1Color,
+              ),
+              tooltip: 'Info',
+              onPressed: () {},
+            ),
+          ),
+        ],
+        backgroundColor: kPrimaryColor,
+        floating: false,
+        pinned: false,
+        expandedHeight: 400,
+        flexibleSpace: FlexibleSpaceBar(
+          title: Text('Eesti Ajalugu',
+              style: Theme.of(context).textTheme.headline5),
+          background:
+              SvgPicture.asset('assets/illustrations/rocket_boy_dark.svg'),
+          collapseMode: CollapseMode.pin,
+        ),
+      ),
+    ];
+    view.addAll(timelines);
+    return view;
+  }
+
+  timelineModelPage(GlobalKey key, BouncingScrollPhysics physics,
+      List<Event> events, String periodTitle) {
     return Timeline.builder(
-        controller: timelineScrollController,
+        tKey: key,
         itemBuilder: leftTimelineBuilder,
         events: events,
         itemCount: events.length,

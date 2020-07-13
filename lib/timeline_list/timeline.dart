@@ -26,6 +26,7 @@ class TimelineProperties {
 }
 
 class Timeline extends StatelessWidget {
+  final tKey;
   final ScrollController controller;
   final IndexedTimelineModelBuilder itemBuilder;
   final int itemCount;
@@ -46,6 +47,7 @@ class Timeline extends StatelessWidget {
       Color lineColor,
       double lineWidth,
       double iconSize,
+      this.tKey,
       this.controller,
       this.position = TimelinePosition.Center,
       this.physics,
@@ -66,6 +68,7 @@ class Timeline extends StatelessWidget {
   Timeline.builder(
       {@required this.itemBuilder,
       this.itemCount,
+      this.tKey,
       this.controller,
       Color lineColor,
       double lineWidth,
@@ -83,6 +86,7 @@ class Timeline extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverStickyHeaderBuilder(
+      key: tKey,
       builder: (context, state) => Container(
         height: 60.0,
         color: (state.isPinned ? kPrimaryColor : Colors.transparent),
