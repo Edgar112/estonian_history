@@ -7,9 +7,9 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ImageSwiper extends StatefulWidget {
-  List<Picture> images;
-  SwiperLayout layout;
-  ImageSwiper(this.images, [this.layout = SwiperLayout.TINDER]);
+  final List<Picture> images;
+  final SwiperLayout layout;
+  const ImageSwiper(this.images, [this.layout = SwiperLayout.TINDER]);
   @override
   State<StatefulWidget> createState() {
     return new _ImageSwiperState(images, this.layout);

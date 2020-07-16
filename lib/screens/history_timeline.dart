@@ -27,7 +27,18 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
       PageController(initialPage: 1, keepPage: true);
   int pageIx = 1;
 
-  final ScrollController timelineScrollController = ScrollController();
+  BouncingScrollPhysics physics = BouncingScrollPhysics();
+
+  List<Period> periods = [
+    Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
+    Period(
+        periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
+        events: getPeriod2()),
+    Period(
+        periodTitle: 'Muistne vabadusvõitlus (1208–27)', events: getPeriod3()),
+  ];
+
+  List<Timeline> timelines = [];
 
   @override
   void initState() {
@@ -39,6 +50,11 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
       background3ScrollController
           .jumpTo(timelineScrollController.position.pixels * 0.7);
     });
+
+    periods.forEach((period) {
+      timelines.add(timelineModelPage(
+          new GlobalKey(), physics, period.events, period.periodTitle));
+    });
     super.initState();
   }
 
@@ -46,23 +62,8 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([]);
 
-    BouncingScrollPhysics physics = BouncingScrollPhysics();
-
-    List<Period> periods = [
-      Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
-      Period(
-          periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
-          events: getPeriod2()),
-      Period(
-          periodTitle: 'Muistne vabadusvõitlus (1208–27)', events: getPeriod3())
-    ];
-    List<Timeline> timelines = [];
-    periods.forEach((period) {
-      timelines.add(timelineModelPage(
-          new GlobalKey(), physics, period.events, period.periodTitle));
-    });
-
     return Scaffold(
+      // drawerScrimColor: Colors.transparent,
       body: Stack(
         children: <Widget>[
           SingleChildScrollView(
@@ -105,7 +106,12 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
           ),
         ],
       ),
-      drawer: MyDrawer(periods, timelines),
+      drawer: Theme(
+        data: Theme.of(context).copyWith(
+          canvasColor: Colors.transparent,
+        ),
+        child: MyDrawer(periods, timelines),
+      ),
     );
   }
 
@@ -122,7 +128,10 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
                 color: kText1Color,
               ),
               tooltip: 'Info',
-              onPressed: () {},
+              onPressed: () {
+                timelineScrollController.animateTo(10000,
+                    duration: Duration(seconds: 1), curve: Curves.easeInOut);
+              },
             ),
           ),
         ],

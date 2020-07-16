@@ -1,6 +1,6 @@
 import 'package:estonian_history/constants.dart';
+import 'package:estonian_history/screens/home.dart';
 import 'package:estonian_history/widgets/my_behavior.dart';
-import 'package:estonian_history/screens/history_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -34,7 +34,7 @@ class EstonianHistory extends StatelessWidget {
         ),
         scaffoldBackgroundColor: kPrimaryColor,
       ),
-      home: HistoryTimeline(title: 'Eesti Ajalugu'),
+      home: Home(),
     );
   }
 }
