@@ -21,7 +21,6 @@ class _HistoryInfoState extends State<HistoryInfo> {
   final ScrollController infoBackground1ScrollController = ScrollController();
   final ScrollController infoBackground2ScrollController = ScrollController();
   final ScrollController infoBackground3ScrollController = ScrollController();
-  double textlen;
 
   @override
   void initState() {
@@ -67,14 +66,6 @@ class _HistoryInfoState extends State<HistoryInfo> {
           CustomScrollView(
             physics: BouncingScrollPhysics(),
             slivers: <Widget>[
-              SliverFixedExtentList(
-                itemExtent: 35,
-                delegate: SliverChildListDelegate([
-                  Container(
-                    color: Colors.transparent,
-                  )
-                ]),
-              ),
               SliverAppBar(
                 brightness: Brightness.light,
                 iconTheme: IconThemeData(

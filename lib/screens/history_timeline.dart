@@ -5,6 +5,7 @@ import 'package:estonian_history/periods/period2.dart';
 import 'package:estonian_history/models/period.dart';
 import 'package:estonian_history/periods/period3.dart';
 import 'package:estonian_history/screens/history_timeline/history_info.dart';
+import 'package:estonian_history/screens/info.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
 import 'package:estonian_history/widgets/myDrawer.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ import 'package:estonian_history/models/event.dart';
 import 'package:flutter/services.dart';
 import 'package:estonian_history/global.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:page_transition/page_transition.dart';
 
 class HistoryTimeline extends StatefulWidget {
   HistoryTimeline({Key key, this.title}) : super(key: key);
@@ -24,12 +26,39 @@ class HistoryTimeline extends StatefulWidget {
 }
 
 class _HistoryTimelineState extends State<HistoryTimeline> {
-  final PageController pageController =
-      PageController(initialPage: 1, keepPage: true);
-
   BouncingScrollPhysics physics = BouncingScrollPhysics();
 
   List<Period> periods = [
+    Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
+    Period(
+        periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
+        events: getPeriod2()),
+    Period(
+        periodTitle: 'Muistne vabadusvõitlus (1208–27)', events: getPeriod3()),
+    Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
+    Period(
+        periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
+        events: getPeriod2()),
+    Period(
+        periodTitle: 'Muistne vabadusvõitlus (1208–27)', events: getPeriod3()),
+    Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
+    Period(
+        periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
+        events: getPeriod2()),
+    Period(
+        periodTitle: 'Muistne vabadusvõitlus (1208–27)', events: getPeriod3()),
+    Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
+    Period(
+        periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
+        events: getPeriod2()),
+    Period(
+        periodTitle: 'Muistne vabadusvõitlus (1208–27)', events: getPeriod3()),
+    Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
+    Period(
+        periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
+        events: getPeriod2()),
+    Period(
+        periodTitle: 'Muistne vabadusvõitlus (1208–27)', events: getPeriod3()),
     Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
     Period(
         periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
@@ -96,8 +125,13 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
               ),
               tooltip: 'Info',
               onPressed: () {
-                timelineScrollController.animateTo(10000,
-                    duration: Duration(seconds: 1), curve: Curves.easeInOut);
+                Navigator.push(
+                  context,
+                  PageTransition(
+                    type: PageTransitionType.fade,
+                    child: Info(),
+                  ),
+                );
               },
             ),
           ),

@@ -41,6 +41,12 @@ class _MyDrawerState extends State<MyDrawer> with TickerProviderStateMixin {
           color: kPrimaryColor,
           child: Stack(
             children: <Widget>[
+              SvgPicture.asset(
+                'assets/illustrations/modern_stars.svg',
+                fit: BoxFit.fitWidth,
+                width: double.infinity,
+                alignment: Alignment.bottomCenter,
+              ),
               CustomScrollView(slivers: <Widget>[
                 header(),
                 SliverList(
@@ -76,7 +82,7 @@ class _MyDrawerState extends State<MyDrawer> with TickerProviderStateMixin {
             child: SvgPicture.asset(
               'assets/illustrations/maakonnad_small.svg',
               fit: BoxFit.fitWidth,
-              color: kText1Color.withOpacity(0.2),
+              color: kImageSecondaryColor,
             ),
           ),
           collapseMode: CollapseMode.pin,

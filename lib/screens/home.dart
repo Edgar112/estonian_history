@@ -30,7 +30,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     return Scaffold(
       body: Stack(
         children: [
-          HistoryTimeline(title: 'Eesti Ajalugu'),
+          HistoryTimeline(),
           isBlur
               ? Container(
                   child: BackdropFilter(
@@ -42,7 +42,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                       color: Colors.transparent,
                     ),
                   ),
-                ) 
+                )
               : Container()
         ],
       ),
