@@ -55,7 +55,7 @@ class _InfoState extends State<Info> {
                   alignment: Alignment.center,
                   width: double.infinity,
                   height: double.infinity,
-                  child: Text(' '), //without Text(Widget), blur doesn't work
+                  child: Text(' '), //without Text, blur doesn't work
                 ),
               ),
             ),
@@ -87,7 +87,7 @@ class _InfoState extends State<Info> {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16.0)),
                         elevation: 0,
-                        color: Colors.white60,
+                        color: Colors.transparent,
                         child: Column(
                           children: <Widget>[
                             SizedBox(height: 10),
@@ -115,7 +115,7 @@ class _InfoState extends State<Info> {
                                   ),
                                   borderSide: BorderSide(color: kText1Color),
                                   highlightedBorderColor: kText1Color,
-                                  splashColor: kPrimaryColor,
+                                  splashColor: Colors.white,
                                   onPressed: () {},
                                   shape: RoundedRectangleBorder(
                                       borderRadius:

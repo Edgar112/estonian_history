@@ -91,33 +91,26 @@ class Timeline extends StatelessWidget {
         color: (state.isPinned ? kPrimaryColor : Colors.transparent),
         padding: EdgeInsets.symmetric(horizontal: 16.0),
         alignment: Alignment.centerLeft,
-        child: Row(
-          key: tKey,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Stack(
           children: <Widget>[
-            Flexible(
-              child: Text(
-                periodTitle,
-                style: GoogleFonts.gabriela(fontSize: 15, color: kText2Color),
+            Container(
+                alignment: Alignment.centerLeft,
+                child: Text(periodTitle,
+                    style: GoogleFonts.gabriela(
+                        fontSize: 15, color: kText2Color))),
+            GestureDetector(
+              onTap: () {
+                Scrollable.ensureVisible(tKey.currentContext,
+                    duration: Duration(milliseconds: 500),
+                    curve: Curves.easeInOut);
+              },
+              child: Container(
+                key: tKey,
+                width: double.infinity,
+                height: 60,
+                child: Text(''), // necessary, for onTap
               ),
             ),
-            state.isPinned
-                ? IconButton(
-                    icon: Icon(Icons.arrow_right),
-                    onPressed: () {
-                      Scrollable.ensureVisible(tKey.currentContext,
-                          duration: Duration(milliseconds: 500),
-                          curve: Curves.easeInOut);
-                    },
-                  )
-                : IconButton(
-                    icon: Icon(Icons.open_in_new),
-                    onPressed: () {
-                      Scrollable.ensureVisible(tKey.currentContext,
-                          duration: Duration(milliseconds: 500),
-                          curve: Curves.easeInOut);
-                    },
-                  ),
           ],
         ),
       ),
