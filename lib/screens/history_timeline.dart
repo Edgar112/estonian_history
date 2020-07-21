@@ -138,7 +138,6 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
     return TimelineModel(
         GestureDetector(
           onTap: () {
-            SystemChrome.setEnabledSystemUIOverlays([]);
             Navigator.push(context, FadeRoute(page: HistoryInfo(event)));
           },
           child: Card(

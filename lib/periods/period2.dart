@@ -182,7 +182,7 @@ List<Event> getPeriod2() {
                       'assets/illustrations/moogaOrdu.png'),
                   Picture('Mõõgavendade ordu ordumeistri pitser',
                       'assets/illustrations/SwordBrothers.png')
-                ], SwiperLayout.CUSTOM)),
+                ], SwiperLayout.DEFAULT)),
               ]),
         ),
         more: true,

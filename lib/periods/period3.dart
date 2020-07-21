@@ -58,7 +58,7 @@ List<Event> getPeriod3() {
                       'assets/illustrations/Ümera_lahing_(1210).gif'),
                   Picture('Soontagana maalinn',
                       'assets/illustrations/Soontagana_maalinn.jpg'),
-                ], SwiperLayout.CUSTOM))
+                ], SwiperLayout.DEFAULT))
               ]),
         ),
         more: true,
@@ -129,7 +129,7 @@ List<Event> getPeriod3() {
                       'assets/illustrations/Turaida_lahing.jpg'),
                   Picture('Varbola linnuse rekonstrueeritud läänevärav',
                       'assets/illustrations/Varbola_värav_2008.jpg')
-                ], SwiperLayout.CUSTOM))
+                ], SwiperLayout.DEFAULT))
               ]),
         ),
         more: true,
@@ -243,7 +243,7 @@ List<Event> getPeriod3() {
                       'assets/illustrations/albertJuubel.gif'),
                   Picture('Taani kuningas Valdemar II',
                       'assets/illustrations/Valdemar2_king.jpg')
-                ], SwiperLayout.CUSTOM))
+                ], SwiperLayout.DEFAULT))
               ]),
         ),
         more: true,
