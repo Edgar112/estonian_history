@@ -1,8 +1,11 @@
+import 'dart:ui';
+
 import 'package:estonian_history/constants.dart';
 import 'package:estonian_history/global.dart';
-import 'package:estonian_history/helper/period.dart';
+import 'package:estonian_history/models/period.dart';
 import 'package:estonian_history/timeline_list/timeline.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class MyDrawer extends StatefulWidget {
   final List<Period> periods;
@@ -17,70 +20,115 @@ class MyDrawer extends StatefulWidget {
       );
 }
 
-class _MyDrawerState extends State<MyDrawer> {
+class _MyDrawerState extends State<MyDrawer> with TickerProviderStateMixin {
   List<Period> periods;
   List<Timeline> timelines;
 
   _MyDrawerState(this.periods, this.timelines);
 
   double drawerOpacity = 1.0;
-  double firstPadding, lastPadding = 0;
+  double lastPadding = 0;
+
+  GlobalKey drawerKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      elevation: 0,
-      child: Container(
-        color: kPrimaryColor.withOpacity(drawerOpacity),
-        padding: EdgeInsets.symmetric(horizontal: 10),
-        child: ListView(
-          children: periods
-                  ?.asMap()
-                  ?.map((i, period) {
-                    return MapEntry(
-                      i,
-                      Builder(builder: (context) {
-                        firstPadding = 0;
-                        lastPadding = 0;
-                        if (i == 0) firstPadding = 50;
-                        if (i == periods.length - 1) lastPadding = 50;
-                        return Container(
-                          padding: EdgeInsets.only(
-                              top: firstPadding, bottom: lastPadding),
-                          child: GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                isBlur = true;
-                                drawerOpacity = 0.0;
-                              });
+    return Opacity(
+      opacity: drawerOpacity,
+      child: Drawer(
+        key: drawerKey,
+        child: Container(
+          color: kPrimaryColor,
+          child: Stack(
+            children: <Widget>[
+              CustomScrollView(slivers: <Widget>[
+                header(),
+                SliverList(
+                  delegate: SliverChildBuilderDelegate(
+                    (context, i) {
+                      lastPadding = 0;
+                      if (i == periods.length - 1) lastPadding = 50;
+                      return item(periods[i], i);
+                    },
+                    childCount: periods.length,
+                  ),
+                ),
+              ]),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 
-                              Navigator.of(context).pop();
-                              blurAnimationController
-                                  .forward()
-                                  .whenComplete(() async {
-                                scrollToKey(i);
-                              });
-                            },
-                            child: Container(
-                              padding: EdgeInsets.symmetric(vertical: 15),
-                              child: ListTile(
-                                title: Text(
-                                  period.periodTitle,
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      color: kText2Color
-                                          .withOpacity(drawerOpacity)),
-                                ),
-                              ),
-                            ),
-                          ),
-                        );
-                      }),
-                    );
-                  })
-                  ?.values
-                  ?.toList() ??
-              [],
+  SliverAppBar header() {
+    return SliverAppBar(
+        brightness: Brightness.light,
+        backgroundColor: kPrimaryColor,
+        elevation: 0.5,
+        pinned: true,
+        expandedHeight: 260,
+        flexibleSpace: FlexibleSpaceBar(
+          centerTitle: true,
+          title: Text('Ajaperioodid',
+              style: Theme.of(context).textTheme.headline5),
+          background: Container(
+            child: SvgPicture.asset(
+              'assets/illustrations/maakonnad_small.svg',
+              fit: BoxFit.fitWidth,
+              color: kText1Color.withOpacity(0.2),
+            ),
+          ),
+          collapseMode: CollapseMode.pin,
+        ),
+        leading: Container(
+          padding: null,
+          margin: null,
+        )); // to remove drawer iconButton
+  }
+
+  Widget item(Period period, int i) {
+    return Container(
+      padding: EdgeInsets.only(bottom: lastPadding),
+      child: Column(
+        children: <Widget>[
+          GestureDetector(
+            onTap: () {
+              setState(() {
+                isBlur = true;
+                drawerOpacity = 0.0;
+              });
+
+              Navigator.of(context).pop();
+              blurAnimationController.forward().whenComplete(() async {
+                scrollToKey(i);
+              });
+            },
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 15),
+              child: ListTile(
+                title: Text(
+                  period.periodTitle,
+                  style: TextStyle(fontSize: 20, color: kText2Color),
+                ),
+              ),
+            ),
+          ),
+          spaceLine()
+        ],
+      ),
+    );
+  }
+
+  spaceLine() {
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 10.0),
+      child: Container(
+        height: 0.2,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: kText1Color.withOpacity(0.2),
+          borderRadius: BorderRadius.circular(30),
         ),
       ),
     );

@@ -1,5 +1,5 @@
 import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/helper/picture.dart';
+import 'package:estonian_history/models/picture.dart';
 import 'package:estonian_history/widgets/HeroPhotoViewWrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_page_indicator/flutter_page_indicator.dart';

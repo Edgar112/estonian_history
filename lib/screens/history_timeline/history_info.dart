@@ -1,9 +1,9 @@
+import 'package:estonian_history/components/backgroundIllustration.dart';
 import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/helper/event.dart';
+import 'package:estonian_history/models/event.dart';
 import 'package:estonian_history/global.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'dart:ui';
 
 class HistoryInfo extends StatefulWidget {
@@ -42,45 +42,12 @@ class _HistoryInfoState extends State<HistoryInfo> {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          SingleChildScrollView(
-            reverse: false,
-            physics: BouncingScrollPhysics(),
-            primary: false,
-            controller: infoBackground1ScrollController,
-            child: Container(
-              width: double.infinity,
-              child: SvgPicture.asset(
-                'assets/illustrations/cosmosBG1.svg',
-                fit: BoxFit.fitWidth,
-              ),
-            ),
-          ),
-          SingleChildScrollView(
-            reverse: false,
-            physics: BouncingScrollPhysics(),
-            primary: false,
-            controller: infoBackground2ScrollController,
-            child: Container(
-              width: double.infinity,
-              child: SvgPicture.asset(
-                'assets/illustrations/cosmosBG2.svg',
-                fit: BoxFit.fitWidth,
-              ),
-            ),
-          ),
-          SingleChildScrollView(
-            reverse: false,
-            physics: BouncingScrollPhysics(),
-            primary: false,
-            controller: infoBackground3ScrollController,
-            child: Container(
-              width: double.infinity,
-              child: SvgPicture.asset(
-                'assets/illustrations/cosmosBG3.svg',
-                fit: BoxFit.fitWidth,
-              ),
-            ),
-          ),
+          Stack(
+              children: backgroundIllustration([
+            infoBackground1ScrollController,
+            infoBackground2ScrollController,
+            infoBackground3ScrollController
+          ])),
           Center(
             child: ClipRect(
               child: BackdropFilter(
@@ -92,7 +59,7 @@ class _HistoryInfoState extends State<HistoryInfo> {
                   alignment: Alignment.center,
                   width: double.infinity,
                   height: double.infinity,
-                  child: Text(' '), //without Text, blur doesn't work
+                  child: Text(' '), //without Text(Widget), blur doesn't work
                 ),
               ),
             ),
@@ -102,7 +69,11 @@ class _HistoryInfoState extends State<HistoryInfo> {
             slivers: <Widget>[
               SliverFixedExtentList(
                 itemExtent: 35,
-                delegate: SliverChildListDelegate([Container(color: Colors.transparent,)]),
+                delegate: SliverChildListDelegate([
+                  Container(
+                    color: Colors.transparent,
+                  )
+                ]),
               ),
               SliverAppBar(
                 brightness: Brightness.light,

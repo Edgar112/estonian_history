@@ -1,7 +1,8 @@
+import 'package:estonian_history/components/backgroundIllustration.dart';
 import 'package:estonian_history/constants.dart';
 import 'package:estonian_history/periods/period1.dart';
 import 'package:estonian_history/periods/period2.dart';
-import 'package:estonian_history/helper/period.dart';
+import 'package:estonian_history/models/period.dart';
 import 'package:estonian_history/periods/period3.dart';
 import 'package:estonian_history/screens/history_timeline/history_info.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
@@ -9,7 +10,7 @@ import 'package:estonian_history/widgets/myDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:estonian_history/timeline_list/timeline.dart';
 import 'package:estonian_history/timeline_list/timeline_model.dart';
-import 'package:estonian_history/helper/event.dart';
+import 'package:estonian_history/models/event.dart';
 import 'package:flutter/services.dart';
 import 'package:estonian_history/global.dart';
 import 'package:flutter_svg/svg.dart';
@@ -49,6 +50,7 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
           .jumpTo(timelineScrollController.position.pixels * 0.8);
       background3ScrollController
           .jumpTo(timelineScrollController.position.pixels * 0.7);
+      // print(timelineScrollController.position.pixels);
     });
 
     periods.forEach((period) {
@@ -60,45 +62,16 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
-
     return Scaffold(
-      // drawerScrimColor: Colors.transparent,
+      drawerScrimColor: Colors.transparent,
       body: Stack(
         children: <Widget>[
-          SingleChildScrollView(
-            physics: physics,
-            controller: background1ScrollController,
-            child: Container(
-              width: double.infinity,
-              child: SvgPicture.asset(
-                'assets/illustrations/cosmosBG1.svg',
-                fit: BoxFit.fitWidth,
-              ),
-            ),
-          ),
-          SingleChildScrollView(
-            physics: physics,
-            controller: background2ScrollController,
-            child: Container(
-              width: double.infinity,
-              child: SvgPicture.asset(
-                'assets/illustrations/cosmosBG2.svg',
-                fit: BoxFit.fitWidth,
-              ),
-            ),
-          ),
-          SingleChildScrollView(
-            physics: physics,
-            controller: background3ScrollController,
-            child: Container(
-              width: double.infinity,
-              child: SvgPicture.asset(
-                'assets/illustrations/cosmosBG3.svg',
-                fit: BoxFit.fitWidth,
-              ),
-            ),
-          ),
+          Stack(
+              children: backgroundIllustration([
+            background1ScrollController,
+            background2ScrollController,
+            background3ScrollController
+          ])),
           CustomScrollView(
             physics: physics,
             controller: timelineScrollController,
@@ -106,12 +79,7 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
           ),
         ],
       ),
-      drawer: Theme(
-        data: Theme.of(context).copyWith(
-          canvasColor: Colors.transparent,
-        ),
-        child: MyDrawer(periods, timelines),
-      ),
+      drawer: MyDrawer(periods, timelines),
     );
   }
 
@@ -135,7 +103,7 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
             ),
           ),
         ],
-        backgroundColor: kPrimaryColor,
+        backgroundColor: Colors.transparent,
         floating: false,
         pinned: false,
         expandedHeight: 400,
@@ -143,7 +111,7 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
           title: Text('Eesti Ajalugu',
               style: Theme.of(context).textTheme.headline5),
           background:
-              SvgPicture.asset('assets/illustrations/rocket_boy_dark.svg'),
+              SvgPicture.asset('assets/illustrations/rocket_boy_no_stars.svg'),
           collapseMode: CollapseMode.pin,
         ),
       ),

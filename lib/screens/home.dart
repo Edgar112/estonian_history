@@ -42,7 +42,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                       color: Colors.transparent,
                     ),
                   ),
-                )
+                ) 
               : Container()
         ],
       ),

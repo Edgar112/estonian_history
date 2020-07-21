@@ -32,6 +32,9 @@ dependencies:
   flutter_sticky_header: ^0.4.2
   flutter_swiper: ^1.1.6
   swipedetector: ^1.2.0
+  simple_animations: ^2.2.1 
+  animations: ^1.1.1
+  matrix4_transform: ^1.1.4
 
 dev_dependencies:
   flutter_test:

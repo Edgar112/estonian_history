@@ -1,7 +1,7 @@
 import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/helper/event.dart';
+import 'package:estonian_history/models/event.dart';
 import 'package:estonian_history/global.dart';
-import 'package:estonian_history/helper/picture.dart';
+import 'package:estonian_history/models/picture.dart';
 import 'package:estonian_history/widgets/imageSwiper.dart';
 import 'package:estonian_history/widgets/myMap.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
