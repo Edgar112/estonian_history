@@ -26,7 +26,6 @@ class HistoryTimeline extends StatefulWidget {
 class _HistoryTimelineState extends State<HistoryTimeline> {
   final PageController pageController =
       PageController(initialPage: 1, keepPage: true);
-  int pageIx = 1;
 
   BouncingScrollPhysics physics = BouncingScrollPhysics();
 

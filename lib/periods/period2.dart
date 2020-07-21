@@ -1,15 +1,10 @@
 import 'package:estonian_history/constants.dart';
 import 'package:estonian_history/models/event.dart';
-import 'package:estonian_history/global.dart';
 import 'package:estonian_history/models/picture.dart';
 import 'package:estonian_history/widgets/imageSwiper.dart';
-import 'package:estonian_history/widgets/myMap.dart';
-import 'package:estonian_history/transitions/fade_route.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 List<Event> getPeriod2() {
   return [
