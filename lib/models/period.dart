@@ -2,6 +2,7 @@ import 'package:estonian_history/models/event.dart';
 
 class Period {
   String periodTitle;
-  List<Event> events;
+  Map<List<Event>, List<Event>>
+      events; // key - period description, value - period events
   Period({this.periodTitle, this.events});
 }

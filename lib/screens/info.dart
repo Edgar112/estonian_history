@@ -68,11 +68,14 @@ class _InfoState extends State<Info> {
                 backgroundColor: Colors.transparent,
                 floating: false,
                 pinned: false,
-                expandedHeight: 400,
+                expandedHeight: 340,
                 flexibleSpace: FlexibleSpaceBar(
                   title: Text('', style: Theme.of(context).textTheme.headline5),
-                  background: SvgPicture.asset(
-                      'assets/illustrations/astronaut_no_stars.svg'),
+                  background: Container(
+                    alignment: Alignment.bottomCenter,
+                    child: SvgPicture.asset(
+                        'assets/illustrations/astronaut_no_stars.svg'),
+                  ),
                   collapseMode: CollapseMode.pin,
                 ),
               ),
@@ -80,7 +83,8 @@ class _InfoState extends State<Info> {
                 delegate: SliverChildListDelegate([
                   Center(
                     child: Container(
-                      margin: EdgeInsets.only(bottom: 100),
+                      alignment: Alignment.topCenter,
+                      margin: EdgeInsets.only(bottom: 200),
                       width: 330,
                       child: Card(
                         margin: EdgeInsets.all(15),
@@ -145,7 +149,7 @@ class _InfoState extends State<Info> {
                                   ),
                                   borderSide: BorderSide(color: kText1Color),
                                   highlightedBorderColor: kText1Color,
-                                  splashColor: kPrimaryColor,
+                                  splashColor: Colors.white,
                                   onPressed: () {},
                                   shape: RoundedRectangleBorder(
                                       borderRadius:
@@ -175,7 +179,7 @@ class _InfoState extends State<Info> {
                                   ),
                                   borderSide: BorderSide(color: kText1Color),
                                   highlightedBorderColor: kText1Color,
-                                  splashColor: kPrimaryColor,
+                                  splashColor: Colors.white,
                                   onPressed: () {},
                                   shape: RoundedRectangleBorder(
                                       borderRadius:

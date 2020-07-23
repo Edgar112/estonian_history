@@ -2,6 +2,8 @@ library timeline;
 
 import 'package:estonian_history/constants.dart';
 import 'package:estonian_history/models/event.dart';
+import 'package:estonian_history/screens/history_timeline/history_info.dart';
+import 'package:estonian_history/transitions/fade_route.dart';
 import 'package:flutter/material.dart';
 import 'package:estonian_history/timeline_list/src/timeline_item.dart';
 import 'package:estonian_history/timeline_list/src/timeline_painter.dart';
@@ -10,7 +12,7 @@ import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 typedef IndexedTimelineModelBuilder = TimelineModel Function(
-    BuildContext context, int indexm, List<Event> events);
+    BuildContext context, int indexm, Map<List<Event>, List<Event>> events);
 
 enum TimelinePosition { Left, Center, Right }
 
@@ -37,7 +39,7 @@ class Timeline extends StatelessWidget {
   final bool primary;
   final bool reverse;
   final String periodTitle;
-  final List<Event> events;
+  final Map<List<Event>, List<Event>> events;
 
   /// Creates a scrollable timeline of widgets that are created befirehand.
   /// Note: [TimelineModel.icon]'s size is ignored when `position` is not
@@ -59,8 +61,9 @@ class Timeline extends StatelessWidget {
       : itemCount = children.length,
         properties = TimelineProperties(
             lineColor: lineColor, lineWidth: lineWidth, iconSize: iconSize),
-        itemBuilder =
-            ((BuildContext context, int i, List<Event> events) => children[i]);
+        itemBuilder = ((BuildContext context, int i,
+                Map<List<Event>, List<Event>> events) =>
+            children[i]);
 
   /// Creates a scrollable timeline of widgets that are created on demand.
   /// Note: `itemBuilder` position and [TimelineModel.icon]'s size is ignored
@@ -94,6 +97,7 @@ class Timeline extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             Container(
+                margin: EdgeInsets.only(right: 50),
                 alignment: Alignment.centerLeft,
                 child: Text(periodTitle,
                     style: GoogleFonts.gabriela(
@@ -111,6 +115,28 @@ class Timeline extends StatelessWidget {
                 child: Text(''), // necessary, for onTap
               ),
             ),
+            state.isPinned
+                ? Container()
+                : events.keys.toList()[0][0] == null
+                    ? Container()
+                    : Container(
+                        width: double.infinity,
+                        height: 60,
+                        alignment: Alignment.centerRight,
+                        child: IconButton(
+                          icon: Icon(
+                            Icons.more_horiz,
+                            color: kText1Color,
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                FadeRoute(
+                                    page: HistoryInfo(
+                                        events.keys.toList()[0][0])));
+                          },
+                        ),
+                      ),
           ],
         ),
       ),

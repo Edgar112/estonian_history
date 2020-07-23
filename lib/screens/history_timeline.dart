@@ -28,46 +28,9 @@ class HistoryTimeline extends StatefulWidget {
 class _HistoryTimelineState extends State<HistoryTimeline> {
   BouncingScrollPhysics physics = BouncingScrollPhysics();
 
-  List<Period> periods = [
-    Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
-    Period(
-        periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
-        events: getPeriod2()),
-    Period(
-        periodTitle: 'Muistne vabadusvõitlus (1208–27)', events: getPeriod3()),
-    Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
-    Period(
-        periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
-        events: getPeriod2()),
-    Period(
-        periodTitle: 'Muistne vabadusvõitlus (1208–27)', events: getPeriod3()),
-    Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
-    Period(
-        periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
-        events: getPeriod2()),
-    Period(
-        periodTitle: 'Muistne vabadusvõitlus (1208–27)', events: getPeriod3()),
-    Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
-    Period(
-        periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
-        events: getPeriod2()),
-    Period(
-        periodTitle: 'Muistne vabadusvõitlus (1208–27)', events: getPeriod3()),
-    Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
-    Period(
-        periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
-        events: getPeriod2()),
-    Period(
-        periodTitle: 'Muistne vabadusvõitlus (1208–27)', events: getPeriod3()),
-    Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
-    Period(
-        periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
-        events: getPeriod2()),
-    Period(
-        periodTitle: 'Muistne vabadusvõitlus (1208–27)', events: getPeriod3()),
-  ];
+  List<Period> periods;
 
-  List<Timeline> timelines = [];
+  List<Timeline> timelines;
 
   @override
   void initState() {
@@ -81,15 +44,28 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
       // print(timelineScrollController.position.pixels);
     });
 
-    periods.forEach((period) {
-      timelines.add(timelineModelPage(
-          new GlobalKey(), physics, period.events, period.periodTitle));
-    });
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    periods = [];
+    periods = [
+      Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
+      Period(
+          periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
+          events: getPeriod2()),
+      Period(
+          periodTitle: 'Muistne vabadusvõitlus (1208–27)',
+          events: getPeriod3()),
+    ];
+    timelines = [];
+
+    periods.forEach((period) {
+      timelines.add(timelineModelPage(
+          new GlobalKey(), physics, period.events, period.periodTitle));
+    });
+
     return Scaffold(
       drawerScrimColor: Colors.transparent,
       body: Stack(
@@ -154,19 +130,19 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
   }
 
   timelineModelPage(GlobalKey key, BouncingScrollPhysics physics,
-      List<Event> events, String periodTitle) {
+      Map<List<Event>, List<Event>> events, String periodTitle) {
     return Timeline.builder(
         tKey: key,
         itemBuilder: leftTimelineBuilder,
         events: events,
-        itemCount: events.length,
+        itemCount: events.values.toList()[0].length,
         physics: physics,
         periodTitle: periodTitle);
   }
 
   TimelineModel leftTimelineBuilder(
-      BuildContext context, int i, List<Event> events) {
-    final event = events[i];
+      BuildContext context, int i, Map<List<Event>, List<Event>> events) {
+    final event = events.values.toList()[0][i];
     final textTheme = Theme.of(context).textTheme;
     return TimelineModel(
         GestureDetector(
