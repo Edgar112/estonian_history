@@ -36,6 +36,8 @@ dependencies:
   animations: ^1.1.1
   matrix4_transform: ^1.1.4
   page_transition: ^1.1.5
+  marquee: ^1.5.2
+  auto_size_text: ^2.1.0
 
 dev_dependencies:
   flutter_test:

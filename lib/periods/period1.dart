@@ -36,7 +36,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
     ]: [
       Event(
           name: "Eesti ala vabanes jääst",
-          date: "13 000-11 000\neKr",
+          date: "13 000-11 000 eKr",
           subDate: "",
           cover:
               "Jääaegsed liustikud taandusid Kagu-Eestist järk-järgult loode poole ja kujundasid maastikku.",

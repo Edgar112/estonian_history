@@ -11,7 +11,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
     [
       Event(
           name: "",
-          date: "Muistne vabadusvõitlus\n (1208–27)",
+          date: "Muistne vabadusvõitlus (1208–27)",
           subDate: "",
           cover: "",
           text: RichText(
