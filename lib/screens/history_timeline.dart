@@ -4,6 +4,7 @@ import 'package:estonian_history/periods/period1.dart';
 import 'package:estonian_history/periods/period2.dart';
 import 'package:estonian_history/models/period.dart';
 import 'package:estonian_history/periods/period3.dart';
+import 'package:estonian_history/periods/period4.dart';
 import 'package:estonian_history/screens/history_timeline/history_info.dart';
 import 'package:estonian_history/screens/info.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
@@ -49,7 +50,6 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
 
   @override
   Widget build(BuildContext context) {
-    periods = [];
     periods = [
       Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
       Period(
@@ -58,6 +58,9 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
       Period(
           periodTitle: 'Muistne vabadusvõitlus (1208–27)',
           events: getPeriod3()),
+      Period(
+          periodTitle: 'Võõrvõimu algussajand (1227–1343)',
+          events: getPeriod4()),
     ];
     timelines = [];
 
