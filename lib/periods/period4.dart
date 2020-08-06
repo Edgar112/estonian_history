@@ -8,7 +8,52 @@ import 'package:google_fonts/google_fonts.dart';
 
 Map<List<Event>, List<Event>> getPeriod4() {
   return {
-    [null]: [
+    [
+      Event(
+          name: "",
+          date: "Võõrvõimu algussajand (1227–1343)",
+          subDate: "",
+          cover: "",
+          text: RichText(
+            text: TextSpan(
+                style: GoogleFonts.gabriela(color: kText2Color),
+                children: <InlineSpan>[
+                  TextSpan(text: "\n\n"),
+                  WidgetSpan(
+                      child: ImageSwiper([
+                    Picture('Euroopa poliitiline kaart 1328. aastal',
+                        'assets/illustrations/1024px-Europe_in_1328.png')
+                  ])),
+                  TextSpan(text: "\n\n"),
+                  WidgetSpan(
+                      child: ImageSwiper([
+                    Picture(
+                        'Saksa ordu valdused Preisimaal ja pärast Liivi ordu liitumist 1237. aastal ordu valdused Kuramaal ja Vana-Liivimaal. Joonisel on märgitud viirutatult 1260. aastal vastupanupiirkonnad Preisimaal ja Žemaitijas',
+                        'assets/illustrations/1024px-Deutscher_Orden_1260.png')
+                  ])),
+                  TextSpan(text: "\n\n"),
+                  WidgetSpan(
+                      child: ImageSwiper([
+                    Picture(
+                        'Läänemere-äärsete paganate maade jaotus ristisõdijate riikide vahel, 1225–1250. Taani kuninga maad on märgitud kaardi ülaosas',
+                        'assets/illustrations/Teutonic_state_1250.png')
+                  ])),
+                  TextSpan(text: "\n\n"),
+                  WidgetSpan(
+                      child: ImageSwiper([
+                    Picture('Garlieb Merkeli kaart 13. sajandi Vana-Liivimaast',
+                        'assets/illustrations/Merkel,_Liefland_im_Anfange_des_13ten_Jahrhunderts.jpg'),
+                    Picture(
+                        'Riia peapiiskopkonna ja Liivi ordu valdused Liivimaal 1260. aastal',
+                        'assets/illustrations/800px-Medieval_Livonia_1260.png'),
+                    Picture(
+                        'Tallinna piiskopkonna diötsees (heleroheline). Sinakasrohelisega on tähistatud alati ordule kuulunud Järvamaa. Piiskopkonda mitte kuulunud ordualad on tähistatud valgega',
+                        'assets/illustrations/Tallinna_pk_Liivis.png')
+                  ])),
+                ]),
+          ),
+          iconBackground: Colors.transparent),
+    ]: [
       Event(
           name: "",
           date: "1227",
@@ -418,8 +463,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
                       text:
                           'Esimene teade Eesti kirikute (Helme ja Paistu) orelite kohta.',
                       style: TextStyle(
-                          fontSize: 25, color: kText2Color.withOpacity(0.6))),
-                  WidgetSpan(child: ImageSwiper([Picture('', '')]))
+                          fontSize: 25, color: kText2Color.withOpacity(0.6)))
                 ]),
           ),
           iconBackground: Colors.transparent),
@@ -455,23 +499,6 @@ Map<List<Event>, List<Event>> getPeriod4() {
                 ]),
           ),
           iconBackground: Colors.transparent),
-      // Event(
-      //     name: "",
-      //     date: "",
-      //     subDate: "",
-      //     cover: "",
-      //     text: RichText(
-      //       text: TextSpan(
-      //           style: GoogleFonts.gabriela(color: kText2Color),
-      //           children: <InlineSpan>[
-      //             TextSpan(
-      //                 text: '',
-      //                 style: TextStyle(
-      //                     fontSize: 25, color: kText2Color.withOpacity(0.6))),
-      //             WidgetSpan(child: ImageSwiper([Picture('', '')]))
-      //           ]),
-      //     ),
-      //     iconBackground: Colors.transparent),
     ]
   };
 }
