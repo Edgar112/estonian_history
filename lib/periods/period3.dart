@@ -455,7 +455,6 @@ Map<List<Event>, List<Event>> getPeriod3() {
       //                 text: '',
       //                 style: TextStyle(
       //                     fontSize: 25, color: kText2Color.withOpacity(0.6))),
-      //             WidgetSpan(child: ImageSwiper([Picture('', '')]))
       //           ]),
       //     ),
       //     iconBackground: Colors.transparent),

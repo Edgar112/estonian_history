@@ -1,12 +1,16 @@
 import 'package:estonian_history/components/backgroundIllustration.dart';
 import 'package:estonian_history/constants.dart';
 import 'package:estonian_history/periods/period1.dart';
+import 'package:estonian_history/periods/period10.dart';
 import 'package:estonian_history/periods/period2.dart';
 import 'package:estonian_history/models/period.dart';
 import 'package:estonian_history/periods/period3.dart';
 import 'package:estonian_history/periods/period4.dart';
 import 'package:estonian_history/periods/period5.dart';
 import 'package:estonian_history/periods/period6.dart';
+import 'package:estonian_history/periods/period7.dart';
+import 'package:estonian_history/periods/period8.dart';
+import 'package:estonian_history/periods/period9.dart';
 import 'package:estonian_history/screens/history_timeline/history_info.dart';
 import 'package:estonian_history/screens/info.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
@@ -65,6 +69,13 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
           events: getPeriod4()),
       Period(periodTitle: 'Jüriöö ülestõus (1343–45)', events: getPeriod5()),
       Period(periodTitle: 'Vana-Liivimaa (1345–1558)', events: getPeriod6()),
+      Period(periodTitle: 'Vene-Liivimaa sõda (1558–83)', events: getPeriod7()),
+      Period(
+          periodTitle: 'Rootsi, Poola ja Taani võimu all (1583–1629)',
+          events: getPeriod8()),
+      //////////////////////////////////////////////////////////////////////////////////////////////////
+      Period(periodTitle: 'Rootsi aeg (1629–1710)', events: getPeriod9()),
+      Period(periodTitle: 'Põhjasõda Eestis (1700–10)', events: getPeriod10()),
     ];
     timelines = [];
 
