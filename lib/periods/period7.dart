@@ -124,9 +124,14 @@ Map<List<Event>, List<Event>> getPeriod7() {
                 children: <InlineSpan>[
                   TextSpan(
                       text:
-                          'Sügisel ostis Taani kuningas Frederik II Saare-Lääne piiskopi valdused oma vennale hertsog Magnusele.',
+                          'Sügisel ostis Taani kuningas Frederik II Saare-Lääne piiskopi valdused oma vennale hertsog Magnusele.\n\n',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
+                  WidgetSpan(
+                      child: ImageSwiper([
+                    Picture('Liivimaa kuningas Magnus 1563. aastal',
+                        'assets/illustrations/Magnus_1563_VS.jpg')
+                  ])),
                 ]),
           ),
           iconBackground: Colors.transparent),
