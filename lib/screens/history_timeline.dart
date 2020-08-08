@@ -5,6 +5,8 @@ import 'package:estonian_history/periods/period2.dart';
 import 'package:estonian_history/models/period.dart';
 import 'package:estonian_history/periods/period3.dart';
 import 'package:estonian_history/periods/period4.dart';
+import 'package:estonian_history/periods/period5.dart';
+import 'package:estonian_history/periods/period6.dart';
 import 'package:estonian_history/screens/history_timeline/history_info.dart';
 import 'package:estonian_history/screens/info.dart';
 import 'package:estonian_history/transitions/fade_route.dart';
@@ -61,6 +63,8 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
       Period(
           periodTitle: 'Võõrvõimu algussajand (1227–1343)',
           events: getPeriod4()),
+      Period(periodTitle: 'Jüriöö ülestõus (1343–45)', events: getPeriod5()),
+      Period(periodTitle: 'Vana-Liivimaa (1345–1558)', events: getPeriod6()),
     ];
     timelines = [];
 

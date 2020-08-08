@@ -1,10 +1,15 @@
 import 'package:estonian_history/constants.dart';
+import 'package:estonian_history/global.dart';
 import 'package:estonian_history/models/event.dart';
 import 'package:estonian_history/models/picture.dart';
+import 'package:estonian_history/transitions/fade_route.dart';
 import 'package:estonian_history/widgets/imageSwiper.dart';
+import 'package:estonian_history/widgets/myMap.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 Map<List<Event>, List<Event>> getPeriod4() {
   return {
@@ -134,8 +139,29 @@ Map<List<Event>, List<Event>> getPeriod4() {
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
                   ),
                   TextSpan(
+                      text: 'Stensby leping on 7. juunil 1238 Taanis ',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text: 'Sjællandi',
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: kText2Color.withOpacity(0.6),
+                          decoration: TextDecoration.underline),
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          Navigator.push(
+                              contextHistoryInfo,
+                              FadeRoute(
+                                  page: MyMap(
+                                coordinates: LatLng(55.466732, 11.721919),
+                                radius: 50000,
+                                zoom: 7,
+                                drawCircles: true,
+                              )));
+                        }),
+                  TextSpan(
                       text:
-                          'Stensby leping on 7. juunil 1238 Taanis Sjællandi saarel Taani kuninga Valdemar II ja Liivimaa ordumeistri Hermann Balke vahel sõlmitud kokkulepe eesmärgiga lõpetada 1220. aastal Põhja- ja Kesk-Eesti kuuluvuse pärast puhkenud konflikt Taani ning Liivi ordu eelkäija Mõõgavendade ordu ja Riia piiskopi vahel.',
+                          ' saarel Taani kuninga Valdemar II ja Liivimaa ordumeistri Hermann Balke vahel sõlmitud kokkulepe eesmärgiga lõpetada 1220. aastal Põhja- ja Kesk-Eesti kuuluvuse pärast puhkenud konflikt Taani ning Liivi ordu eelkäija Mõõgavendade ordu ja Riia piiskopi vahel.',
                       style: TextStyle(fontSize: 25)),
                   WidgetSpan(
                       child: ImageSwiper([
