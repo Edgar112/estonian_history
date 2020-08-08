@@ -3,9 +3,17 @@ import 'package:estonian_history/screens/home.dart';
 import 'package:estonian_history/widgets/my_behavior.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-void main() => runApp(EstonianHistory());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await precachePicture(
+      ExactAssetPicture(SvgPicture.svgStringDecoder,
+          'assets/illustrations/rocket_boy_no_stars.svg'),
+      null);
+  runApp(EstonianHistory());
+}
 
 class EstonianHistory extends StatelessWidget {
   @override

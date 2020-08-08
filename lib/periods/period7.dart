@@ -134,6 +134,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
                   ])),
                 ]),
           ),
+          more: true,
           iconBackground: Colors.transparent),
       Event(
           name: "",
