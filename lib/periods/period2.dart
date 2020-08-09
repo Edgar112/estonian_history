@@ -17,7 +17,7 @@ Map<List<Event>, List<Event>> getPeriod2() {
               "Jaroslav Targa sõjavägi vallutas Tarbatu (Tartu) linnuse ning Kagu-Eesti; eestlaste maksustamine; võimalikud ristiusu mõjud; Tartu esmakordne mainimine kirjasõnas (Jurjev).",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -41,7 +41,7 @@ Map<List<Event>, List<Event>> getPeriod2() {
               "Algas eestlaste viikingiaeg (Eesti meremeeste kauba- ja röövretked üle Läänemere).",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -58,7 +58,7 @@ Map<List<Event>, List<Event>> getPeriod2() {
           cover: "Eestlased vallutasid venelastelt Tarbatu linnuse tagasi.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -76,7 +76,7 @@ Map<List<Event>, List<Event>> getPeriod2() {
               "Eesti (Astlanda) esmakordne märkimine – araabia geograafi Abu Abdallah Muhammad al-ldrisi maailmakaardil.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -101,7 +101,7 @@ Map<List<Event>, List<Event>> getPeriod2() {
               "Lundi peapiiskop pühitses benediktlase Fulco Eestimaa piiskopiks.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -129,7 +129,7 @@ Map<List<Event>, List<Event>> getPeriod2() {
           cover: "Piiskop Fulco oletatav esimene misjoniretk Eestisse.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -146,7 +146,7 @@ Map<List<Event>, List<Event>> getPeriod2() {
           cover: "Piiskop Fulco oletatav teine misjoniretk Eestisse.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -164,7 +164,7 @@ Map<List<Event>, List<Event>> getPeriod2() {
               "Paavst Innocentius III kuulutas Vana-Liivimaa ristiusku pööramiseks ristisõja, asutati Mõõgavendade Ordu.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:

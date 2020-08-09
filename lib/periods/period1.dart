@@ -20,7 +20,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text: 'Eesti esiajalugu ehk Eesti muinasaeg\n\n',
@@ -42,7 +42,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Jääaegsed liustikud taandusid Kagu-Eestist järk-järgult loode poole ja kujundasid maastikku.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                       text:
@@ -60,7 +60,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Pärnu jõe paremal kaldal Pullis peatus mõnda aega rühm küttijaid ja kalastajaid.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text: 'Pärnu jõe paremal kaldal ',
@@ -100,7 +100,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Mesoliitikum ehk keskmine kiviaeg. Kõik selle ajajärgu ligi sadakond asulakohta (sh Pulli) kuulusid Kunda kultuuri, mida iseloomustavad rohked luu- ja sarvriistad ning vähesed kvartsist ja tulekivist esemed.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                     text:
@@ -136,7 +136,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Kunda Lammasmäele, madalaveelises järves paiknevale saarekesele, rajati esimest korda hooajaline asula, mida kasutati ka edaspidi.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                       text: 'Kunda Lammasmäele',
@@ -174,7 +174,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Kesk-Eesti neisse piirkondadesse, kus leidus kohalikku looduslikku tulekivi, rajati mitu asulat. Omaaegsed eluasemed kerkisid  ja Lepakosel, Võrtsjärve põhjaranniku voortele Siimusaares, Umbusis ja Moksis.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -309,7 +309,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Asustus hakkas levima vahetusse rannikuvööndisse, mille asulate elanikud tegelesid ka hülgeküttimisega. U 5800 eKr jõudsid hülgekütid Saaremaale, u 5700 eKr Hiiumaale ja 5300 eKr Ruhnu saarele.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -392,7 +392,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Keraamika kasutuselevõtmisega algas Eestis neoliitikum ehk noorem kiviaeg, mis kestis kuni u 1800 eKr. Keraamika esimese leiukoha järgi seostatakse neoliitikumi varaseimat järku Narva kultuuriga.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -411,7 +411,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Kasutusele võeti uus savinõude tüüp, mida nimetatakse kammijäljendeid meenutava ornamendi järgi tüüpiliseks kammkeraamikaks. Asulad, näiteks Valma, Akali, Kullamäe ja Narva, rajati endiselt veekogu lähedusse.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -521,7 +521,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Eesti soode selleaegsetes kihtides leidub kultuurtaimede õietolmu (oder, nisu, kaer), mis viitab võimalusele, et teatud määral tegeldi siin juba maaviljelusega.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -540,7 +540,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Eestis hakkas levima nöörkeraamika kultuur, mis tõi kaasa uut tüüpi muistised, esemed ja kombestiku. Kõige iseloomulikumad on nöörijäljenditega ilustatud savinõud ja vene ehk paati meenutavad silmaaukudega kivikirved (nn venekirved).",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -559,7 +559,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Nagu mitmel pool Põhja- ja Ida-Euroopas levis ka Eestis tekstiilkeraamika - savinõud, mille välispinnale vajutatakse mustriks jämedakoeline riie.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -578,7 +578,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Eestis algas pronksiaeg, mis kestis kuni u 500 aastani eKr. Vanimad seni leitud pronksesemed on odaots (Muhu saarelt), mis pärines Uurali aladelt, ja sirp (Võrtsjärve äärest Kivisaarest), mis jõudis siia Ukraina piirkonnast.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -645,7 +645,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Põhja- ja Lääne-Eesti ning Saaremaa elanike tegevuses ja maailmavaates leidsid aset olulised muutused, millest annavad tunnistust uut tüüpi muistised.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                     text:
@@ -794,7 +794,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Algas vanem rauaaeg, mille varasemat järku nimetatakse eelrooma rauaajaks (kuni u 50 pKr).",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -813,7 +813,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Kivikirstkalmete kõrval hakati ehitama uut tüüpi kivikalmeid - nn varaseid tarandkalmeid. Hakati rajama nn kelti põlde, mis võrreldes varasemate põldudega olid korrapärased.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -832,7 +832,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Ajutiselt kasutati mõnda linnust. Õpiti ise kohalikust soomaagist rauda sulatama.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -851,7 +851,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Vanema rauaaja noorem järk ehk nn rooma rauaaeg, mille alguseks peetakse klassikaliste tarandkalmete rajamise algust ja sõlgede ilmumist kalmetesse.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                     text:
@@ -877,7 +877,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Eesti siseosa asustus tihenes järk-järgult, klassikalised tarandkalmed levisid üsna laialdaselt ka Kesk- ja Lõuna-Eesti tüsedama muldkattega aladel, mis on raskemini haritavad.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -896,7 +896,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Keskmise rauaaja vanem järk ehk nn rahvaste rännuaeg oli põhjalike muutuste ajajärk.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -915,7 +915,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Sagenes varanduse peitmine maasse. Hõbedast sõlgi, kaela- ja käevõrusid ning isegi üksikuid kuldesemeid tuleb enamasti välja põllumaadelt või asulakohtadest, vahel isegi kalmetest. Pronksehteid, relvi ja tööriistu ohverdati sohu või veekogudesse.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -934,7 +934,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Keskmise rauaaja noorem järk ehk nn eelviikingiaeg. Eriti maa ida- ja lõunaosas hakati püstitama rohkelt linnuseid. Algas Eesti traditsioonilise küla ja külaühiskonna kujunemine. Mitmedki selleaegsed külad on jäänud pidevalt asustatuks.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -953,7 +953,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Eestlaste elu mõjutasid oluliselt viikingitest sõdalaste ja kaupmeeste tegevus ning Läänemerelt mööda Venemaa suuri jõgesid Bütsantsi ja Idamaadesse kulgeva veetee muutumine rahvusvaheliselt tähtsaks ühendussooneks.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                     text:
@@ -980,7 +980,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Rjuriku kaaslane Oleg vallutas Kiievi, millega ühendati Venemaa lõuna- ja põhjapoolsed hõimud ning loodi Vana-Vene ehk Kiievi-Vene riik. Olegi sõjaväes olid ka tšuudid, keda osa ajaloolasi peab otseselt eestlasteks, teised aga üheks omaette läänemeresoome rahvaks, kes elas sel ajal Pihkva- ja Novgorodimaal.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <TextSpan>[
                   TextSpan(
                     text:
@@ -1007,7 +1007,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Olav Trygvassoni saaga põhjal vangistasid eestlased merel hilisema kuulsa Norra viikingitejuhi ja kuninga, tol ajal veel 3-aastase poisikese Olav Trygvassoni ja tema ema Astridi. Kuus aastat viibis Olav Eestis kolme peremehe valduses, kes teda üksteisele müüsid. Lõpuks ostis Novgorodist siia turule tulnud Olavi lihane onu Sigurd ta vabaks. Ema Astridi ostis hiljem välja rikas norralane Loden.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                     text:
@@ -1033,7 +1033,7 @@ Map<List<Event>, List<Event>> getPeriod1() {
               "Eestlaste eduka kauplemise tulemusena jõudis siia rohkesti hõbedat, araabia hõbemünte hakkasid asendama nüüd järk-järgult mitmesugused Lääne-Euroopa mündid. Rahutute olude tõttu hoiti neid maasse peidetuna. Tänapäevaks on selle ajajärgu aaretest leitud juba üle 11 000 hõberaha.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                     text:

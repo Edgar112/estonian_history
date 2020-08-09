@@ -20,7 +20,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Vene-Liivimaa sõja tulemused\n\n',
@@ -54,7 +54,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
               "Vene vägi tungis põhjas Alutagusesse ja lõunas Vastseliina kaudu Tartu piiskopkonda, rüüsteretk kestis 3 nädalat.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -71,7 +71,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
           cover: "Venelased vallutasid Narva.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Venelased vallutasid Narva.',
@@ -87,7 +87,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
           cover: "Venelased vallutasid Vasknarva.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Venelased vallutasid Vasknarva.',
@@ -103,7 +103,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
           cover: "Venelased vallutasid Tartu.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Venelased vallutasid Tartu.',
@@ -120,7 +120,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
               "Sügisel ostis Taani kuningas Frederik II Saare-Lääne piiskopi valdused oma vennale hertsog Magnusele.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -144,7 +144,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
               "Härgmäe lahing, Liivimaa Ordu viimane välilahing, kaotati venelastele.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -162,7 +162,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
               "Venelased vallutasid Viljandi; sügisel algas Harjus talupoegade mäss, see levis Viru- ja Läänemaale; aasta lõpus paigutati ordu kutsel mitmesse Eesti linnusesse Poola väeosad.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -180,7 +180,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
               "Harju-, Viru- ja Järvamaa rüütelkond koos Tallinna linnaga andsid ustavusvande Rootsi kuningale Erik XIV-le.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -198,7 +198,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
               "Viimased Vana-Liivimaa alad, sh Lõuna- ja Kesk-Eesti, alistusid Poola kuningale Zygmunt II Augustile.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -220,7 +220,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
           cover: "Kuressaare sai linna õigused.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Kuressaare sai linna õigused.',
@@ -236,7 +236,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
           cover: "Venemaast sõltuv Magnuse vasallkuningriik Eesti alal.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -253,7 +253,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
           cover: "Venelased piirasid Magnuse juhatusel Tallinna.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Venelased piirasid Magnuse juhatusel Tallinna.',
@@ -270,7 +270,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
               "Koluvere lahing; Rootsi väepealik Clas Tott võitis venelasi ja sundis nad Läänemaalt lahkuma.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -288,7 +288,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
               "Venelaste vastu tegutses Ivo Schenkenbergi juhitud talumeeste lipkond - „Hannibali rahvas”.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -305,7 +305,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
           cover: "Venelased piirasid teist korda Tallinna.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Venelased piirasid teist korda Tallinna.',
@@ -321,7 +321,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
           cover: "Nälg Eestis.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Nälg Eestis.',
@@ -337,7 +337,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
           cover: "Katk Eestis.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Katk Eestis.',
@@ -353,7 +353,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
           cover: "Rootslased vallutasid venelastelt Narva.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Rootslased vallutasid venelastelt Narva.',
@@ -369,7 +369,7 @@ Map<List<Event>, List<Event>> getPeriod7() {
           cover: "Rootsi ja Venemaa sõlmisid 3 aastaks Pljussa vaherahu.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.gabriela(color: kText2Color),
+                style: GoogleFonts.exo2(color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:

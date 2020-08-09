@@ -36,7 +36,7 @@ class ImagePupUp extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               child: Text(
                 imageDescription,
-                style: GoogleFonts.gabriela(
+                style: GoogleFonts.exo2(
                     fontSize: 15,
                     color: kText2Color,
                     fontStyle: FontStyle.italic),

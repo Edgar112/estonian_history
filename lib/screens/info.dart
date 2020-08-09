@@ -104,7 +104,7 @@ class _InfoState extends State<Info> {
                                     alignment: Alignment.center,
                                     child: RichText(
                                       text: TextSpan(
-                                          style: GoogleFonts.gabriela(
+                                          style: GoogleFonts.exo2(
                                               color: kText1Color),
                                           children: <TextSpan>[
                                             TextSpan(
@@ -134,7 +134,7 @@ class _InfoState extends State<Info> {
                                     alignment: Alignment.center,
                                     child: RichText(
                                       text: TextSpan(
-                                          style: GoogleFonts.gabriela(
+                                          style: GoogleFonts.exo2(
                                               color: kText1Color),
                                           children: <TextSpan>[
                                             TextSpan(
@@ -164,7 +164,7 @@ class _InfoState extends State<Info> {
                                     alignment: Alignment.center,
                                     child: RichText(
                                       text: TextSpan(
-                                          style: GoogleFonts.gabriela(
+                                          style: GoogleFonts.exo2(
                                               color: kText1Color),
                                           children: <TextSpan>[
                                             TextSpan(

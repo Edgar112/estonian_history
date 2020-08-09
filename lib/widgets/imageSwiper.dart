@@ -153,7 +153,7 @@ class _ImageSwiperState extends State<ImageSwiper> {
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             child: Text(
               images[_currentIndex].imageName,
-              style: GoogleFonts.gabriela(
+              style: GoogleFonts.exo2(
                   fontSize: 15,
                   color: kText2Color,
                   fontStyle: FontStyle.italic),

@@ -100,8 +100,7 @@ class Timeline extends StatelessWidget {
                 margin: EdgeInsets.only(right: 50),
                 alignment: Alignment.centerLeft,
                 child: Text(periodTitle,
-                    style: GoogleFonts.gabriela(
-                        fontSize: 15, color: kText2Color))),
+                    style: GoogleFonts.exo2(fontSize: 15, color: kText2Color))),
             GestureDetector(
               onTap: () {
                 Scrollable.ensureVisible(tKey.currentContext,
