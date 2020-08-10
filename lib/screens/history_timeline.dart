@@ -73,8 +73,8 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
       Period(
           periodTitle: 'Rootsi, Poola ja Taani võimu all (1583–1629)',
           events: getPeriod8()),
-      //////////////////////////////////////////////////////////////////////////////////////////////////
       Period(periodTitle: 'Rootsi aeg (1629–1710)', events: getPeriod9()),
+      //////////////////////////////////////////////////////////////////////////////////////////////////
       Period(periodTitle: 'Põhjasõda Eestis (1700–10)', events: getPeriod10()),
     ];
     timelines = [];
