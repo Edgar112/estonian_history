@@ -7,7 +7,7 @@ import 'package:estonian_history/widgets/myMap.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 Map<List<Event>, List<Event>> getPeriod8() {
@@ -20,7 +20,7 @@ Map<List<Event>, List<Event>> getPeriod8() {
           cover: "Tartus avati jesuiitidele gümnaasiumi tasemega kolleegium.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -37,7 +37,7 @@ Map<List<Event>, List<Event>> getPeriod8() {
           cover: "Valga sai linna õigused.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Valga sai linna õigused.',
@@ -53,7 +53,7 @@ Map<List<Event>, List<Event>> getPeriod8() {
           cover: "Pljussa vaherahu pikendati 1590. a-ni.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Pljussa vaherahu pikendati 1590. a-ni.',
@@ -69,7 +69,7 @@ Map<List<Event>, List<Event>> getPeriod8() {
           cover: "Vene-Rootsi sõda.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Vene-Rootsi sõda.',
@@ -85,7 +85,7 @@ Map<List<Event>, List<Event>> getPeriod8() {
           cover: "Katk Eestis.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Katk Eestis.',
@@ -101,7 +101,7 @@ Map<List<Event>, List<Event>> getPeriod8() {
           cover: "Täyssinä rahu; Rootsi loovutas Ingerimaa Venemaale.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -118,7 +118,7 @@ Map<List<Event>, List<Event>> getPeriod8() {
           cover: "Rootsi-Poola sõda Liivimaa pärast.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Rootsi-Poola sõda Liivimaa pärast.',
@@ -134,7 +134,7 @@ Map<List<Event>, List<Event>> getPeriod8() {
           cover: "Nälg ja katk Eestis.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Nälg ja katk Eestis.',
@@ -151,7 +151,7 @@ Map<List<Event>, List<Event>> getPeriod8() {
               "Asutati esimene Eesti klaasikoda (Hüti klaasikoda Hiiumaal, tegutses a-ni 1664).",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -169,7 +169,7 @@ Map<List<Event>, List<Event>> getPeriod8() {
               "Rootsi ja Poola sõlmisid Altmargi vaherahu, kogu Liivimaa sai Rootsile.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:

@@ -1,7 +1,6 @@
 import 'package:estonian_history/constants.dart';
 import 'package:estonian_history/widgets/HeroPhotoViewWrapper.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class ImagePupUp extends StatelessWidget {
   final String image;
@@ -36,7 +35,8 @@ class ImagePupUp extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               child: Text(
                 imageDescription,
-                style: GoogleFonts.exo2(
+                style: TextStyle(
+                    fontFamily: 'Exo2',
                     fontSize: 15,
                     color: kText2Color,
                     fontStyle: FontStyle.italic),

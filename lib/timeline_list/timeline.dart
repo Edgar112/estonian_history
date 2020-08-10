@@ -9,7 +9,6 @@ import 'package:estonian_history/timeline_list/src/timeline_item.dart';
 import 'package:estonian_history/timeline_list/src/timeline_painter.dart';
 import 'package:estonian_history/timeline_list/timeline_model.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 typedef IndexedTimelineModelBuilder = TimelineModel Function(
     BuildContext context, int indexm, Map<List<Event>, List<Event>> events);
@@ -100,7 +99,8 @@ class Timeline extends StatelessWidget {
                 margin: EdgeInsets.only(right: 50),
                 alignment: Alignment.centerLeft,
                 child: Text(periodTitle,
-                    style: GoogleFonts.exo2(fontSize: 15, color: kText2Color))),
+                    style: TextStyle(
+                        fontFamily: 'Exo2', fontSize: 15, color: kText2Color))),
             GestureDetector(
               onTap: () {
                 Scrollable.ensureVisible(tKey.currentContext,

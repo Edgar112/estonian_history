@@ -4,7 +4,6 @@ import 'package:estonian_history/models/picture.dart';
 import 'package:estonian_history/widgets/imageSwiper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 Map<List<Event>, List<Event>> getPeriod3() {
   return {
@@ -16,7 +15,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                     text: 'Muistne vabadusvõitlus\n\n',
@@ -64,7 +63,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
               "Mõõgavendade Ordu sõjaretk Ugandisse koos ristitud lätlaste ja liivlastega, Otepää mahapõletamine; ugalaste ja sakalaste vasturetk lätlaste aladele; lätlaste rüüsteretk Sakalasse; aasta lõpus sõlmiti üheks aastaks rahu.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -88,7 +87,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
               "Venelaste retk Ugandisse; ordu, piiskopi, lätlaste ja liivlaste retk Ugandisse ja Otepää teine põletamine; eestlaste retk Võnnu alla, võit Ümera lahingus sakslaste, lätlaste ja liivlaste väe üle; aasta lõpus sakslaste, lätlaste, liivlaste ja venelaste retk Soontaganasse.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -113,7 +112,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
           cover: "Esimene teadaolev katk Eestis.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Esimene teadaolev katk Eestis.\n\n',
@@ -156,7 +155,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
               "Eestlaste retked Lätisse; sakslaste, lätlaste ja liivlaste retked Eestisse, Viljandi linnuse piiramine ja alistamine, eestlaste ristimine Sakalas; eestlased piirasid Turaida linnust ja said Koiva lahingus lüüa; venelaste retk Varbola alla; Lembitu retk Pihkvasse.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -185,7 +184,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
               "Turaidas sõlmisid eestlased ja sakslased kolmeks aastaks vaherahu.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -202,7 +201,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
           cover: "Leedulaste rüüsteretk Sakalasse.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Leedulaste rüüsteretk Sakalasse.',
@@ -219,7 +218,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
               "Talvel sakslaste, lätlaste ja liivlaste rüüsteretked Ridalasse ja Sakalasse (Leole linnuse vallutamine); kevadel eestlaste kolme maleva sõjakäik; suvel lätlaste 9 rüüsteretke Ugandisse ja Vaigasse; Uue sadama lahing Saaremaa rannikul; Ugandi ja Sakala maakonna ristimine.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -237,7 +236,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
               "Talvel sakslaste, lätlaste ja liivlaste retked Soontaganasse ja Saaremaale; kevadel saarlaste retk Põhja-Lätisse; suvel sakslaste, lätlaste ja liivlaste retk Harjusse ja Revalasse; sügisel venelaste retk Ugandisse.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -255,7 +254,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
               "Jaanuaris sakslaste ja ugalaste retk Pihkvamaale; kevadtalvel sakslaste, lätlaste, liivlaste ja ugalaste retk Järva- ja Virumaale ning Järvamaa alistumine; lääne-eestlased ja venelased piirasid Otepääl olevaid sakslasi ja sundisid need lahkuma; sakslaste, lätlaste ja liivlaste retk Sakalasse, vabade Eesti maakondade ühinemine Lembitu juhtimisel malevaks ning Madisepäeva lahing (21. sept), kus eestlased said lüüa ja Lembitu langes; Lõuna- ja Kesk-Eesti maakonnad sõlmisid sakslastega rahu ja lasksid end ristida.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -273,7 +272,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
               "Talvel sakslaste, lätlaste ja liivlaste retk Läänemaale, läänlaste ristimine ja maksustamine; kevadel saarlaste retk Põhja-Lätisse; jaanipäeval piiskop Alberti abipalve Taani kuningale Valdemar II-le eestlaste ühiseks alistamiseks; sügisel sakslaste 2 lahingut venelastega Väikese Emajõe juures; harjulased piirasid koos venelastega Võnnut (Cēsist).",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -299,7 +298,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
               "Talvel sakslaste, lätlaste ja liivlaste retk Harjusse ja Revalasse; suvel taanlaste laevastiku maabumine Lindanise linnuse all, Lindanise lahing, Revala alistamine ja ristimine; sügisel sakslaste, lätlaste ja sakalaste retk Järvamaale.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -324,7 +323,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
               "Talvel sakslaste, lätlaste, liivlaste, järvalaste, ugalaste ja sakalaste retk Virumaale; seejärel saarlaste rüüsteretk Järvamaale ristitud eestlaste vastu; sakslaste, lätlaste, liivlaste ja ristitud eestlaste retk Harjusse ja Revalasse; Virumaa ristimine; suvel tungisid rootslased Läänemaale, vallutasid Lihula linnuse ja ristisid ümbruskonna rahvast, augustis vallutasid linnuse saarlased.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -348,7 +347,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
               "Aprillis saarlaste ja põhjaeestlaste ebaõnnestunud katse Tallinna taanlastelt tagasi vallutada, taanlaste ja sakslaste leping mõjupiiride kohta; hakati täitma ristiusu väliseid kombeid.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -366,7 +365,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
               "Suvel maabusid taanlased Saaremaal ja ehitasid sinna kivilinnuse; pärast kuningas Valdemar II lahkumist vallutasid linnuse saarlased, seejärel kihutasid nad vastuhakule ka harjulasi, läänlasi, virulasi ja järvalasi.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -384,7 +383,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
               "Jaanuari lõpus sakalaste vastuhakk Viljandis; veebruaris vastuhakk Ugandis, Tallinna linna piiramine, sakslaste linnuste vallutamine; Tallinn jäi taanlaste valdusse; vastastikused sõjakäigud maa lõunapiiril, eestlaste kaotus teises Ümera lahingus; augustis vallutasid sakslased Viljandi; venelaste retk läbi Eesti eestlaste liitlastena.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -402,7 +401,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
               "Jaanuaris sakslaste retk Harjumaale; augustis piirasid sakslased Tarbatu linnust, kogu Mandri-Eesti alistus ja võttis uuesti vastu ristiusu.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -426,7 +425,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
               "Veebruaris vallutas sakslaste, lätlaste, liivlaste ja mandrieestlaste vägi Muhu linnuse; hävitati Valjala linnus; kogu Saaremaa allutati, rahvas ristiti.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -449,7 +448,7 @@ Map<List<Event>, List<Event>> getPeriod3() {
       //     cover: "",
       //     text: RichText(
       //       text: TextSpan(
-      //           style: GoogleFonts.exo2(color: kText2Color),
+      //           style: TextStyle(fontFamily: 'Exo2',color: kText2Color),
       //           children: <InlineSpan>[
       //             TextSpan(
       //                 text: '',

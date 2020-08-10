@@ -7,7 +7,6 @@ import 'package:estonian_history/widgets/myMap.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 Map<List<Event>, List<Event>> getPeriod5() {
@@ -20,7 +19,7 @@ Map<List<Event>, List<Event>> getPeriod5() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -59,7 +58,7 @@ Map<List<Event>, List<Event>> getPeriod5() {
               "Harju ülestõusu algus; mõisate, kirikute ja kabelite ning Padise kloostri põletamine, sakslaste tapmine; eestlased piirasid Tallinna; 4 vanema valimine.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -76,7 +75,7 @@ Map<List<Event>, List<Event>> getPeriod5() {
           cover: 'Läänemaa ülestõusu algus.',
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Läänemaa ülestõusu algus.',
@@ -92,7 +91,7 @@ Map<List<Event>, List<Event>> getPeriod5() {
           cover: 'Läbirääkimised ja Eesti vanemate tapmine Paides.',
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Läbirääkimised ja Eesti vanemate tapmine Paides.',
@@ -109,7 +108,7 @@ Map<List<Event>, List<Event>> getPeriod5() {
               'Kimmole ja Kanavere lahing - võitlus eestlaste tõkestusväe ja Tallinnale appitulnud orduväe vahel.',
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -127,7 +126,7 @@ Map<List<Event>, List<Event>> getPeriod5() {
               'Sõjamäe lahing, Tallinna piirava eestlaste peaväe lüüasaamine.',
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -145,7 +144,7 @@ Map<List<Event>, List<Event>> getPeriod5() {
               'Viiburi foogti laevaväe saabumine Tallinna, eestlastele appi.',
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -162,7 +161,7 @@ Map<List<Event>, List<Event>> getPeriod5() {
           cover: 'Algas Pihkva väe tungimine Tartu piiskopkonda.',
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Algas Pihkva väe tungimine Tartu piiskopkonda.',
@@ -178,7 +177,7 @@ Map<List<Event>, List<Event>> getPeriod5() {
           cover: 'Saaremaa ülestõusu algus, Pöide piiramine ja langemine.',
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -195,7 +194,7 @@ Map<List<Event>, List<Event>> getPeriod5() {
           cover: 'Teine orduvägi tuli Harjumaale eestlasi karistama.',
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -212,7 +211,7 @@ Map<List<Event>, List<Event>> getPeriod5() {
           cover: 'Orduväe tungimine Saaremaale, vanem Vesse hukkamine.',
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -230,7 +229,7 @@ Map<List<Event>, List<Event>> getPeriod5() {
               'Talvel orduväe teine tungimine Saaremaale ning saare täielik allutamine.',
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:

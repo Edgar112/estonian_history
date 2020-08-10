@@ -7,7 +7,7 @@ import 'package:estonian_history/widgets/myMap.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 Map<List<Event>, List<Event>> getPeriod9() {
@@ -20,7 +20,7 @@ Map<List<Event>, List<Event>> getPeriod9() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: '',
@@ -36,7 +36,7 @@ Map<List<Event>, List<Event>> getPeriod9() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: '',
@@ -52,7 +52,7 @@ Map<List<Event>, List<Event>> getPeriod9() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: '',
@@ -68,7 +68,7 @@ Map<List<Event>, List<Event>> getPeriod9() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: '',
@@ -84,7 +84,7 @@ Map<List<Event>, List<Event>> getPeriod9() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: '',
@@ -100,7 +100,7 @@ Map<List<Event>, List<Event>> getPeriod9() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: '',
@@ -116,7 +116,7 @@ Map<List<Event>, List<Event>> getPeriod9() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: '',
@@ -132,7 +132,7 @@ Map<List<Event>, List<Event>> getPeriod9() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: '',
@@ -148,7 +148,7 @@ Map<List<Event>, List<Event>> getPeriod9() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: '',
@@ -164,7 +164,7 @@ Map<List<Event>, List<Event>> getPeriod9() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: '',
@@ -180,7 +180,7 @@ Map<List<Event>, List<Event>> getPeriod9() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: '',
@@ -196,7 +196,7 @@ Map<List<Event>, List<Event>> getPeriod9() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: '',
@@ -212,7 +212,7 @@ Map<List<Event>, List<Event>> getPeriod9() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: '',
@@ -228,7 +228,7 @@ Map<List<Event>, List<Event>> getPeriod9() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: '',
@@ -244,7 +244,7 @@ Map<List<Event>, List<Event>> getPeriod9() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: '',
@@ -260,7 +260,7 @@ Map<List<Event>, List<Event>> getPeriod9() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: '',

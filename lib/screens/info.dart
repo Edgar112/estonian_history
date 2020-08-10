@@ -5,7 +5,6 @@ import 'package:estonian_history/constants.dart';
 import 'package:estonian_history/global.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Info extends StatefulWidget {
   Info({Key key}) : super(key: key);
@@ -104,7 +103,8 @@ class _InfoState extends State<Info> {
                                     alignment: Alignment.center,
                                     child: RichText(
                                       text: TextSpan(
-                                          style: GoogleFonts.exo2(
+                                          style: TextStyle(
+                                              fontFamily: 'Exo2',
                                               color: kText1Color),
                                           children: <TextSpan>[
                                             TextSpan(
@@ -134,7 +134,8 @@ class _InfoState extends State<Info> {
                                     alignment: Alignment.center,
                                     child: RichText(
                                       text: TextSpan(
-                                          style: GoogleFonts.exo2(
+                                          style: TextStyle(
+                                              fontFamily: 'Exo2',
                                               color: kText1Color),
                                           children: <TextSpan>[
                                             TextSpan(
@@ -164,7 +165,8 @@ class _InfoState extends State<Info> {
                                     alignment: Alignment.center,
                                     child: RichText(
                                       text: TextSpan(
-                                          style: GoogleFonts.exo2(
+                                          style: TextStyle(
+                                              fontFamily: 'Exo2',
                                               color: kText1Color),
                                           children: <TextSpan>[
                                             TextSpan(

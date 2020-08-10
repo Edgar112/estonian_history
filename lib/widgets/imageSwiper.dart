@@ -4,7 +4,6 @@ import 'package:estonian_history/widgets/HeroPhotoViewWrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_page_indicator/flutter_page_indicator.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class ImageSwiper extends StatefulWidget {
   final List<Picture> images;
@@ -153,7 +152,8 @@ class _ImageSwiperState extends State<ImageSwiper> {
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             child: Text(
               images[_currentIndex].imageName,
-              style: GoogleFonts.exo2(
+              style: TextStyle(
+                  fontFamily: 'Exo2',
                   fontSize: 15,
                   color: kText2Color,
                   fontStyle: FontStyle.italic),

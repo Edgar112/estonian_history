@@ -8,7 +8,7 @@ import 'package:estonian_history/widgets/myMap.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 Map<List<Event>, List<Event>> getPeriod4() {
@@ -21,7 +21,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
           cover: "",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(text: "\n\n"),
                   WidgetSpan(
@@ -67,7 +67,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
               "Mõõgavendade Ordu allutas Tallinna ja kogu Põhja-Eesti; Tallinn sai Riia linnaõiguse.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -93,7 +93,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
           cover: "Mõõgavendade Ordu ühines Saksa Orduga Liivimaa Orduks.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -110,7 +110,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
           cover: "Saarlaste ülestõus.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Saarlaste ülestõus.',
@@ -127,7 +127,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
               "Taani ja ordu sõlmisid Stensby lepingu, millega taanlased said tagasi Tallinna ja kogu Põhja-Eesti.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -180,7 +180,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
               "Koostati „Liber Census Daniae” („Taani hindamisraamat”), milles on andmeid Põhja-Eesti kohta (peamisi Eesti vanema ajaloo allikaid).",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -197,7 +197,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
           cover: "Tallinn sai Lübecki linnaõiguse.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Tallinn sai Lübecki linnaõiguse.\n\n',
@@ -227,7 +227,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
           cover: "Tallinnas rajati naistsistertslaste Püha Mikaeli klooster.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -244,7 +244,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
           cover: "Esimene teade Eesti kooli kohta (Pärnu toomkool).",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Esimene teade Eesti kooli kohta (Pärnu toomkool).',
@@ -260,7 +260,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
           cover: "Saarlaste teine ülestõus.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Saarlaste teine ülestõus.',
@@ -277,7 +277,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
               "Leedulased põletasid maha Vana-Pärnu, Saare-Lääne piiskop viis oma residentsi Pärnust Haapsallu.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -294,7 +294,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
           cover: "Haapsalu sai linna õigused.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Haapsalu sai linna õigused.',
@@ -311,7 +311,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
               "Viljandi esmamaining linnana; järgmistel aastatel said Tallinn, Tartu, Pärnu ja Viljandi Hansa liikmeks.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -328,7 +328,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
           cover: "Paide sai linna õigused.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Paide sai linna õigused.',
@@ -345,7 +345,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
               "Liivimaa kodusõda (ühel pool ordu ja Riia linn, teisel pool piiskopid).",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -362,7 +362,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
           cover: "Põllumajanduses võeti kasutusele kolmeväljasüsteem.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -388,7 +388,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
           cover: "Rakvere sai linna õigused.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Rakvere sai linna õigused.',
@@ -404,7 +404,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
           cover: "Tsistertslased asutasid Padise kloostri.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Tsistertslased asutasid Padise kloostri.\n\n',
@@ -450,7 +450,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
           cover: "Liivimaad tabas mitmeaastase ikalduse tõttu nälg.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Liivimaad tabas mitmeaastase ikalduse tõttu nälg.',
@@ -466,7 +466,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
           cover: "Teine Liivimaa kodusõda.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Teine Liivimaa kodusõda.',
@@ -483,7 +483,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
               "Esimene teade Eesti kirikute (Helme ja Paistu) orelite kohta.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text:
@@ -500,7 +500,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
           cover: "Tallinna raekoja esmamaining ürikuis.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Tallinna raekoja esmamaining ürikuis.',
@@ -516,7 +516,7 @@ Map<List<Event>, List<Event>> getPeriod4() {
           cover: "Vastseliina linnuse ehitamine.",
           text: RichText(
             text: TextSpan(
-                style: GoogleFonts.exo2(color: kText2Color),
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
                       text: 'Vastseliina linnuse ehitamine.',
