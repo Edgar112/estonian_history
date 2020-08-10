@@ -14,15 +14,17 @@ Map<List<Event>, List<Event>> getPeriod10() {
     [null]: [
       Event(
           name: "",
-          date: "",
-          subDate: "",
-          cover: "",
+          date: "1700",
+          subDate: "12. veebruar",
+          cover:
+              "August II (Saksi) vägi tungis Liivimaale ja piiras maikuuni Riiat.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: '',
+                      text:
+                          'August II (Saksi) vägi tungis Liivimaale ja piiras maikuuni Riiat.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),
@@ -30,15 +32,15 @@ Map<List<Event>, List<Event>> getPeriod10() {
           iconBackground: Colors.transparent),
       Event(
           name: "",
-          date: "",
-          subDate: "",
-          cover: "",
+          date: "1700",
+          subDate: "19. august",
+          cover: "Venemaa kuulutas Rootsile sõja.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: '',
+                      text: 'Venemaa kuulutas Rootsile sõja.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),
@@ -46,15 +48,15 @@ Map<List<Event>, List<Event>> getPeriod10() {
           iconBackground: Colors.transparent),
       Event(
           name: "",
-          date: "",
-          subDate: "",
-          cover: "",
+          date: "1700",
+          subDate: "22. september",
+          cover: "Vene sõjavägi jõudis Narva alla.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: '',
+                      text: 'Vene sõjavägi jõudis Narva alla.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),
@@ -62,15 +64,15 @@ Map<List<Event>, List<Event>> getPeriod10() {
           iconBackground: Colors.transparent),
       Event(
           name: "",
-          date: "",
-          subDate: "",
-          cover: "",
+          date: "1700",
+          subDate: "4. november",
+          cover: "Tallinnas maabus Karl XII koos oma väega.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: '',
+                      text: 'Tallinnas maabus Karl XII koos oma väega.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),
@@ -78,15 +80,15 @@ Map<List<Event>, List<Event>> getPeriod10() {
           iconBackground: Colors.transparent),
       Event(
           name: "",
-          date: "",
-          subDate: "",
-          cover: "",
+          date: "1700",
+          subDate: "19. november",
+          cover: "Karl XII lõi venelasi Narva lahingus.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: '',
+                      text: 'Karl XII lõi venelasi Narva lahingus.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),
@@ -94,15 +96,15 @@ Map<List<Event>, List<Event>> getPeriod10() {
           iconBackground: Colors.transparent),
       Event(
           name: "",
-          date: "",
-          subDate: "",
-          cover: "",
+          date: "1701",
+          subDate: "29. detsember",
+          cover: "Venelased võitsid rootslasi Erastvere lahingus.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: '',
+                      text: 'Venelased võitsid rootslasi Erastvere lahingus.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),
@@ -110,15 +112,15 @@ Map<List<Event>, List<Event>> getPeriod10() {
           iconBackground: Colors.transparent),
       Event(
           name: "",
-          date: "",
-          subDate: "",
-          cover: "",
+          date: "1701",
+          subDate: "18. juuli",
+          cover: "Venelased võitsid rootslasi Hummuli lahingus.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: '',
+                      text: 'Venelased võitsid rootslasi Hummuli lahingus.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),
@@ -126,15 +128,17 @@ Map<List<Event>, List<Event>> getPeriod10() {
           iconBackground: Colors.transparent),
       Event(
           name: "",
-          date: "",
+          date: "1703",
           subDate: "",
-          cover: "",
+          cover:
+              "Venelaste rüüsteretk läbi Viru-, Järva-, Viljandi-, Tartu- ja Võrumaa.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: '',
+                      text:
+                          'Venelaste rüüsteretk läbi Viru-, Järva-, Viljandi-, Tartu- ja Võrumaa.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),
@@ -142,15 +146,16 @@ Map<List<Event>, List<Event>> getPeriod10() {
           iconBackground: Colors.transparent),
       Event(
           name: "",
-          date: "",
-          subDate: "",
-          cover: "",
+          date: "1704",
+          subDate: "3. mai",
+          cover: "Venelased võitsid rootslasi Kastre lahingus Emajõel.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: '',
+                      text:
+                          'Venelased võitsid rootslasi Kastre lahingus Emajõel.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),
@@ -158,15 +163,15 @@ Map<List<Event>, List<Event>> getPeriod10() {
           iconBackground: Colors.transparent),
       Event(
           name: "",
-          date: "",
-          subDate: "",
-          cover: "",
+          date: "1704",
+          subDate: "13. juuli",
+          cover: "Venelased vallutasid Tartu.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: '',
+                      text: 'Venelased vallutasid Tartu.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),
@@ -174,15 +179,15 @@ Map<List<Event>, List<Event>> getPeriod10() {
           iconBackground: Colors.transparent),
       Event(
           name: "",
-          date: "",
-          subDate: "",
-          cover: "",
+          date: "1704",
+          subDate: "9. august",
+          cover: "Venelased vallutasid Narva.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: '',
+                      text: 'Venelased vallutasid Narva.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),
@@ -190,15 +195,16 @@ Map<List<Event>, List<Event>> getPeriod10() {
           iconBackground: Colors.transparent),
       Event(
           name: "",
-          date: "",
-          subDate: "",
-          cover: "",
+          date: "1709",
+          subDate: "27. juuni",
+          cover: "Rootslased said venelastelt Poltaava lahingus lüüa.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: '',
+                      text:
+                          'Rootslased said venelastelt Poltaava lahingus lüüa.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),
@@ -206,15 +212,17 @@ Map<List<Event>, List<Event>> getPeriod10() {
           iconBackground: Colors.transparent),
       Event(
           name: "",
-          date: "",
+          date: "1710–13",
           subDate: "",
-          cover: "",
+          cover:
+              "Viimane ning suurim katk Eestis; suri u 200 000 inimest – pool rahvastikust.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: '',
+                      text:
+                          'Viimane ning suurim katk Eestis; suri u 200 000 inimest – pool rahvastikust.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),
@@ -222,15 +230,15 @@ Map<List<Event>, List<Event>> getPeriod10() {
           iconBackground: Colors.transparent),
       Event(
           name: "",
-          date: "",
-          subDate: "",
-          cover: "",
+          date: "1710",
+          subDate: "12. august",
+          cover: "Venelased vallutasid Pärnu.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: '',
+                      text: 'Venelased vallutasid Pärnu.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),
@@ -238,15 +246,15 @@ Map<List<Event>, List<Event>> getPeriod10() {
           iconBackground: Colors.transparent),
       Event(
           name: "",
-          date: "",
-          subDate: "",
-          cover: "",
+          date: "1710",
+          subDate: "15. september",
+          cover: "Venelased vallutasid Kuressaare.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: '',
+                      text: 'Venelased vallutasid Kuressaare.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),
@@ -254,15 +262,17 @@ Map<List<Event>, List<Event>> getPeriod10() {
           iconBackground: Colors.transparent),
       Event(
           name: "",
-          date: "",
-          subDate: "",
-          cover: "",
+          date: "1710",
+          subDate: "29. september",
+          cover:
+              "Tallinna linna ja Eestimaa rüütelkonna kapitulatsioon Venemaa ees.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: '',
+                      text:
+                          'Tallinna linna ja Eestimaa rüütelkonna kapitulatsioon Venemaa ees.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),
