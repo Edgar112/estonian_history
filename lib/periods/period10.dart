@@ -11,7 +11,106 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 Map<List<Event>, List<Event>> getPeriod10() {
   return {
-    [null]: [
+    [
+      Event(
+          name: "",
+          date: "Põhjasõda Eestis (1700–10)",
+          subDate: "",
+          cover: "",
+          text: RichText(
+            text: TextSpan(
+                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
+                children: <InlineSpan>[
+                  TextSpan(
+                      text: 'Põhjasõda (1700–1721)\n\n',
+                      style:
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.w600)),
+                  TextSpan(
+                      text:
+                          "Sõjas osalesid ühel pool Rootsi, vastaspoolel Moskva tsaaririik, Taani, Saksimaa, Rzeczpospolita ning 1713. aastal liitusid nendega Preisimaa ja Hannover.\n\n",
+                      style: TextStyle(fontSize: 25)),
+                  WidgetSpan(
+                      child: ImageSwiper([
+                    Picture('Lahingutegevus Põhjasõjas aastatel 1700–1709',
+                        'assets/illustrations/Great_Northern_War_Part1.png'),
+                    Picture('Sõjategevus Läänemere sõjatandril 1709–1721',
+                        'assets/illustrations/Great_Northern_War_Baltic_Theater.png'),
+                    Picture(
+                        'Ülevalt päripäeva: Narva lahing, Spilve lahing, Poltava lahing, Riilahti lahing, Gadebuschi lahing',
+                        'assets/illustrations/Great_Northern_War.jpg'),
+                  ], SwiperLayout.DEFAULT)),
+                  TextSpan(
+                      text: '\n\nPoolte jõud\n\n',
+                      style:
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.w600)),
+                  TextSpan(
+                      text: 'Rootsi - 77-135 tuh.\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text: 'Ottomani impeerium - 100-200 tuh.\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text: '____________________\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text: 'Venemaa - 170 tuh.\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text: 'Kalmyk Khanate - 25 tuh.\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text: 'Taani - 40 tuh.\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text: 'Rzeczpospolita ja Saksimaa - 170 tuh.\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text: 'Kaotused\n\n',
+                      style:
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.w600)),
+                  TextSpan(
+                      text:
+                          'Rootsi - 25 tuh võitluskahjumit, 175 tuh - võitluseta kahju (nälg, haigused, kurnatus).\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text: '____________________\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text:
+                          'Venemaa - 30 tuh lahingukahju, kokku 120 tuh kaotust.\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text: 'Kalmyk Khanate - 5 tuh tapetu.\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text:
+                          'Taani - hukkus suuremates lahingutes 8 tuh (kokku 60 tuh).\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text: 'Rzeczpospolita ja Saksimaa - 14-20 tuh.\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text: 'Tulemus\n\n',
+                      style:
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.w600)),
+                  TextSpan(
+                      text:
+                          'Venemaa tsaaririigi ja tema liitlaste võit. Sõja lõpetas Uusikaupunki rahu.\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(text: '', style: TextStyle(fontSize: 25)),
+                  WidgetSpan(
+                      child: ImageSwiper([
+                    Picture(
+                        'Ülevalt päripäeva: Narva lahing, Spilve lahing, Poltava lahing, Riilahti lahing, Gadebuschi lahing',
+                        'assets/illustrations/Great_Northern_War.jpg'),
+                    Picture(
+                        'Venemaa keisririigi poolt Uusikaupunki rahulepinguga omandatud maa-alad',
+                        'assets/illustrations/NystatIngria.png')
+                  ], SwiperLayout.DEFAULT)),
+                ]),
+          ),
+          iconBackground: Colors.transparent),
+    ]: [
       Event(
           name: "",
           date: "1700",
@@ -88,11 +187,17 @@ Map<List<Event>, List<Event>> getPeriod10() {
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: 'Karl XII lõi venelasi Narva lahingus.',
+                      text: 'Karl XII lõi venelasi Narva lahingus.\n\n',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
+                  WidgetSpan(
+                      child: ImageSwiper([
+                    Picture('Rootslaste võit Narva all 1700. aastal',
+                        'assets/illustrations/1280px-Victory_at_Narva.jpg')
+                  ])),
                 ]),
           ),
+          more: true,
           iconBackground: Colors.transparent),
       Event(
           name: "",
@@ -204,11 +309,38 @@ Map<List<Event>, List<Event>> getPeriod10() {
                 children: <InlineSpan>[
                   TextSpan(
                       text:
-                          'Rootslased said venelastelt Poltaava lahingus lüüa.',
+                          'Rootslased said venelastelt Poltaava lahingus lüüa.\n\n',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
+                  TextSpan(
+                      text:
+                          'Demoraliseerunud Rootsi armee oli ümbritsetud ning kapituleerus.\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text:
+                          'Kokku kaotas Rootsi Poltava lahingu tagajärjel üle 9000 hukkunud inimese ja 18 000 vangi, Moskva tsaaririik kaotas kokku 1345 hukkunut ja 3290 haavatut.\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  WidgetSpan(
+                      child: ImageSwiper([
+                    Picture('Poltava lahing',
+                        'assets/illustrations/plotvaBattle.JPG')
+                  ])),
+                  TextSpan(
+                      text:
+                          '\n\nKarl XII asus varju Ottomani impeeriumisse, kus ta üritas veenda sultan Ahmed III alustama sõda Venemaa vastu.\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text:
+                          '1710. aasta lõpus sai Peeter I teate Türgi armee ettevalmistamisest sõjaks Venemaaga. 1711. aasta alguses kuulutas ta sõja Ottomani impeeriumile ja alustas kampaaniat. Kampaania lõppes täieliku ebaõnnestumisega: Venemaa loovutas Türgile Aasovi ja Zaporožje, hävitas Taganrogi kindlused ja laevad Musta mere ääres ning kaotas juurdepääsu Aasovi merele. Kuid Ottomani impeerium ei astunud Rootsi poolel sõjas.\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  WidgetSpan(
+                      child: ImageSwiper([
+                    Picture('Ahmed III',
+                        'assets/illustrations/800px-III._Ahmet.jpg')
+                  ])),
                 ]),
           ),
+          more: true,
           iconBackground: Colors.transparent),
       Event(
           name: "",
