@@ -2,6 +2,8 @@ import 'package:estonian_history/components/backgroundIllustration.dart';
 import 'package:estonian_history/constants.dart';
 import 'package:estonian_history/periods/period1.dart';
 import 'package:estonian_history/periods/period10.dart';
+import 'package:estonian_history/periods/period11.dart';
+import 'package:estonian_history/periods/period12.dart';
 import 'package:estonian_history/periods/period2.dart';
 import 'package:estonian_history/models/period.dart';
 import 'package:estonian_history/periods/period3.dart';
@@ -74,8 +76,17 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
           periodTitle: 'Rootsi, Poola ja Taani võimu all (1583–1629)',
           events: getPeriod8()),
       Period(periodTitle: 'Rootsi aeg (1629–1710)', events: getPeriod9()),
-      //////////////////////////////////////////////////////////////////////////////////////////////////
       Period(periodTitle: 'Põhjasõda Eestis (1700–10)', events: getPeriod10()),
+      //////////////////////////////////////////////////////////////////////////////////////////////////
+
+      Period(periodTitle: '', events: getPeriod11()),
+      Period(periodTitle: '', events: getPeriod12()),
+      // Period(periodTitle: '', events: getPeriod13()),
+      // Period(periodTitle: '', events: getPeriod14()),
+      // Period(periodTitle: '', events: getPeriod15()),
+      // Period(periodTitle: '', events: getPeriod16()),
+      // Period(periodTitle: '', events: getPeriod17()),
+      // Period(periodTitle: '', events: getPeriod18()),
     ];
     timelines = [];
 
