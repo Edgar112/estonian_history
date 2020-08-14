@@ -12,3 +12,5 @@ bool isBlur = false;
 
 AnimationController blurAnimationController;
 Animation blurAnimation;
+
+AnimationController circleAnimationController;

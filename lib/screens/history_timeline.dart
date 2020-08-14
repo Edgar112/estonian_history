@@ -79,8 +79,8 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
       Period(periodTitle: 'Põhjasõda Eestis (1700–10)', events: getPeriod10()),
       //////////////////////////////////////////////////////////////////////////////////////////////////
 
-      Period(periodTitle: '', events: getPeriod11()),
-      Period(periodTitle: '', events: getPeriod12()),
+      Period(periodTitle: 'Vene aeg (1710–1918)', events: getPeriod11()),
+      // Period(periodTitle: '', events: getPeriod12()),
       // Period(periodTitle: '', events: getPeriod13()),
       // Period(periodTitle: '', events: getPeriod14()),
       // Period(periodTitle: '', events: getPeriod15()),
@@ -155,6 +155,28 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
       ),
     ];
     view.addAll(timelines);
+    view.add(
+      SliverToBoxAdapter(
+        child: Container(
+          alignment: Alignment.center,
+          child: Column(
+            children: [
+              SizedBox(height: 50),
+              Text(
+                'Praeguseks kõik',
+                style: Theme.of(context).textTheme.caption,
+              ),
+              Text(
+                'uuendus peatselt aega tekkib',
+                textAlign: TextAlign.left,
+                style: Theme.of(context).textTheme.headline6,
+              ),
+              SizedBox(height: 50),
+            ],
+          ),
+        ),
+      ),
+    );
     return view;
   }
 
@@ -203,37 +225,40 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
                     : Container(),
                 Padding(
                   padding: EdgeInsets.all(16.0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      event.name != ''
-                          ? Text(
-                              event.name,
-                              style: textTheme.headline6,
-                              textAlign: TextAlign.left,
-                            )
-                          : Container(),
-                      event.name != ''
-                          ? SizedBox(
-                              height: 8.0,
-                            )
-                          : Container(),
-                      event.cover != ''
-                          ? Text(
-                              event.cover,
-                              style: textTheme.subtitle2,
-                              textAlign: TextAlign.center,
-                            )
-                          : Container(),
-                      event.cover != ''
-                          ? SizedBox(
-                              height: 8.0,
-                            )
-                          : Container(),
-                    ],
+                  child: Center(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        SizedBox(
+                          height: 8.0,
+                        ),
+                        event.name != ''
+                            ? Text(
+                                event.name,
+                                style: textTheme.headline6,
+                                textAlign: TextAlign.center,
+                              )
+                            : Container(),
+                        event.name != ''
+                            ? SizedBox(
+                                height: 8.0,
+                              )
+                            : Container(),
+                        event.cover != ''
+                            ? Text(
+                                event.cover,
+                                style: textTheme.subtitle2,
+                                textAlign: TextAlign.center,
+                              )
+                            : Container(),
+                        event.cover != ''
+                            ? SizedBox(
+                                height: 8.0,
+                              )
+                            : Container(),
+                      ],
+                    ),
                   ),
                 ),
               ],

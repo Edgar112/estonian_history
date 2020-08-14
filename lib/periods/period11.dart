@@ -32,18 +32,74 @@ Map<List<Event>, List<Event>> getPeriod11() {
       Event(
           name: "",
           date: "1718",
-          subDate: "Hakati ehitama Kadrioru lossi.",
-          cover: "",
+          subDate: "",
+          cover: "Hakati ehitama Kadrioru lossi.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: 'Hakati ehitama Kadrioru lossi.',
+                      text: 'Hakati ehitama Kadrioru lossi.\n\n',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
+                  TextSpan(
+                      text:
+                          '22. juulil 1718 mõõtis arhitekt Niccolò Michetti koos Peeter I-ga maha lossi ja aia plaani. Michetti planeeris pargi ja lossi kolmeosalisena Itaalia villade eeskujul.\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text:
+                          '1719. aastal said katuse alla tiibhooned, 1720–1721 ehitati lossi peahoone ja põhiosas valmis loss 1725. aastal.\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text:
+                          'Ehitusisand ei jõudnud ise lossi valmiskujul näha – lossi rajada lasknud keiser Peeter I suri juba 1725. aasta 8. veebruaril, mil lossi ehitamine oli alles pooleli. Tema surma järel rakendatud kokkuhoiupoliitika tõttu jäid ehitustööd soiku.\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text:
+                          'Nimi Katharinenthal (Kadriorg) võeti senise Fonnenthali asemel kasutusele alles 1740. aastatel.\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  WidgetSpan(
+                      child: ImageSwiper([
+                    Picture('Kadrioru lossi peafassaad',
+                        'assets/illustrations2/1280px-Kadrioru_loss..jpg')
+                  ])),
+                  TextSpan(
+                      text:
+                          '\n\n1754. aastal sai peahoone ülakorrus tulekahjus kannatada ning taastamistööde käigus asendati varasem kivikatus plekiga.\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text:
+                          '1773. aastal toimus küll lossis ulatuslik remont, kuid ülakorruse lagede stukkdekoori taastamisest loobuti. Keisrinna Anna Ivanovna lasi raidkujud ja purskkaevud viia lossipargist Peterhofi palee parki ning Kadrioru loss jäi edaspidi kasutamata ja hooletusse.\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text:
+                          'Kadrioru lossi paremad päevad saabusid pärast keiser Aleksander I külaskäiku Tallinna 1804. aastal. Selle järel anti Eestimaa kubernerile korraldus loss korrastada ning ehitati praeguse Koidula tänava äärde lossi ülevaataja elumaja, kus tänapäeval asub Eduard Vilde Muuseum. Aja jooksul jäi loss aga jälle keisriperekonna tähelepanuta.\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  WidgetSpan(
+                      child: ImageSwiper([
+                    Picture('Kadrioru loss talvel',
+                        'assets/illustrations2/Kadrioru_loss_talvel_2013.jpg')
+                  ])),
+                  TextSpan(
+                      text:
+                          '\n\n1827. aasta ümberehituste käigus kaotas lossi peosaal glasuurkividest põranda ning paljud ruumid oma stukkdekoori ja kaminad.\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text:
+                          '1837. aastal külastas Tallinna uus Vene keiser Nikolai I, kes andis korralduse loss korrastada ning andis lossi Eestimaa kuberneri suveresidentsiks.\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  TextSpan(
+                      text:
+                          '1917. aasta kaksikvõimu ajal Eestis asus Kadrioru lossis Eestimaa Nõukogude Täitevkomitee.\n\n',
+                      style: TextStyle(fontSize: 25)),
+                  WidgetSpan(
+                      child: ImageSwiper([
+                    Picture('Kadrioru loss u 1910. aastal',
+                        'assets/illustrations2/Kadriorg_Palace_c1910.jpg')
+                  ])),
                 ]),
           ),
+          more: true,
           iconBackground: Colors.transparent),
       Event(
           name: "",
@@ -454,13 +510,15 @@ Map<List<Event>, List<Event>> getPeriod11() {
           name: "",
           date: "1856",
           subDate: "",
-          cover: "Aleksander II kinnitas Eestimaa uue talurahvaseaduse; ka Põhja-Eestis sai hakata talusid päriseks ostma.",
+          cover:
+              "Aleksander II kinnitas Eestimaa uue talurahvaseaduse; ka Põhja-Eestis sai hakata talusid päriseks ostma.",
           text: RichText(
             text: TextSpan(
                 style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
                 children: <InlineSpan>[
                   TextSpan(
-                      text: 'Aleksander II kinnitas Eestimaa uue talurahvaseaduse; ka Põhja-Eestis sai hakata talusid päriseks ostma.',
+                      text:
+                          'Aleksander II kinnitas Eestimaa uue talurahvaseaduse; ka Põhja-Eestis sai hakata talusid päriseks ostma.',
                       style: TextStyle(
                           fontSize: 25, color: kText2Color.withOpacity(0.6))),
                 ]),

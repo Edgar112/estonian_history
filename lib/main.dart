@@ -36,6 +36,10 @@ Future precacheSvg() async {
       ExactAssetPicture(
           SvgPicture.svgStringDecoder, 'assets/illustrations/modern_stars.svg'),
       null);
+  await precachePicture(
+      ExactAssetPicture(SvgPicture.svgStringDecoder,
+          'assets/illustrations/astronaut_no_stars.svg'),
+      null);
 }
 
 class EstonianHistory extends StatelessWidget {
