@@ -14,3 +14,6 @@ AnimationController blurAnimationController;
 Animation blurAnimation;
 
 AnimationController circleAnimationController;
+
+AnimationController bgAnimationController;
+Animation bgAnimation;  

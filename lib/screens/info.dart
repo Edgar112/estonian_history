@@ -56,16 +56,17 @@ class _InfoState extends State<Info> with SingleTickerProviderStateMixin {
               transitionDuration: Duration(seconds: 0),
             ),
           ).whenComplete(() {
+            // bgAnimationController.forward().;
             canShowAutorContent = false;
             setState(() {
               disableAll = false;
             });
             circleAnimationController.reverse().whenComplete(() {
+              showCircleAnimation = false;
               canShowAutorContent = true;
             });
           });
         }
-        print(_fraction);
       });
   }
 
@@ -225,7 +226,7 @@ class _InfoState extends State<Info> with SingleTickerProviderStateMixin {
                                                   color: kText1Color),
                                               children: <TextSpan>[
                                                 TextSpan(
-                                                  text: 'License',
+                                                  text: 'Litsents',
                                                   style: TextStyle(
                                                     fontSize: 40,
                                                   ),
