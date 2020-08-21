@@ -11,24 +11,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 Map<List<Event>, List<Event>> getPeriod11() {
   return {
-    [
-      Event(
-          name: "",
-          date: "",
-          subDate: "",
-          cover: "",
-          text: RichText(
-            text: TextSpan(
-                style: TextStyle(fontFamily: 'Exo2', color: kText2Color),
-                children: <InlineSpan>[
-                  TextSpan(
-                      text: '',
-                      style: TextStyle(
-                          fontSize: 25, color: kText2Color.withOpacity(0.6))),
-                ]),
-          ),
-          iconBackground: Colors.transparent),
-    ]: [
+    [null]: [
       Event(
           name: "",
           date: "1718",
