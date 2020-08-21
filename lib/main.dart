@@ -45,8 +45,6 @@ Future precacheSvg() async {
 class EstonianHistory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // SystemChrome.setSystemUIOverlayStyle(
-    //     SystemUiOverlayStyle(statusBarColor: Colors.transparent));
     SystemChrome.setEnabledSystemUIOverlays([]);
     return MaterialApp(
       builder: (context, child) {

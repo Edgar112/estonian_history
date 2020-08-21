@@ -37,9 +37,33 @@ class HistoryTimeline extends StatefulWidget {
 class _HistoryTimelineState extends State<HistoryTimeline> {
   BouncingScrollPhysics physics = BouncingScrollPhysics();
 
-  List<Period> periods;
-
-  List<Timeline> timelines;
+  List<Period> periods = [
+    Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
+    Period(
+        periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
+        events: getPeriod2()),
+    Period(
+        periodTitle: 'Muistne vabadusvõitlus (1208–27)', events: getPeriod3()),
+    Period(
+        periodTitle: 'Võõrvõimu algussajand (1227–1343)', events: getPeriod4()),
+    Period(periodTitle: 'Jüriöö ülestõus (1343–45)', events: getPeriod5()),
+    Period(periodTitle: 'Vana-Liivimaa (1345–1558)', events: getPeriod6()),
+    Period(periodTitle: 'Vene-Liivimaa sõda (1558–83)', events: getPeriod7()),
+    Period(
+        periodTitle: 'Rootsi, Poola ja Taani võimu all (1583–1629)',
+        events: getPeriod8()),
+    Period(periodTitle: 'Rootsi aeg (1629–1710)', events: getPeriod9()),
+    Period(periodTitle: 'Põhjasõda Eestis (1700–10)', events: getPeriod10()),
+    Period(periodTitle: 'Vene aeg (1710–1918)', events: getPeriod11()),
+    // Period(periodTitle: '', events: getPeriod12()),
+    // Period(periodTitle: '', events: getPeriod13()),
+    // Period(periodTitle: '', events: getPeriod14()),
+    // Period(periodTitle: '', events: getPeriod15()),
+    // Period(periodTitle: '', events: getPeriod16()),
+    // Period(periodTitle: '', events: getPeriod17()),
+    // Period(periodTitle: '', events: getPeriod18()),
+  ];
+  List<Timeline> timelines = [];
 
   @override
   void initState() {
@@ -53,48 +77,16 @@ class _HistoryTimelineState extends State<HistoryTimeline> {
       // print(timelineScrollController.position.pixels);
     });
 
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    periods = [
-      Period(periodTitle: 'Esiajalugu', events: getPeriod1()),
-      Period(
-          periodTitle: 'Eesti II a-tuh alguses (a-ni 1208)',
-          events: getPeriod2()),
-      Period(
-          periodTitle: 'Muistne vabadusvõitlus (1208–27)',
-          events: getPeriod3()),
-      Period(
-          periodTitle: 'Võõrvõimu algussajand (1227–1343)',
-          events: getPeriod4()),
-      Period(periodTitle: 'Jüriöö ülestõus (1343–45)', events: getPeriod5()),
-      Period(periodTitle: 'Vana-Liivimaa (1345–1558)', events: getPeriod6()),
-      Period(periodTitle: 'Vene-Liivimaa sõda (1558–83)', events: getPeriod7()),
-      Period(
-          periodTitle: 'Rootsi, Poola ja Taani võimu all (1583–1629)',
-          events: getPeriod8()),
-      Period(periodTitle: 'Rootsi aeg (1629–1710)', events: getPeriod9()),
-      Period(periodTitle: 'Põhjasõda Eestis (1700–10)', events: getPeriod10()),
-      //////////////////////////////////////////////////////////////////////////////////////////////////
-
-      Period(periodTitle: 'Vene aeg (1710–1918)', events: getPeriod11()),
-      // Period(periodTitle: '', events: getPeriod12()),
-      // Period(periodTitle: '', events: getPeriod13()),
-      // Period(periodTitle: '', events: getPeriod14()),
-      // Period(periodTitle: '', events: getPeriod15()),
-      // Period(periodTitle: '', events: getPeriod16()),
-      // Period(periodTitle: '', events: getPeriod17()),
-      // Period(periodTitle: '', events: getPeriod18()),
-    ];
-    timelines = [];
-
     periods.forEach((period) {
       timelines.add(timelineModelPage(
           new GlobalKey(), physics, period.events, period.periodTitle));
     });
 
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       drawerScrimColor: Colors.transparent,
       body: Stack(
