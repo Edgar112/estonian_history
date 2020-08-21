@@ -56,6 +56,7 @@ class EstonianHistory extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Eesti Ajalugu',
       theme: ThemeData(
+        primaryColor: kPrimaryColor,
         primaryIconTheme: IconThemeData(color: kText1Color),
         textTheme: TextTheme(
           caption:

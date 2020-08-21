@@ -7,6 +7,7 @@ import 'package:estonian_history/global.dart';
 import 'package:estonian_history/widgets/circleAnimation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Info extends StatefulWidget {
   Info({Key key}) : super(key: key);
@@ -74,6 +75,15 @@ class _InfoState extends State<Info> with SingleTickerProviderStateMixin {
   void dispose() {
     super.dispose();
     circleAnimationController.dispose();
+  }
+
+  launchURL() async {
+    const url = 'https://github.com/Edgar112/estonian_history';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 
   @override
@@ -207,7 +217,7 @@ class _InfoState extends State<Info> with SingleTickerProviderStateMixin {
                                           BorderSide(color: kText1Color),
                                       highlightedBorderColor: kText1Color,
                                       splashColor: Colors.white,
-                                      onPressed: () {},
+                                      onPressed: launchURL,
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(16.0))),
@@ -239,7 +249,9 @@ class _InfoState extends State<Info> with SingleTickerProviderStateMixin {
                                           BorderSide(color: kText1Color),
                                       highlightedBorderColor: kText1Color,
                                       splashColor: Colors.white,
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        showLicensePage(context: context);
+                                      },
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(16.0))),
