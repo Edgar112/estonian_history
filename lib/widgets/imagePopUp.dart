@@ -1,5 +1,5 @@
-import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/widgets/HeroPhotoViewWrapper.dart';
+import 'package:Eesti_Ajalugu/constants.dart';
+import 'package:Eesti_Ajalugu/widgets/HeroPhotoViewWrapper.dart';
 import 'package:flutter/material.dart';
 
 class ImagePupUp extends StatelessWidget {

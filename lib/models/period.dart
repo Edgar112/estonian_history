@@ -1,4 +1,4 @@
-import 'package:estonian_history/models/event.dart';
+import 'package:Eesti_Ajalugu/models/event.dart';
 
 class Period {
   String periodTitle;

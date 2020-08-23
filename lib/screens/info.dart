@@ -1,11 +1,11 @@
 import 'dart:ui';
 
-import 'package:estonian_history/components/backgroundIllustration.dart';
-import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/screens/info/author.dart';
-import 'package:estonian_history/global.dart';
-import 'package:estonian_history/screens/info/sources.dart';
-import 'package:estonian_history/widgets/circleAnimation.dart';
+import 'package:Eesti_Ajalugu/components/backgroundIllustration.dart';
+import 'package:Eesti_Ajalugu/constants.dart';
+import 'package:Eesti_Ajalugu/screens/info/author.dart';
+import 'package:Eesti_Ajalugu/global.dart';
+import 'package:Eesti_Ajalugu/screens/info/sources.dart';
+import 'package:Eesti_Ajalugu/widgets/circleAnimation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -79,7 +79,7 @@ class _InfoState extends State<Info> with SingleTickerProviderStateMixin {
   }
 
   launchGitHubURL() async {
-    const url = 'https://github.com/Edgar112/estonian_history';
+    const url = 'https://github.com/Edgar112/Eesti_Ajalugu';
     if (await canLaunch(url)) {
       await launch(url);
     } else {

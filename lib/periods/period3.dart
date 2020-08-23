@@ -1,7 +1,7 @@
-import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/models/event.dart';
-import 'package:estonian_history/models/picture.dart';
-import 'package:estonian_history/widgets/imageSwiper.dart';
+import 'package:Eesti_Ajalugu/constants.dart';
+import 'package:Eesti_Ajalugu/models/event.dart';
+import 'package:Eesti_Ajalugu/models/picture.dart';
+import 'package:Eesti_Ajalugu/widgets/imageSwiper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 

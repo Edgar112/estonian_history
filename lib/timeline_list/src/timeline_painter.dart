@@ -1,6 +1,6 @@
-import 'package:estonian_history/constants.dart';
+import 'package:Eesti_Ajalugu/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:estonian_history/timeline_list/timeline.dart';
+import 'package:Eesti_Ajalugu/timeline_list/timeline.dart';
 
 class TimelineBoxDecoration extends Decoration {
   final Color iconBackground;

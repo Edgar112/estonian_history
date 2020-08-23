@@ -1,13 +1,13 @@
 library timeline;
 
-import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/models/event.dart';
-import 'package:estonian_history/screens/history_timeline/history_info.dart';
-import 'package:estonian_history/transitions/fade_route.dart';
+import 'package:Eesti_Ajalugu/constants.dart';
+import 'package:Eesti_Ajalugu/models/event.dart';
+import 'package:Eesti_Ajalugu/screens/history_timeline/history_info.dart';
+import 'package:Eesti_Ajalugu/transitions/fade_route.dart';
 import 'package:flutter/material.dart';
-import 'package:estonian_history/timeline_list/src/timeline_item.dart';
-import 'package:estonian_history/timeline_list/src/timeline_painter.dart';
-import 'package:estonian_history/timeline_list/timeline_model.dart';
+import 'package:Eesti_Ajalugu/timeline_list/src/timeline_item.dart';
+import 'package:Eesti_Ajalugu/timeline_list/src/timeline_painter.dart';
+import 'package:Eesti_Ajalugu/timeline_list/timeline_model.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 
 typedef IndexedTimelineModelBuilder = TimelineModel Function(

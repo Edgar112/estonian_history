@@ -1,10 +1,10 @@
-import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/global.dart';
-import 'package:estonian_history/models/event.dart';
-import 'package:estonian_history/models/picture.dart';
-import 'package:estonian_history/transitions/fade_route.dart';
-import 'package:estonian_history/widgets/imageSwiper.dart';
-import 'package:estonian_history/widgets/myMap.dart';
+import 'package:Eesti_Ajalugu/constants.dart';
+import 'package:Eesti_Ajalugu/global.dart';
+import 'package:Eesti_Ajalugu/models/event.dart';
+import 'package:Eesti_Ajalugu/models/picture.dart';
+import 'package:Eesti_Ajalugu/transitions/fade_route.dart';
+import 'package:Eesti_Ajalugu/widgets/imageSwiper.dart';
+import 'package:Eesti_Ajalugu/widgets/myMap.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';

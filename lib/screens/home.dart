@@ -1,8 +1,8 @@
 import 'dart:ui';
 
-import 'package:estonian_history/screens/history_timeline.dart';
+import 'package:Eesti_Ajalugu/screens/history_timeline.dart';
 import 'package:flutter/material.dart';
-import 'package:estonian_history/global.dart';
+import 'package:Eesti_Ajalugu/global.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);

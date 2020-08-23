@@ -1,9 +1,9 @@
 import 'dart:math';
 
 import 'package:delayed_display/delayed_display.dart';
-import 'package:estonian_history/global.dart';
-import 'package:estonian_history/widgets/authorPhraseBuilder.dart';
-import 'package:estonian_history/widgets/physics.dart';
+import 'package:Eesti_Ajalugu/global.dart';
+import 'package:Eesti_Ajalugu/widgets/authorPhraseBuilder.dart';
+import 'package:Eesti_Ajalugu/widgets/physics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

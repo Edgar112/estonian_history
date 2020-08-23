@@ -1,6 +1,6 @@
-import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/screens/home.dart';
-import 'package:estonian_history/widgets/my_behavior.dart';
+import 'package:Eesti_Ajalugu/constants.dart';
+import 'package:Eesti_Ajalugu/screens/home.dart';
+import 'package:Eesti_Ajalugu/widgets/my_behavior.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';

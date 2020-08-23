@@ -1,5 +1,5 @@
-import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/widgets/backButton.dart';
+import 'package:Eesti_Ajalugu/constants.dart';
+import 'package:Eesti_Ajalugu/widgets/backButton.dart';
 import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 

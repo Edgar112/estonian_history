@@ -1,9 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:estonian_history/timeline_list/src/timeline_painter.dart';
-import 'package:estonian_history/timeline_list/timeline.dart';
-import 'package:estonian_history/timeline_list/timeline_model.dart';
+import 'package:Eesti_Ajalugu/timeline_list/src/timeline_painter.dart';
+import 'package:Eesti_Ajalugu/timeline_list/timeline.dart';
+import 'package:Eesti_Ajalugu/timeline_list/timeline_model.dart';
 
 abstract class TimelineItem extends StatelessWidget {
   final TimelineModel model;

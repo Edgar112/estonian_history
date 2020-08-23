@@ -1,9 +1,9 @@
 import 'dart:ui';
 
-import 'package:estonian_history/constants.dart';
-import 'package:estonian_history/global.dart';
-import 'package:estonian_history/models/period.dart';
-import 'package:estonian_history/timeline_list/timeline.dart';
+import 'package:Eesti_Ajalugu/constants.dart';
+import 'package:Eesti_Ajalugu/global.dart';
+import 'package:Eesti_Ajalugu/models/period.dart';
+import 'package:Eesti_Ajalugu/timeline_list/timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
