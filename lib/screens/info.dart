@@ -4,6 +4,7 @@ import 'package:estonian_history/components/backgroundIllustration.dart';
 import 'package:estonian_history/constants.dart';
 import 'package:estonian_history/screens/info/author.dart';
 import 'package:estonian_history/global.dart';
+import 'package:estonian_history/screens/info/sources.dart';
 import 'package:estonian_history/widgets/circleAnimation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -77,7 +78,7 @@ class _InfoState extends State<Info> with SingleTickerProviderStateMixin {
     circleAnimationController.dispose();
   }
 
-  launchURL() async {
+  launchGitHubURL() async {
     const url = 'https://github.com/Edgar112/estonian_history';
     if (await canLaunch(url)) {
       await launch(url);
@@ -185,7 +186,13 @@ class _InfoState extends State<Info> with SingleTickerProviderStateMixin {
                                           BorderSide(color: kText1Color),
                                       highlightedBorderColor: kText1Color,
                                       splashColor: Colors.white,
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Sources()),
+                                        );
+                                      },
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(16.0))),
@@ -217,7 +224,7 @@ class _InfoState extends State<Info> with SingleTickerProviderStateMixin {
                                           BorderSide(color: kText1Color),
                                       highlightedBorderColor: kText1Color,
                                       splashColor: Colors.white,
-                                      onPressed: launchURL,
+                                      onPressed: launchGitHubURL,
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
                                               BorderRadius.circular(16.0))),
