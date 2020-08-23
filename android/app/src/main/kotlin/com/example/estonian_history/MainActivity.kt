@@ -1,4 +1,4 @@
-package com.example.estonian_history
+package ee.njuh.estonian_history
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
