@@ -52,10 +52,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-flutter_icons:
-  image_path: "assets/icons/res/mipmap-hdpi/ic_launcher.png"
-  android: true
-  ios: true
+# flutter_icons:
+#   image_path: "assets/icons/res/mipmap-hdpi/ic_launcher.png"
+#   android: true
+#   ios: true
   # adaptive_icon_background: "assets/icons/HistoryIconFullSize.png"
   # adaptive_icon_foreground: "assets/icons/HistoryIconFullSize.png"
 

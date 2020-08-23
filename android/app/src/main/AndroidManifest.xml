@@ -8,7 +8,7 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:label="Eesti Ajalugu"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/history_icon">
         <meta-data android:name="com.google.android.geo.API_KEY"
                android:value="AIzaSyAgK0vkOakBumetd5Axu8ciwVsJgTRuGck"/>
         <activity
