@@ -1,2 +1,5 @@
-# estonian_history
-Estonian History (flutter)
+# Eesti Ajalugu
+Loodud eestlaste ajaloo huvi ja teadlikkuse tõstmiseks.
+
+## License
+[MIT](LICENSE)
